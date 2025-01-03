@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>选择线路</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 设置两列 */
+            gap: 20px; /* 设置按钮之间的间距 */
+        }
+        .line-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 300px; /* 按钮长度 */
+            padding: 20px;
+            background-color: #f0f0f0;
+	    background: <img src="images/line1.jpg">
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            text-decoration: none;
+            color: black; /* 默认颜色，可移除 */
+        }
+    	
+
+	.img-usual { 
+			width: 250px; 
+			height: 45px; 
+	}
+	.img-small { 
+			width: 250px; 
+			height: 40px; 
+	}
+	
+.line5 { color: #ff0000; } 
+.line7 { color: #00FFFF; }
+ .line10 { color: #FFA500; } 
+.lineS1 { color: #800080; }
+ .lineS3 { color: #A52A2A; }
+ .lineS4 { color: #008080; }
+ .lineS6 { color: #808000; } 
+.lineS7 { color: #808080; }
+ .lineS8 { color: #000080; }
+ .lineS9 { color: #008000; }
+    </style>
+</head>
+<body>
+    <h1>请选择您需要乘坐的线路:</h1>
+    <div class="container">
+        <a href="line1.html" class="line-button line1"><img src="images/line1.jpg" class="img-usual"></a>
+        <a href="line2.html" class="line-button line2"><img src="images/line2.jpg" class="img-usual"></a>
+        <a href="line3.html" class="line-button line3"><img src="images/line3.jpg" class="img-usual"></a>
+        <a href="chooseline4.html" class="line-button line4"><img src="images/line4.jpg" class="img-usual"></a>
+        <a href="chooseline5.html" class="line-button line5"><img src="images/line5.jpg" class="img-usual">暂停运营</a>
+        <a href="line7.html" class="line-button line7"><img src="images/line7.jpg" class="img-usual"></a>
+        <a href="line10.html" class="line-button line10"><img src="images/line10.jpg" class="img-usual"></a>
+        <a href="airport.html" class="line-button lineS1"><img src="images/lineS1.jpg" class="img-small" ></a>
+        <a href="ninghe.html" class="line-button lineS3"><img src="images/lineS3.jpg" class="img-small"></a>
+        <a href="ningchu.html" class="line-button lineS4"><img src="images/lineS4.jpg" class="img-small"></a>
+        <a href="ningju.html" class="line-button lineS6"><img src="images/lineS6.jpg" class="img-small"></a>
+        <a href="ningli.html" class="line-button lineS7"><img src="images/lineS7.jpg" class="img-small"></a>
+        <a href="ningtian.html" class="line-button lineS8"><img src="images/lineS8.jpg" class="img-small"></a>
+        <a href="ninggao.html" class="line-button lineS9"><img src="images/lineS9.jpg" class="img-small"></a>
+    </div>
+</body>
+</html>
