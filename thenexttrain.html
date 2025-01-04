@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>列车到站时间表</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-for-thenexttrain.css">
+</head>
+<body>
+
+<h1 id="name"></h1>
+<h5>  开发者：NFLS-lyx & NFLS-xcx</h5>
+
+<table>
+    <thead>
+        <tr>
+            <th>终点站</th>
+            <th>到站时间</th>
+            <th>状态</th>
+            <th>交路模式</th>
+            <th>列车状态</th>
+        </tr>
+    </thead>
+    <tbody id="train-table-body">
+    </tbody>
+</table>
+
+<script src="main.js"></script>
+<script src="update.js"></script>
+<script>
+    var station = urlParams.get("station");
+    var line = urlParams.get("line");
+    var arrivalTimes;
+    document.getElementById("name").innerHTML = line + "号线 " + station;
+    function callback() {
+        arrivalTimes = data[station];
+        run();
+    };
+    loadScript("./data/stations" + line + ".js", callback);
+</script>
+
+</body>
+</html>
