@@ -133,8 +133,7 @@ function updateTable() {
     });
 }
 
-// 初始更新表格
-updateTable();
-
-// 每秒更新一次表格
-setInterval(updateTable, 1000);
+function run() {
+    updateTable();
+    setInterval(updateTable, 1000);
+}

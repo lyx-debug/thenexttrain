@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<h1>5号线 九龙湖南</h1>
+<h1 id="name"></h1>
 <h5>  开发者：NFLS-lyx</h5>
 
 <table>
@@ -26,11 +26,19 @@
     </tbody>
 </table>
 
-<script>
-    const arrivalTimes = [
-        { destination: '暂停运营', time: "23:59:59", jiaolu: "暂停运营" },
-    ];
-</script>
+<script src="/main.js"></script>
 <script src="/update.js"></script>
+<script>
+    var station = urlParams.get("station");
+    var line = urlParams.get("line");
+    var arrivalTimes;
+    document.getElementById("name").innerHTML = line.toUpperCase() + "号线 " + station;
+    function callback() {
+        arrivalTimes = data[station];
+        run();
+    };
+    loadScript("/data/stations" + line + ".js", callback);
+</script>
+
 </body>
 </html>
