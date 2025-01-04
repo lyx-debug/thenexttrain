@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>4号线</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-for-chooseline.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style-for-chooseline.css">
 </head>
 <body>
     <h1>请选择您需要乘坐的车站:</h1>
@@ -20,14 +20,14 @@ function callback() {
     var table = document.getElementById("table");
     for (const [station, arrivalTimes] of Object.entries(data)) {
         var t = document.createElement("a");
-        t.href = "thenexttrain.html?line=" + line + "&station=" + station;
+        t.href = "./thenexttrain.html?line=" + line + "&station=" + station;
         t.classList = "line-button line" + line;
         t.textContent = station;
         table.appendChild(t);
     }
 }
 
-loadScript("data/stations" + line + ".js", callback)
+loadScript("./data/stations" + line + ".js", callback)
 
 </script>
 </html>
