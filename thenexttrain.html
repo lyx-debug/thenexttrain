@@ -32,7 +32,7 @@
     var station = urlParams.get("station");
     var line = urlParams.get("line");
     var arrivalTimes;
-    document.getElementById("name").innerHTML = line.toUpperCase() + "号线 " + station;
+    document.getElementById("name").innerHTML = line + "号线 " + station;
     function callback() {
         arrivalTimes = data[station];
         run();
