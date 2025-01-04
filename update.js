@@ -20,9 +20,6 @@ function calculateTimeRemaining(arrivalTime, currentTime) {
     const currentTotalSeconds = currentHours * 3600 + currentMinutes * 60 + currentSeconds;
 
     let timeRemainingSeconds = arrivalTotalSeconds - currentTotalSeconds;
-    if (timeRemainingSeconds < 0) {
-        timeRemainingSeconds += 24 * 3600; // 处理跨天情况
-    }
 
     const hours = Math.floor(timeRemainingSeconds / 3600);
     timeRemainingSeconds %= 3600;
@@ -33,28 +30,20 @@ function calculateTimeRemaining(arrivalTime, currentTime) {
         hours, 
         minutes, 
         seconds, 
-        totalSeconds: arrivalTotalSeconds - currentTotalSeconds, // 这里添加 totalSeconds 属性
+        totalSeconds: arrivalTotalSeconds - currentTotalSeconds,
         timeString: `${padTime(hours)}小时 ${padTime(minutes)}分钟 ${padTime(seconds)}秒` 
     };
 }
 
 function updateTable() {
     const tableBody = document.getElementById('train-table-body');
-    tableBody.innerHTML = ''; // 清空表格内容
+    tableBody.innerHTML = '';
 
     const currentTimeString = getCurrentTimeString();
     const currentTime = parseTimeString(currentTimeString);
 
-    // 过滤掉已经过站的列车
-    const filteredArrivalTimes = arrivalTimes.filter(train => {
-        const arrivalTime = parseTimeString(train.time);
-        return currentTime.hours < arrivalTime.hours || 
-               (currentTime.hours === arrivalTime.hours && currentTime.minutes < arrivalTime.minutes) ||
-               (currentTime.hours === arrivalTime.hours && currentTime.minutes === arrivalTime.minutes && currentTime.seconds < arrivalTime.seconds);
-    });
-
     // 计算剩余时间并排序
-    const sortedArrivalTimes = filteredArrivalTimes.map(train => ({
+    const sortedArrivalTimes = arrivalTimes.map(train => ({
         ...train,
         timeRemaining: calculateTimeRemaining(parseTimeString(train.time), currentTime)
     })).sort((a, b) => a.timeRemaining.hours * 3600 + a.timeRemaining.minutes * 60 + a.timeRemaining.seconds - 
@@ -73,7 +62,7 @@ function updateTable() {
 
         const timeRemainingCell = document.createElement('td');
         timeRemainingCell.className = 'time-remaining';
-        timeRemainingCell.textContent = train.timeRemaining.timeString;
+        timeRemainingCell.textContent = train.timeRemaining.totalSeconds > 0 ? train.timeRemaining.timeString : "已到站";
         row.appendChild(timeRemainingCell);
 
         const jiaoluCell = document.createElement('td');
@@ -84,52 +73,23 @@ function updateTable() {
         statusCell.textContent = '正常';
         row.appendChild(statusCell);
 
-        let statusUpdated = false;
+        var alreadyLeft = false;
 
-        function updateStatus() {
-            if (train.timeRemaining.totalSeconds > 0) {
-                if (train.timeRemaining.totalSeconds <= 60) {
-                    statusCell.textContent = '即将进站';
-                    if (train.timeRemaining.totalSeconds <= 60) {
-                        row.classList.add('arriving-soon');
-                    } else {
-                        row.classList.remove('arriving-soon');
-                    }
-                } else {
-                    statusCell.textContent = '正常';
-                    row.classList.remove('arriving-soon');
-                }
-            } else {
-                if (train.timeRemaining.totalSeconds === 0) {
-                    statusUpdated = true;
-                    setTimeout(() => {
-                        statusCell.textContent = '正在离开';
-                    }, 10000); // 10秒后显示“正在离开”
-                    setTimeout(() => {
-                        row.style.display = 'none';
-                    }, 15000); // 再等待5秒钟后隐藏行
-                }
+        if (train.timeRemaining.totalSeconds > 0) {
+            if (train.timeRemaining.totalSeconds <= 60) {
+                statusCell.textContent = '即将进站';
+                row.classList.add('arriving-soon');
             }
+        } else if (train.timeRemaining.totalSeconds >= -10) {
+            statusCell.textContent = '即将离开';
+            row.classList.add('leaving-soon');
+        } else {
+            alreadyLeft = true;
         }
 
-        // 每秒更新状态列
-        const intervalId = setInterval(() => {
-            if (!statusUpdated) {
-                train.timeRemaining.totalSeconds--;
-                updateStatus();
-            } else {
-                clearInterval(intervalId);
-            }
-        }, 1000);
-
-        // 如果列车在1分钟内到达，将该行的背景色更改为深绿色
-        if (train.timeRemaining.totalSeconds <= 60 && train.timeRemaining.totalSeconds > 0) {
-            row.classList.add('arriving-soon');
+        if (!alreadyLeft) {
+            tableBody.appendChild(row);
         }
-
-        updateStatus(); // 初始更新
-
-        tableBody.appendChild(row);
     });
 }
 

@@ -38,10 +38,6 @@ th {
     font-weight: bold;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #f1f1f1;/* 表格颜色 */
-}
-
 tbody tr:hover {
     background-color: #5F60A2; /* 光标悬停颜色 */
     cursor: pointer;

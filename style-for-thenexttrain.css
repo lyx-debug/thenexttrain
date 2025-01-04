@@ -21,3 +21,6 @@ th {
 .arriving-soon {
     background-color: #4A772A; /* 列车在1分钟内到达时的背景色 */
 }
+.leaving-soon {
+    background-color: #FF0000;
+}
