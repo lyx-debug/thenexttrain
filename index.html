@@ -1,67 +1,169 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>选择线路</title>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁-the-next-train</h1>
     <style>
-        .container {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr); /* 设置两列 */
-            gap: 20px; /* 设置按钮之间的间距 */
-        }
-        .line-button {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 300px; /* 按钮长度 */
+        body {
+            font-family: "SimHei", sans-serif;
+            max-width: 800px;
+            margin: 20px auto;
             padding: 20px;
-            background-color: #f0f0f0;
-	    background: <img src="images/line1.jpg">
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            text-decoration: none;
-            color: black; /* 默认颜色，可移除 */
         }
-    	
 
-	.img-usual { 
-			width: 250px; 
-			height: 45px; 
-	}
-	.img-small { 
-			width: 250px; 
-			height: 40px; 
-	}
-	
-.line5 { color: #ff0000; } 
-.line7 { color: #00FFFF; }
- .line10 { color: #FFA500; } 
-.lineS1 { color: #800080; }
- .lineS3 { color: #A52A2A; }
- .lineS4 { color: #008080; }
- .lineS6 { color: #808000; } 
-.lineS7 { color: #808080; }
- .lineS8 { color: #000080; }
- .lineS9 { color: #008000; }
+        .search-box {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .result {
+            margin-top: 20px;
+        }
+
+        .station-name {
+            font-size: 24px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+
+        .line-info {
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            color: #FFFFFF;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .autocomplete-items {
+            position: absolute;
+            border: 1px solid #d4d4d4;
+            border-bottom: none;
+            border-top: none;
+            z-index: 99;
+            top: 100%;
+            left: 0;
+            right: 0;
+        }
+
+        .autocomplete-item {
+            padding: 10px;
+            cursor: pointer;
+            background: #fff;
+            border-bottom: 1px solid #d4d4d4;
+        }
+
+        .autocomplete-item:hover {
+            background: #e9e9e9;
+        }
     </style>
 </head>
 <body>
-    <h1>请选择您需要乘坐的线路:</h1>
-    <div class="container">
-        <a href="line1.html" class="line-button line1"><img src="images/line1.jpg" class="img-usual"></a>
-        <a href="line2.html" class="line-button line2"><img src="images/line2.jpg" class="img-usual"></a>
-        <a href="line3.html" class="line-button line3"><img src="images/line3.jpg" class="img-usual"></a>
-        <a href="chooseline4.html" class="line-button line4"><img src="images/line4.jpg" class="img-usual"></a>
-        <a href="chooseline5.html" class="line-button line5"><img src="images/line5.jpg" class="img-usual">暂停运营</a>
-        <a href="line7.html" class="line-button line7"><img src="images/line7.jpg" class="img-usual"></a>
-        <a href="line10.html" class="line-button line10"><img src="images/line10.jpg" class="img-usual"></a>
-        <a href="airport.html" class="line-button lineS1"><img src="images/lineS1.jpg" class="img-small" ></a>
-        <a href="ninghe.html" class="line-button lineS3"><img src="images/lineS3.jpg" class="img-small"></a>
-        <a href="ningchu.html" class="line-button lineS4"><img src="images/lineS4.jpg" class="img-small"></a>
-        <a href="ningju.html" class="line-button lineS6"><img src="images/lineS6.jpg" class="img-small"></a>
-        <a href="ningli.html" class="line-button lineS7"><img src="images/lineS7.jpg" class="img-small"></a>
-        <a href="ningtian.html" class="line-button lineS8"><img src="images/lineS8.jpg" class="img-small"></a>
-        <a href="ninggao.html" class="line-button lineS9"><img src="images/lineS9.jpg" class="img-small"></a>
+    <div class="search-box">
+        <input type="text" id="stationInput" placeholder="输入地铁站名称..." oninput="showSuggestions(this.value)">
+        <button onclick="searchStation()">搜索</button>
     </div>
+    <div id="result" class="result"></div>
+    <div id="autocomplete-list" class="autocomplete-items"></div>
+
+    <script src="stationData.js"></script>
+    <script>
+        function showSuggestions(input) {
+            const autocompleteList = document.getElementById("autocomplete-list");
+            autocompleteList.innerHTML = "";
+            if (!input) return;
+
+            const suggestions = metroLines.flatMap(line => 
+                line.stations.filter(station => 
+                    station.name.toLowerCase().includes(input.toLowerCase())
+                ).map(station => ({ station, line }))
+            );
+
+            suggestions.forEach(suggestion => {
+                const item = document.createElement("div");
+                item.className = "autocomplete-item";
+                item.innerHTML = `<strong>${suggestion.station.name}</strong> - ${suggestion.line.name}`;
+                item.addEventListener("click", () => {
+                    document.getElementById("stationInput").value = suggestion.station.name;
+                    autocompleteList.innerHTML = "";
+                });
+                autocompleteList.appendChild(item);
+            });
+        }
+
+        function searchStation() {
+            const input = document.getElementById("stationInput").value.trim();
+            const resultDiv = document.getElementById("result");
+            resultDiv.innerHTML = "";
+
+            if (!input) {
+                resultDiv.innerHTML = "<div>请输入站点名称</div>";
+                return;
+            }
+
+            const foundLines = metroLines.filter(line => 
+                line.stations.some(station => 
+                    station.name.toLowerCase() === input.toLowerCase()
+                )
+            );
+
+            if (foundLines.length === 0) {
+                resultDiv.innerHTML = "<div>未找到相关站哦，请重试～</div>";
+                return;
+            }
+
+            const output = document.createElement("div");
+            output.innerHTML = `<div class="station-name">${input}</div>`;
+
+            const lineNames = foundLines.map(line => line.name).join(" ");//线路文字间隔
+
+            // 判断站点是否为换乘站
+            const isTransferStation = foundLines.some(line =>
+                line.stations.some(station => 
+                    station.name.toLowerCase() === input.toLowerCase() && station.isTransferStation
+                )
+            );
+
+            const lineInfo = document.createElement("div");
+            lineInfo.className = "line-info";
+            lineInfo.style.background = isTransferStation 
+                ? `linear-gradient(to right, ${foundLines.map(line => line.color).join(", ")})`
+                : foundLines[0].color;
+
+            lineInfo.innerHTML = `
+                <h3>${lineNames}</h3>
+            `;
+            lineInfo.addEventListener("click", () => {
+                const stationHtmlMapping = {
+                    "鸡鸣寺": "./station/4/cs2.html",
+                    "鼓楼": "gl.html",
+                    // 继续添加其他站点和对应的 HTML 页面
+                };
+
+                const htmlPage = stationHtmlMapping[input] || "default.html";
+                window.location.href = htmlPage;
+            });
+            output.appendChild(lineInfo);
+
+            resultDiv.appendChild(output);
+        }
+    </script>
 </body>
 </html>

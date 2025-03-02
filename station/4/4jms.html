@@ -1,3 +1,11 @@
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
@@ -52,11 +60,48 @@
     </tbody>
 </table>
 
+<body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <script type="module">
-    // 列车到站时间列表（格式为小时:分钟:秒）
-    
-    import arrivalTimes from "./js/4jmstrainData.js"
-    
+    import arrivalTimes from "./js/4jmstrainData.js";
+
+    // 获取当前日期的星期几
+    function getWeekDay() {
+        const now = new Date();
+        return now.getDay(); // 返回值：0（周日）到6（周六）
+    }
+
+    // 根据星期几选择相应的数据
+    function getArrivalTimesForToday() {
+        const weekDay = getWeekDay();
+        console.log(`Today is day: ${weekDay}`); // 调试信息
+
+        const arrivalTimesForToday = {
+            0: arrivalTimes.sunday,
+            1: arrivalTimes.monday,
+            2: arrivalTimes.tuesday,
+            3: arrivalTimes.wednesday,
+            4: arrivalTimes.thursday,
+            5: arrivalTimes.friday,
+            6: arrivalTimes.saturday,
+        }[weekDay] || [];
+
+        console.log("Arrival times for today:", arrivalTimesForToday); // 调试信息
+        return Array.isArray(arrivalTimesForToday) ? arrivalTimesForToday : [];
+    }
 
     function padTime(number) {
         return String(number).padStart(2, '0');
@@ -103,20 +148,28 @@
         tableBody.innerHTML = ''; // 清空表格内容
 
         const currentTimeString = getCurrentTimeString();
+        console.log(`Current time: ${currentTimeString}`); // 调试信息
         const currentTime = parseTimeString(currentTimeString);
 
-        
-    // 过滤掉已经过站的列车和到站时间超过30分钟的列车
-    const filteredArrivalTimes = arrivalTimes.filter(train => {
-        const arrivalTime = parseTimeString(train.time);
-        const timeRemaining = calculateTimeRemaining(arrivalTime, currentTime);
-        const arrivalTotalSeconds = arrivalTime.hours * 3600 + arrivalTime.minutes * 60 + arrivalTime.seconds;
-        const currentTotalSeconds = currentTime.hours * 3600 + currentTime.minutes * 60 + currentTime.seconds;
+        const arrivalTimesForToday = getArrivalTimesForToday();
+        console.log(`Arrival times for today:`, arrivalTimesForToday); // 调试信息
 
-        return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 1800; // 30分钟 = 1800秒
-    });
+        if (arrivalTimesForToday.length === 0) {
+            console.log("No arrival times available for today.");
+            return;
+        }
 
+        // 过滤掉已经过站的列车和到站时间超过30分钟的列车
+        const filteredArrivalTimes = arrivalTimesForToday.filter(train => {
+            const arrivalTime = parseTimeString(train.time);
+            const timeRemaining = calculateTimeRemaining(arrivalTime, currentTime);
+            const arrivalTotalSeconds = arrivalTime.hours * 3600 + arrivalTime.minutes * 60 + arrivalTime.seconds;
+            const currentTotalSeconds = currentTime.hours * 3600 + currentTime.minutes * 60 + currentTime.seconds;
 
+            return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 1800; // 30分钟 = 1800秒
+        });
+
+        console.log(`Filtered arrival times:`, filteredArrivalTimes); // 调试信息
 
         // 计算剩余时间并排序
         const sortedArrivalTimes = filteredArrivalTimes.map(train => ({
@@ -124,6 +177,8 @@
             timeRemaining: calculateTimeRemaining(parseTimeString(train.time), currentTime)
         })).sort((a, b) => a.timeRemaining.hours * 3600 + a.timeRemaining.minutes * 60 + a.timeRemaining.seconds - 
                           (b.timeRemaining.hours * 3600 + b.timeRemaining.minutes * 60 + b.timeRemaining.seconds));
+
+        console.log(`Sorted arrival times:`, sortedArrivalTimes); // 调试信息
 
         sortedArrivalTimes.forEach(train => {
             const row = document.createElement('tr');
@@ -156,19 +211,13 @@
                 statusCell.textContent = '即将进站'; 
             }
 
-
-
             let statusUpdated = false;
 
             function updateStatus() {
                 if (train.timeRemaining.totalSeconds > 0) {
                     if (train.timeRemaining.totalSeconds <= 60) {
                         statusCell.textContent = '即将进站';
-                        if (train.timeRemaining.totalSeconds <= 60) {
-                            row.classList.add('arriving-soon');
-                        } else {
-                            row.classList.remove('arriving-soon');
-                        }
+                        row.classList.add('arriving-soon');
                     } else {
                         statusCell.textContent = '正常';
                         row.classList.remove('arriving-soon');
@@ -176,12 +225,10 @@
                 } else {
                     if (train.timeRemaining.totalSeconds === 0) {
                         statusUpdated = true;
-                        setTimeout(() => {
-                            statusCell.textContent = '正在离开';
-                        }, 10000); // 10秒后显示“正在离开”
+                        statusCell.textContent = '正在离开';
                         setTimeout(() => {
                             row.style.display = 'none';
-                        }, 15000); // 再等待5秒钟后隐藏行
+                        }, 5000); // 再等待5秒钟后隐藏行
                     }
                 }
             }
@@ -197,18 +244,11 @@
             }, 1000);
 
             // 如果列车在1分钟内到达，将该行的背景色更改为深绿色
-            
-         
             if (train.timeRemaining.totalSeconds <= 60 && train.timeRemaining.totalSeconds > 0) {
                 row.classList.add('arriving-soon');
             }
 
-
-
-
-
             updateStatus(); // 初始更新
-
             tableBody.appendChild(row);
         });
     }

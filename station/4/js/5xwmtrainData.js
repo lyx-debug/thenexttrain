@@ -2,7 +2,7 @@
 
 const arrivalTimes = {
 
-	sunday: [
+	tuesday: [
 
 		{ destination: '仙林湖', time: "06:10:00", jiaolu: "大交路" },
 		{ destination: '东流', time: "06:15:00", jiaolu: "小交路" }, // 为之前缺失 jiaolu 属性的对象添加了 jiaolu 属性，可根据实际情况修改
@@ -209,7 +209,7 @@ const arrivalTimes = {
         { destination: '终点站K', time: "14:00:00", jiaolu: "模式A" },
         { destination: '终点站L', time: "14:30:00", jiaolu: "模式B" },
     ],
-    saturday: [
+    sunday: [
         { destination: '终点站M', time: "15:00:00", jiaolu: "模式A" },
         { destination: '终点站N', time: "15:10:00", jiaolu: "模式B" },
         { destination: '终点站M', time: "15:13:00", jiaolu: "模式A" },
@@ -219,7 +219,7 @@ const arrivalTimes = {
         { destination: '终点站M', time: "15:24:00", jiaolu: "模式A" },
  
     ],
-    tuesday: [
+    saturday: [
         { destination: '终点站A', time: "10:00:00", jiaolu: "模式A" },
         { destination: '终点站B', time: "10:15:00", jiaolu: "模式B" },
     ],
