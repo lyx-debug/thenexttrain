@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁-the-next-train</h1>
+    <title>南京地铁-the-next-train</title>
     <style>
         body {
             font-family: "SimHei", sans-serif;
@@ -11,10 +11,45 @@
             padding: 20px;
         }
 
+        .navbar {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #f0f0f0; /* 浅灰色背景 */
+            padding: 15px 30px;
+            border-bottom: 2px solid #ccc;
+            box-sizing: border-box;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 添加柔和的阴影效果 */
+            border-radius: 5px; /* 让导航栏有轻微的圆角 */
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: #333; /* 深灰色文字 */
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s ease; /* 添加鼠标悬停效果的过渡动画 */
+        }
+
+        .navbar a:hover {
+            color: #666; /* 鼠标悬停时变为更浅的灰色 */
+        }
+
+        .navbar img {
+            height: 30px; /* 调整图片大小 */
+            width: 100px;
+            object-fit: cover;
+            border-radius: 5px; /* 设置图片边角为轻微圆角 */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 给图片添加小的阴影效果 */
+        }
+
+
+
         .search-box {
             display: flex;
             gap: 10px;
-            margin-bottom: 20px;
+            margin: 20px 0;
         }
 
         input {
@@ -76,6 +111,16 @@
     </style>
 </head>
 <body>
+    <!-- 导航栏 -->
+    <div class="navbar">
+        <!-- 左侧导航按钮 -->
+        <a href="about.html" target="_self">关于</a>
+
+        <!-- 右侧图片占位符 -->
+        <img src="placeholder.png" alt="">
+    </div>
+
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁-the-next-train</h1>
     <div class="search-box">
         <input type="text" id="stationInput" placeholder="输入地铁站名称..." oninput="showSuggestions(this.value)">
         <button onclick="searchStation()">搜索</button>
@@ -157,7 +202,7 @@
                     // 继续添加其他站点和对应的 HTML 页面
                 };
 
-                const htmlPage = stationHtmlMapping[input] || "default.html";
+                const htmlPage = stationHtmlMapping[input] || "./default.html";
                 window.location.href = htmlPage;
             });
             output.appendChild(lineInfo);

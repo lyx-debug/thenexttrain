@@ -17,7 +17,7 @@ const metroLines = [
             { name: "珠江路", isTransferStation: false },
             { name: "新街口", isTransferStation: true },
             { name: "张府园", isTransferStation: false },
-            { name: "三山街", isTransferStation: false },
+            { name: "三山街", isTransferStation: true },
             { name: "中华门", isTransferStation: false },
             { name: "安德门", isTransferStation: false },
             { name: "天隆寺", isTransferStation: false },
@@ -74,7 +74,7 @@ const metroLines = [
             { name: "浮桥", isTransferStation: false },
             { name: "大行宫", isTransferStation: true },
             { name: "常府街", isTransferStation: false },
-            { name: "夫子庙", isTransferStation: false },
+            { name: "夫子庙", isTransferStation: true },
             { name: "武定门", isTransferStation: false },
             { name: "雨花门", isTransferStation: false },
             { name: "卡子门", isTransferStation: false },
@@ -85,7 +85,7 @@ const metroLines = [
             { name: "胜太西路", isTransferStation: false },
             { name: "天元西路", isTransferStation: false },
             { name: "九龙湖", isTransferStation: false },
-            { name: "诚信大道", isTransferStation: false },
+            { name: "诚信大道", isTransferStation: true },
             { name: "东大九龙湖校区", isTransferStation: false },
             { name: "秣周东路", isTransferStation: false }
         ]
@@ -96,16 +96,17 @@ const metroLines = [
         stations: [
             { name: "龙江", isTransferStation: false },
             { name: "草场门", isTransferStation: false },
+            //{ name: "云南路", isTransferStation: true },
             { name: "云南路", isTransferStation: false },
             { name: "鼓楼", isTransferStation: true },
             { name: "鸡鸣寺", isTransferStation: true },
             { name: "九华山", isTransferStation: false },
-            { name: "岗子村", isTransferStation: false },
+            { name: "岗子村", isTransferStation: true },
             { name: "蒋王庙", isTransferStation: false },
             { name: "王家湾", isTransferStation: false },
             { name: "聚宝山", isTransferStation: false },
             { name: "苏宁总部·徐庄", isTransferStation: false },
-            { name: "金马路", isTransferStation: false },
+            { name: "金马路", isTransferStation: true },
             { name: "汇通路", isTransferStation: false },
             { name: "灵山", isTransferStation: false },
             { name: "东流", isTransferStation: false },
@@ -115,17 +116,102 @@ const metroLines = [
         ]
     },
     {
+        name: "5号线",
+        color: "#FDDA24",
+        stations: [
+            { name: "吉印大道", isTransferStation: true },
+            { name: "九龙湖南", isTransferStation: false },
+            { name: "诚信大道", isTransferStation: true },
+            { name: "前庄", isTransferStation: false },
+            { name: "科宁路", isTransferStation: false },
+            { name: "竹山路", isTransferStation: true },
+            { name: "新亭路", isTransferStation: false },
+            { name: "东山", isTransferStation: false },
+            { name: "文靖路", isTransferStation: false }
+            /*{ name: "东山香樟园", isTransferStation: false },
+            { name: "神机营", isTransferStation: false },
+            { name: "大校场", isTransferStation: false },
+            { name: "七桥瓮", isTransferStation: false },
+            { name: "石门坎", isTransferStation: false },
+            { name: "光华门", isTransferStation: false },
+            { name: "通济门", isTransferStation: false },
+            { name: "夫子庙", isTransferStation: true },
+            { name: "三山街", isTransferStation: true },
+            { name: "朝天宫", isTransferStation: false },
+            { name: "上海路", isTransferStation: true },
+            { name: "五台山", isTransferStation: false },
+            { name: "云南路", isTransferStation: true },
+            { name: "青春广场", isTransferStation: false },
+            { name: "虹桥", isTransferStation: false },
+            { name: "福建路", isTransferStation: true },
+            { name: "盐仓桥", isTransferStation: false },
+            { name: "下关", isTransferStation: true },
+            { name: "静海寺", isTransferStation: false },
+            { name: "南京西站", isTransferStation: false },
+            { name: "方家营", isTransferStation: false } */
+        ]
+    },
+    {
+        name: "6号线",
+        color: "#00B2A9",
+        stations: [
+            { name: "南京南站", isTransferStation: true },
+            { name: "夹岗", isTransferStation: false },
+            { name: "十月广场", isTransferStation: false },
+            { name: "兴智街", isTransferStation: false },
+            { name: "兴学路", isTransferStation: false },
+            { name: "燕江新城", isTransferStation: false },
+            { name: "万寿", isTransferStation: true },
+            { name: "营苑南路", isTransferStation: false },
+            { name: "红山新城", isTransferStation: false },
+            { name: "花园路", isTransferStation: false },
+            { name: "岗子村", isTransferStation: true },
+           /* { name: "大校场", isTransferStation: false },
+            { name: "七桥瓮", isTransferStation: false },
+            { name: "石门坎", isTransferStation: false },
+            { name: "光华门", isTransferStation: false },
+            { name: "通济门", isTransferStation: false },
+            { name: "夫子庙", isTransferStation: true },
+            { name: "三山街", isTransferStation: true },
+            { name: "朝天宫", isTransferStation: false },
+            { name: "上海路", isTransferStation: true },
+            { name: "五台山", isTransferStation: false },
+            { name: "云南路", isTransferStation: true },
+            { name: "青春广场", isTransferStation: false },
+            { name: "虹桥", isTransferStation: false },
+            { name: "福建路", isTransferStation: true },
+            { name: "盐仓桥", isTransferStation: false },
+            { name: "下关", isTransferStation: true },
+            { name: "静海寺", isTransferStation: false },*/
+            { name: "金陵石化", isTransferStation: false },
+            { name: "栖霞山", isTransferStation: false } 
+        ]
+    },
+    {
         name: "S1号线",
         color: "#00B2A9",
         stations: [
             { name: "南京南站", isTransferStation: true },
             { name: "翠屏山", isTransferStation: false },
             { name: "河海大学·佛城西路", isTransferStation: false },
-            { name: "吉印大道", isTransferStation: false },
+            { name: "吉印大道", isTransferStation: true },
             { name: "正方中路", isTransferStation: false },
             { name: "翔宇路北", isTransferStation: false },
-            { name: "翔宇路南", isTransferStation: false },
+            { name: "翔宇路南", isTransferStation: true },
             { name: "禄口机场", isTransferStation: false }
+        ]
+    },
+    {
+        name: "S9号线",
+        color: "#F9BB28",
+        stations: [
+            
+            { name: "翔宇路南", isTransferStation: true },
+            { name: "铜山", isTransferStation: false },
+            { name: "石湫", isTransferStation: false },
+            { name: "明觉", isTransferStation: false },
+            { name: "团结圩", isTransferStation: false },
+            { name: "高淳", isTransferStation: false }
         ]
     }
 ];
