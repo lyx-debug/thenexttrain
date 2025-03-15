@@ -43,7 +43,7 @@ tbody tr:nth-child(even) {
 }
 
 tbody tr:hover {
-    background-color: #5F60A2; /* 光标悬停颜色 */
+    background-color: #808080; /* 光标悬停颜色 */
     cursor: pointer;
 }
 
