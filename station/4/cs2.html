@@ -34,7 +34,7 @@
         }
 
        .arriving-soon {
-            background-color: #4A772A;
+            background-color: #808080;
         }
     </style>
 </head>
@@ -237,7 +237,7 @@
 
                 function updateStatus() {
                     if (train.timeRemaining.totalSeconds > 0) {
-                        if (train.timeRemaining.totalSeconds <= 60) {
+                        if (train.timeRemaining.totalSeconds <= 60) {6
                             statusCell.textContent = '即将进站';
                             row.classList.add('arriving-soon');
                         } else {

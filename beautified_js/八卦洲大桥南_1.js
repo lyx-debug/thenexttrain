@@ -1,7682 +1,1935 @@
 const arrivalTimes = {
-    monday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:42:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:46:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:50:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:54:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:58:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:02:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:06:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:10:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:14:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:18:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:22:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:26:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:30:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:34:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:38:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:42:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:46:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:50:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:10:06",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:13:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:16:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:20:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:23:16",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:26:36",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:41:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:44:44",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:47:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:50:04",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:52:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:54:48",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:57:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:02:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:07:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:15:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:18:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:20:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:23:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:28:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:31:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:34:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:39:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:42:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:47:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:50:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:52:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:55:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:58:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:00:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:06:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:14:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:22:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:26:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:30:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:34:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:42:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:59:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:07:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:11:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:16:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:20:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:24:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:29:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:33:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:37:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:41:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:50:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:54:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:58:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:02:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:19:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:24:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:28:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:32:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:41:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:45:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:49:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:53:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:02:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:06:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:10:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:15:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:19:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:23:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:32:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:36:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:40:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:49:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:53:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:57:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:01:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:06:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:14:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:23:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:27:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:57:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:01:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:05:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:14:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:18:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:22:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:31:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:35:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:39:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:43:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:48:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:52:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:56:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:09:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:13:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:17:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:22:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:26:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:30:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:34:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:39:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:43:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:47:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:51:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:56:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:00:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:04:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:13:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:15",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:24:33",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:28:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:32:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:35:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:38:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:42:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:45:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:49:27",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:56:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:59:53",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:03:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:06:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:10:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:13:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:17:19",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:20:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:24:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:27:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:30:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:32:54",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:35:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:41:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:43:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:48:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:51:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:53:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:56:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:01:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:04:26",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:07:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:09:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:17:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:21:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:26:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:29:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:37:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:42:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:45:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:48:09",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:52:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:59:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:03:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:07:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:10:08",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:13:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:16:01",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:19:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:22:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:26:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:29:57",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:33:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:40:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:43:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:47:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:50:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:54:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:01:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:04:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:09:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:13:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:17:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:22:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:26:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:34:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:38:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:43:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:47:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:51:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:55:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:05:28",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:09:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:12:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:21:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:25:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:29:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:34:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:38:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:08:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:15:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:21:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:28:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:35:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:16:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:24:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:28:34",
-        jiaolu: "小交路"
-    }],
-    tuesday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:42:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:46:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:50:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:54:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:58:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:02:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:06:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:10:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:14:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:18:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:22:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:26:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:30:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:34:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:38:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:42:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:46:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:50:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:10:06",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:13:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:16:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:20:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:23:16",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:26:36",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:41:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:44:44",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:47:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:50:04",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:52:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:54:48",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:57:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:02:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:07:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:15:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:18:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:20:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:23:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:28:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:31:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:34:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:39:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:42:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:47:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:50:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:52:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:55:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:58:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:00:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:06:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:14:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:22:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:26:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:30:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:34:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:42:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:59:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:07:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:11:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:16:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:20:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:24:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:29:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:33:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:37:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:41:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:50:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:54:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:58:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:02:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:19:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:24:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:28:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:32:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:41:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:45:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:49:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:53:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:02:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:06:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:10:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:15:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:19:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:23:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:32:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:36:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:40:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:49:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:53:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:57:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:01:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:06:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:14:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:23:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:27:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:57:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:01:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:05:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:14:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:18:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:22:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:31:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:35:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:39:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:43:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:48:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:52:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:56:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:09:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:13:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:17:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:22:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:26:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:30:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:34:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:39:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:43:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:47:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:51:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:56:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:00:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:04:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:13:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:15",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:24:33",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:28:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:32:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:35:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:38:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:42:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:45:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:49:27",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:56:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:59:53",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:03:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:06:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:10:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:13:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:17:19",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:20:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:24:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:27:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:30:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:32:54",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:35:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:41:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:43:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:48:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:51:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:53:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:56:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:01:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:04:26",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:07:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:09:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:17:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:21:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:26:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:29:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:37:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:42:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:45:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:48:09",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:52:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:59:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:03:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:07:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:10:08",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:13:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:16:01",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:19:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:22:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:26:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:29:57",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:33:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:40:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:43:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:47:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:50:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:54:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:01:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:04:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:09:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:13:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:17:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:22:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:26:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:34:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:38:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:43:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:47:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:51:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:55:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:05:28",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:09:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:12:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:21:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:25:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:29:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:34:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:38:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:08:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:15:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:21:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:28:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:35:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:16:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:24:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:28:34",
-        jiaolu: "小交路"
-    }],
-    wednesday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:42:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:46:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:50:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:54:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:58:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:02:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:06:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:10:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:14:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:18:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:22:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:26:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:30:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:34:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:38:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:42:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:46:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:50:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:10:06",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:13:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:16:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:20:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:23:16",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:26:36",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:41:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:44:44",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:47:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:50:04",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:52:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:54:48",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:57:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:02:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:07:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:15:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:18:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:20:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:23:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:28:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:31:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:34:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:39:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:42:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:47:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:50:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:52:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:55:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:58:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:00:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:06:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:14:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:22:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:26:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:30:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:34:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:42:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:59:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:07:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:11:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:16:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:20:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:24:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:29:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:33:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:37:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:41:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:50:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:54:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:58:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:02:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:19:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:24:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:28:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:32:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:41:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:45:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:49:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:53:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:02:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:06:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:10:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:15:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:19:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:23:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:32:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:36:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:40:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:49:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:53:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:57:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:01:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:06:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:14:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:23:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:27:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:57:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:01:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:05:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:14:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:18:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:22:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:31:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:35:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:39:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:43:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:48:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:52:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:56:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:09:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:13:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:17:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:22:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:26:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:30:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:34:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:39:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:43:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:47:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:51:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:56:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:00:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:04:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:13:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:15",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:24:33",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:28:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:32:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:35:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:38:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:42:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:45:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:49:27",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:56:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:59:53",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:03:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:06:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:10:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:13:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:17:19",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:20:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:24:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:27:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:30:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:32:54",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:35:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:41:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:43:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:48:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:51:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:53:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:56:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:01:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:04:26",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:07:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:09:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:17:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:21:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:26:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:29:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:37:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:42:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:45:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:48:09",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:52:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:59:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:03:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:07:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:10:08",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:13:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:16:01",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:19:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:22:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:26:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:29:57",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:33:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:40:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:43:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:47:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:50:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:54:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:01:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:04:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:09:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:13:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:17:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:22:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:26:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:34:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:38:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:43:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:47:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:51:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:55:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:05:28",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:09:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:12:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:21:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:25:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:29:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:34:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:38:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:08:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:15:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:21:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:28:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:35:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:16:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:24:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:28:34",
-        jiaolu: "小交路"
-    }],
-    thursday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:42:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:46:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:50:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:54:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:58:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:02:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:06:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:10:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:14:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:18:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:22:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:26:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:30:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:34:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:38:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:42:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:46:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:50:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:10:06",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:13:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:16:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:20:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:23:16",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:26:36",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:41:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:44:44",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:47:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:50:04",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:52:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:54:48",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:57:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:02:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:07:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:15:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:18:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:20:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:23:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:28:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:31:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:34:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:39:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:42:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:47:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:50:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:52:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:55:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:58:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:00:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:06:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:14:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:22:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:26:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:30:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:34:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:42:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:59:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:07:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:11:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:16:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:20:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:24:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:29:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:33:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:37:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:41:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:50:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:54:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:58:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:02:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:19:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:24:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:28:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:32:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:41:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:45:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:49:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:53:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:02:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:06:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:10:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:15:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:19:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:23:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:32:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:36:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:40:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:49:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:53:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:57:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:01:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:06:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:14:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:23:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:27:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:57:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:01:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:05:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:14:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:18:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:22:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:31:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:35:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:39:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:43:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:48:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:52:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:56:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:09:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:13:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:17:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:22:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:26:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:30:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:34:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:39:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:43:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:47:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:51:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:56:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:00:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:04:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:13:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:15",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:24:33",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:28:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:32:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:35:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:38:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:42:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:45:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:49:27",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:56:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:59:53",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:03:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:06:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:10:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:13:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:17:19",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:20:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:24:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:27:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:30:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:32:54",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:35:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:41:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:43:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:48:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:51:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:53:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:56:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:01:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:04:26",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:07:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:09:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:17:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:21:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:26:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:29:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:37:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:42:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:45:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:48:09",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:52:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:59:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:03:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:07:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:10:08",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:13:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:16:01",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:19:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:22:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:26:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:29:57",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:33:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:40:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:43:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:47:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:50:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:54:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:01:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:04:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:09:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:13:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:17:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:22:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:26:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:34:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:38:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:43:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:47:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:51:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:55:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:05:28",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:09:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:12:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:21:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:25:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:29:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:34:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:38:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:08:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:15:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:21:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:28:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:35:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:16:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:24:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:28:34",
-        jiaolu: "小交路"
-    }],
-    sunday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:47:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:56:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:01:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:05:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:09:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:14:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:18:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:23:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:27:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:36:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:40:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:45:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:49:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:11:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:16:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:20:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:24:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:33:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:42:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:47:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:51:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:55:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:00:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:04:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:09:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:13:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:17:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:22:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:31:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:35:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:40:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:48:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:53:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:57:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:04:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:08:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:12:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:16:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:20:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:23:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:27:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:31:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:35:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:43:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:58:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:02:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:06:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:13:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:17:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:21:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:25:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:29:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:32:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:40:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:44:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:48:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:52:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:55:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:59:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:03:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:22:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:26:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:30:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:38:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:41:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:45:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:49:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:53:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:57:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:01:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:04:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:08:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:12:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:16:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:20:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:24:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:31:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:35:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:39:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:43:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:47:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:50:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:54:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:58:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:02:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:06:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:13:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:17:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:21:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:25:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:29:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:33:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:56:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:03:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:07:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:11:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:15:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:19:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:22:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:26:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:30:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:34:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:38:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:42:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:49:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:53:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:57:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:01:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:16:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:20:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:24:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:28:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:35:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:39:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:43:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:47:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:51:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:54:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:58:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:02:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:06:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:14:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:25:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:29:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:33:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:37:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:40:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:48:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:52:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:56:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:00:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:03:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:07:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:15:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:19:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:23:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:30:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:34:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:42:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:49:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:53:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:57:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:01:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:09:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:16:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:20:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:28:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:43:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:47:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:51:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:58:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:02:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:06:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:14:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:21:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:25:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:29:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:33:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:41:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:48:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:52:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:02:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:06:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:11:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:16:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:21:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:25:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:35:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:40:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:45:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:49:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:54:33",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:59:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:08:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:13:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:18:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:23:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:32:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:37:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:46:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:52:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:59:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:05:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:12:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:19:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:25:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:32:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:39:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:45:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:52:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:00:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:16:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "天隆寺",
-        time: "23:24:00",
-        jiaolu: "小交路"
-    }],
-    friday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:42:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:46:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:50:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:54:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:58:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:02:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:06:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:10:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:14:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:18:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:22:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:26:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:30:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:34:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:38:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:42:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:46:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:50:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:46",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:10:06",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:13:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:16:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:20:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:23:16",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:26:36",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:41:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:44:44",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:47:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:50:04",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:52:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:54:48",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:57:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:02:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:07:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:15:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:18:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:20:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:23:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:28:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:31:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:34:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:39:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:42:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:47:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:50:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:52:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:55:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:58:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:00:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:06:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:14:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:22:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:26:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:30:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:34:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:42:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:59:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:03:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:07:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:11:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:16:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:20:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:24:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:29:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:33:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:37:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:41:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:50:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:54:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:58:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:02:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:19:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:24:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:28:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:32:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:41:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:45:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:49:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:53:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:02:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:06:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:10:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:15:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:19:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:23:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:32:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:36:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:40:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:49:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:53:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:57:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:01:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:06:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:14:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:23:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:27:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:57:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:01:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:05:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:14:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:18:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:22:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:31:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:35:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:39:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:43:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:48:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:52:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:56:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:09:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:13:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:17:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:22:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:26:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:30:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:34:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:39:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:43:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:47:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:51:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:56:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:00:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:04:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:13:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:15",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:24:33",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:28:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:32:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:35:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:38:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:42:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:45:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:49:27",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:52:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:56:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:59:53",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:03:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:06:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:10:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:13:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:17:19",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:20:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:24:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:27:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:30:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:32:54",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:35:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:41:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:43:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:48:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:51:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:53:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:56:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:01:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:04:26",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:07:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:09:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:17:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:21:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:26:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:29:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:37:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:42:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:45:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:48:09",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:52:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:59:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:03:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:07:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:10:08",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:13:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:16:01",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:19:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:22:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:26:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:29:57",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:33:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:40:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:43:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:47:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:50:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:54:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:01:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:04:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:09:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:13:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:17:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:22:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:26:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:34:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:38:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:43:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:47:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:51:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:55:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:05:28",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:09:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:12:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:21:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:25:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:29:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:34:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:38:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:08:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:15:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:21:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:28:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:35:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:48:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:01:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:10:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:30:00",
-        jiaolu: "大交路"
-    }],
-    saturday: [{
-        destination: "中国药科大学",
-        time: "05:30:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:34:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:38:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:47:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "05:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "05:56:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:01:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:05:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:09:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:14:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:18:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:23:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:27:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:36:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:40:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:45:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:49:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "06:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "06:58:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:02:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:07:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:11:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:16:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:20:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:24:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:29:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:33:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:38:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:42:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:47:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "07:51:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "07:55:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:00:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:04:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:09:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:13:30",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:17:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:22:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:26:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:31:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:35:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:40:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:44:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:48:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "08:53:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "08:57:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:00:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:04:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:08:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:12:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:16:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:20:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:23:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:27:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:31:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:35:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:39:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:43:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:46:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:50:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "09:54:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "09:58:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:02:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:06:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:09:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:13:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:17:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:21:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:25:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:29:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:32:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:36:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:40:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:44:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:48:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:52:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "10:55:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "10:59:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:03:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:07:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:11:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:15:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:18:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:22:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:26:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:30:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:34:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:38:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:41:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:45:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:49:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "11:53:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "11:57:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:01:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:04:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:08:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:12:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:16:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:20:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:24:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:31:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:35:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:39:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:43:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:47:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:50:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "12:54:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "12:58:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:02:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:06:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:10:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:13:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:17:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:21:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:25:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:29:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:33:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:36:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:40:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:44:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:52:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "13:56:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "13:59:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:03:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:07:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:11:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:15:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:19:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:22:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:26:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:30:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:34:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:38:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:42:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:45:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:49:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "14:53:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "14:57:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:01:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:05:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:08:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:16:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:20:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:24:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:28:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:31:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:35:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:39:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:43:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:47:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:51:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "15:54:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "15:58:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:02:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:06:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:10:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:14:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:17:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:21:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:25:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:29:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:33:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:37:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:40:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:44:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:48:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "16:52:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "16:56:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:00:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:03:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:07:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:15:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:19:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:23:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:26:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:30:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:34:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:38:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:42:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:46:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:49:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "17:53:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "17:57:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:01:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:05:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:09:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:12:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:16:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:20:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:24:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:28:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:32:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:35:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:39:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:43:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:47:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:51:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "18:55:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "18:58:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:02:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:06:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:10:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:14:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:18:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:21:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:25:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:29:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:33:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:37:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "19:41:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:44:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:48:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:52:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "19:57:21",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:02:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:06:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:11:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:16:25",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:21:11",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:25:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:30:43",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:35:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:40:15",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:45:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:49:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "20:54:33",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "20:59:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:08:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "河定桥",
-        time: "21:13:37",
-        jiaolu: "小交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:18:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:23:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:27:55",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:32:41",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:37:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:42:13",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:46:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:52:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "21:59:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:05:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:12:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:19:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:25:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:32:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:39:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:45:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "22:52:29",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:00:09",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:10:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "中国药科大学",
-        time: "23:30:00",
-        jiaolu: "大交路"
-    }]
+  monday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:42:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:46:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:50:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:54:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:58:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:02:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:06:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:10:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:14:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:18:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:22:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:26:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:30:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:34:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:38:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:42:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:46:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:50:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:10:06", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:13:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:16:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:20:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:23:16", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:26:36", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:36", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:31:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:32", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:41:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:44:44", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:47:44", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:50:04", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:52:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:54:48", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:57:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:02:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:07:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:15:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:18:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:20:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:23:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:26:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:28:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:31:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:34:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:39:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:42:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:47:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:50:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:52:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:55:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:58:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:00:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:03:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "09:06:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:14:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:22:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:26:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:30:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:34:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:42:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:59:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:03:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:07:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:11:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:16:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:20:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:24:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:29:44", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:33:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:37:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:41:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:50:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:54:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:58:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:02:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:19:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:24:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:28:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:32:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:41:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:45:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:49:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:53:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:58:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:02:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:06:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:10:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:15:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:19:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:23:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:32:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:36:12", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:40:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:44:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:49:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:53:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:57:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:01:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:06:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:10:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:14:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:23:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:27:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:31:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:57:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:01:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:05:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:14:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:18:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:22:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:31:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:35:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:39:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:43:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:48:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:52:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:56:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:09:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:13:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:17:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:22:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:26:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:30:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:34:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:39:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:43:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:47:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:51:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:56:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:00:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:04:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:13:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:15", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:24:33", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:28:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:32:01", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:35:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:38:59", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:42:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:45:57", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:49:27", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:56:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:59:53", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:03:23", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:06:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:10:21", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:13:49", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:17:19", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:20:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:24:17", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:27:47", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:30:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:32:54", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:35:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:41:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:43:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:48:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:51:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:53:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:56:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:59:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:01:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:04:26", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:07:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:09:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:12:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:15:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:17:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:21:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:26:50", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:29:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:37:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:42:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:45:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:48:09", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:52:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:59:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:03:20", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:07:20", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:10:08", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:13:41", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:16:01", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:19:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:22:59", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:26:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:29:57", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:33:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:37:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:40:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:43:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:47:21", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:50:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:54:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:01:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:04:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:09:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:13:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:17:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:22:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:26:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:34:37", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:38:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:43:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:47:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:51:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:55:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:00:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:05:28", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:09:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:12:43", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:17:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:21:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:25:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:29:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:34:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:38:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:08:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:15:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:21:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:28:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:35:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:41:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:08:00", jiaolu: "大交路" },
+    { destination: "天隆寺", time: "23:16:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:24:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:28:34", jiaolu: "小交路" },
+  ],
+  tuesday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:42:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:46:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:50:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:54:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:58:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:02:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:06:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:10:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:14:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:18:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:22:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:26:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:30:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:34:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:38:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:42:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:46:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:50:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:10:06", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:13:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:16:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:20:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:23:16", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:26:36", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:36", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:31:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:32", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:41:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:44:44", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:47:44", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:50:04", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:52:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:54:48", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:57:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:02:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:07:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:15:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:18:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:20:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:23:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:26:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:28:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:31:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:34:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:39:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:42:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:47:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:50:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:52:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:55:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:58:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:00:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:03:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "09:06:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:14:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:22:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:26:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:30:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:34:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:42:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:59:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:03:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:07:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:11:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:16:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:20:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:24:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:29:44", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:33:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:37:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:41:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:50:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:54:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:58:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:02:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:19:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:24:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:28:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:32:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:41:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:45:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:49:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:53:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:58:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:02:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:06:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:10:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:15:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:19:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:23:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:32:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:36:12", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:40:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:44:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:49:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:53:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:57:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:01:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:06:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:10:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:14:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:23:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:27:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:31:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:57:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:01:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:05:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:14:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:18:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:22:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:31:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:35:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:39:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:43:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:48:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:52:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:56:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:09:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:13:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:17:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:22:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:26:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:30:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:34:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:39:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:43:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:47:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:51:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:56:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:00:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:04:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:13:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:15", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:24:33", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:28:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:32:01", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:35:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:38:59", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:42:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:45:57", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:49:27", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:56:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:59:53", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:03:23", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:06:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:10:21", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:13:49", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:17:19", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:20:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:24:17", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:27:47", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:30:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:32:54", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:35:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:41:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:43:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:48:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:51:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:53:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:56:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:59:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:01:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:04:26", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:07:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:09:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:12:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:15:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:17:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:21:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:26:50", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:29:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:37:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:42:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:45:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:48:09", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:52:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:59:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:03:20", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:07:20", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:10:08", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:13:41", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:16:01", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:19:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:22:59", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:26:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:29:57", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:33:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:37:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:40:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:43:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:47:21", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:50:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:54:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:01:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:04:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:09:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:13:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:17:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:22:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:26:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:34:37", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:38:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:43:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:47:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:51:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:55:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:00:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:05:28", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:09:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:12:43", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:17:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:21:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:25:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:29:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:34:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:38:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:08:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:15:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:21:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:28:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:35:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:41:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:08:00", jiaolu: "大交路" },
+    { destination: "天隆寺", time: "23:16:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:24:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:28:34", jiaolu: "小交路" },
+  ],
+  wednesday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:42:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:46:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:50:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:54:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:58:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:02:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:06:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:10:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:14:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:18:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:22:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:26:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:30:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:34:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:38:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:42:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:46:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:50:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:10:06", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:13:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:16:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:20:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:23:16", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:26:36", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:36", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:31:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:32", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:41:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:44:44", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:47:44", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:50:04", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:52:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:54:48", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:57:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:02:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:07:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:15:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:18:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:20:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:23:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:26:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:28:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:31:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:34:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:39:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:42:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:47:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:50:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:52:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:55:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:58:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:00:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:03:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "09:06:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:14:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:22:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:26:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:30:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:34:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:42:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:59:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:03:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:07:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:11:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:16:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:20:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:24:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:29:44", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:33:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:37:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:41:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:50:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:54:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:58:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:02:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:19:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:24:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:28:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:32:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:41:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:45:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:49:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:53:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:58:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:02:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:06:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:10:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:15:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:19:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:23:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:32:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:36:12", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:40:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:44:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:49:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:53:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:57:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:01:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:06:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:10:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:14:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:23:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:27:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:31:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:57:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:01:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:05:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:14:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:18:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:22:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:31:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:35:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:39:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:43:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:48:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:52:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:56:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:09:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:13:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:17:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:22:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:26:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:30:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:34:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:39:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:43:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:47:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:51:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:56:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:00:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:04:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:13:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:15", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:24:33", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:28:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:32:01", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:35:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:38:59", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:42:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:45:57", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:49:27", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:56:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:59:53", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:03:23", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:06:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:10:21", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:13:49", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:17:19", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:20:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:24:17", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:27:47", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:30:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:32:54", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:35:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:41:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:43:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:48:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:51:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:53:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:56:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:59:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:01:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:04:26", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:07:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:09:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:12:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:15:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:17:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:21:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:26:50", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:29:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:37:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:42:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:45:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:48:09", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:52:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:59:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:03:20", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:07:20", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:10:08", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:13:41", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:16:01", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:19:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:22:59", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:26:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:29:57", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:33:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:37:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:40:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:43:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:47:21", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:50:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:54:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:01:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:04:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:09:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:13:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:17:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:22:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:26:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:34:37", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:38:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:43:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:47:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:51:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:55:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:00:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:05:28", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:09:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:12:43", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:17:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:21:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:25:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:29:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:34:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:38:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:08:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:15:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:21:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:28:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:35:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:41:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:08:00", jiaolu: "大交路" },
+    { destination: "天隆寺", time: "23:16:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:24:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:28:34", jiaolu: "小交路" },
+  ],
+  thursday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:42:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:46:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:50:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:54:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:58:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:02:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:06:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:10:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:14:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:18:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:22:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:26:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:30:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:34:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:38:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:42:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:46:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:50:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:10:06", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:13:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:16:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:20:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:23:16", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:26:36", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:36", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:31:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:32", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:41:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:44:44", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:47:44", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:50:04", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:52:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:54:48", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:57:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:02:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:07:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:15:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:18:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:20:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:23:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:26:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:28:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:31:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:34:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:39:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:42:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:47:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:50:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:52:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:55:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:58:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:00:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:03:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "09:06:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:14:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:22:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:26:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:30:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:34:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:42:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:59:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:03:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:07:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:11:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:16:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:20:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:24:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:29:44", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:33:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:37:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:41:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:50:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:54:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:58:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:02:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:19:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:24:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:28:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:32:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:41:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:45:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:49:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:53:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:58:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:02:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:06:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:10:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:15:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:19:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:23:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:32:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:36:12", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:40:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:44:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:49:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:53:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:57:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:01:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:06:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:10:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:14:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:23:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:27:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:31:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:57:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:01:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:05:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:14:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:18:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:22:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:31:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:35:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:39:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:43:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:48:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:52:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:56:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:09:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:13:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:17:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:22:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:26:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:30:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:34:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:39:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:43:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:47:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:51:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:56:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:00:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:04:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:13:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:15", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:24:33", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:28:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:32:01", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:35:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:38:59", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:42:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:45:57", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:49:27", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:56:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:59:53", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:03:23", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:06:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:10:21", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:13:49", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:17:19", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:20:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:24:17", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:27:47", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:30:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:32:54", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:35:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:41:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:43:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:48:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:51:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:53:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:56:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:59:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:01:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:04:26", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:07:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:09:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:12:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:15:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:17:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:21:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:26:50", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:29:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:37:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:42:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:45:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:48:09", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:52:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:59:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:03:20", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:07:20", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:10:08", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:13:41", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:16:01", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:19:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:22:59", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:26:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:29:57", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:33:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:37:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:40:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:43:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:47:21", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:50:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:54:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:01:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:04:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:09:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:13:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:17:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:22:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:26:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:34:37", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:38:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:43:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:47:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:51:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:55:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:00:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:05:28", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:09:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:12:43", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:17:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:21:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:25:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:29:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:34:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:38:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:08:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:15:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:21:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:28:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:35:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:41:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:08:00", jiaolu: "大交路" },
+    { destination: "天隆寺", time: "23:16:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:24:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:28:34", jiaolu: "小交路" },
+  ],
+  sunday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:43:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:47:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:52:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:56:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:01:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:05:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:09:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:14:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:18:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:23:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:27:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:31:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:36:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:40:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:45:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:49:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:11:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:16:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:20:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:24:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:33:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:42:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:47:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:51:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:55:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:00:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:04:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:09:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:13:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:17:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:22:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:26:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:31:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:35:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:40:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:48:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:53:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:57:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:04:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:08:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:12:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:16:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:20:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:23:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:27:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:31:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:35:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:43:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:58:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:02:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:06:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:13:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:17:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:21:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:25:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:29:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:32:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:40:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:44:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:48:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:52:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:55:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:59:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:03:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:22:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:26:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:30:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:38:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:41:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:45:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:49:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:53:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:57:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:01:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:04:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:08:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:12:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:16:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:20:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:24:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:31:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:35:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:39:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:43:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:47:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:50:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:54:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:58:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:02:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:06:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:13:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:17:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:21:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:25:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:29:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:33:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:56:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:03:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:07:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:11:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:15:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:19:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:22:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:26:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:30:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:34:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:38:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:42:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:49:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:53:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:57:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:01:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:16:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:20:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:24:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:28:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:31:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:35:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:39:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:43:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:47:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:51:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:54:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:58:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:02:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:06:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:14:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:25:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:29:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:33:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:37:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:40:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:48:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:52:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:56:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:00:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:03:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:07:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:11:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:15:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:19:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:23:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:30:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:34:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:42:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:49:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:53:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:57:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:01:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:09:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:12:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:16:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:20:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:28:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:43:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:47:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:51:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:58:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:02:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:06:35", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:10:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:14:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:21:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:25:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:29:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:33:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:37:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:41:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:44:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:48:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:52:35", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:21", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:02:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:06:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:11:39", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:16:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:21:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:25:57", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:43", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:35:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:40:15", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:45:01", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:49:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:54:33", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:59:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:04:05", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:08:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:13:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:18:23", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:23:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:27:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:32:41", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:37:27", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:46:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:52:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:59:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:05:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:12:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:19:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:25:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:32:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:39:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:45:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:52:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:00:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:08:00", jiaolu: "大交路" },
+    { destination: "天隆寺", time: "23:16:00", jiaolu: "小交路" },
+    { destination: "天隆寺", time: "23:24:00", jiaolu: "小交路" },
+  ],
+  friday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:42:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:46:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:50:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:54:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:58:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:02:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:06:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:10:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:14:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:18:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:22:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:26:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:30:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:34:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:38:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:42:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:46:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:50:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:46", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:10:06", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:13:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:16:46", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:20:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:23:16", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:26:36", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:36", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:31:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:32", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:41:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:44:44", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:47:44", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:50:04", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:52:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "07:54:48", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:57:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:02:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:07:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:15:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:18:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:20:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:23:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:26:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:28:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:31:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:34:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:39:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:42:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:47:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:50:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:52:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:55:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "08:58:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:00:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:03:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "09:06:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:14:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:22:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:26:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:30:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:34:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:42:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:59:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:03:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:07:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:11:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:16:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:20:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:24:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:29:44", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:33:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:37:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:41:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:50:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:54:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:58:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:02:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:19:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:24:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:28:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:32:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:41:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:45:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:49:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:53:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:58:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:02:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:06:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:10:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:15:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:19:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:23:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:32:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:36:12", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:40:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:44:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:49:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:53:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:57:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:01:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:06:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:10:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:14:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:23:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:27:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:31:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:57:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:01:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:05:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:14:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:18:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:22:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:31:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:35:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:39:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:43:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:48:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:52:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:56:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:09:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:13:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:17:42", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:22:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:26:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:30:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:34:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:39:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:43:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:47:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:51:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:56:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:00:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:04:41", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:13:11", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:15", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:24:33", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:28:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:32:01", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:35:31", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:38:59", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:42:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:45:57", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:49:27", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:52:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:56:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:59:53", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:03:23", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:06:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:10:21", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:13:49", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:17:19", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:20:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:24:17", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:27:47", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:30:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:32:54", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:35:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:41:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:43:34", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:14", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:48:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:51:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:53:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "17:56:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:59:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:01:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:04:26", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:07:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:09:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:12:39", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:15:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:17:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:21:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:26:50", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:29:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:37:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:42:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "18:45:09", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:48:09", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:52:14", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:59:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:03:20", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:07:20", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:10:08", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:13:41", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:16:01", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:19:29", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:22:59", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:26:27", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:29:57", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:33:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:37:10", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:40:23", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:43:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:47:21", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:50:51", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:54:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:01:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:04:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:09:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:13:13", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:17:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:22:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:26:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:34:37", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:38:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:43:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:47:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:51:24", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:55:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:00:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:05:28", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:09:17", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:12:43", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:17:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:21:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:25:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:29:43", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:34:07", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:38:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:37", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:08:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:15:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:21:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:28:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:35:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:41:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:48:32", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:55:12", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:01:52", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:10:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:20:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:30:00", jiaolu: "大交路" },
+  ],
+  saturday: [
+    { destination: "中国药科大学", time: "05:30:00", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:34:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:38:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:43:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:47:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "05:52:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "05:56:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:01:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:05:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:09:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:14:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:18:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:23:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:27:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:31:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:36:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:40:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:45:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:49:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "06:54:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "06:58:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:02:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:07:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:11:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:16:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:20:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:24:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:29:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:33:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:38:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:42:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:47:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "07:51:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "07:55:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:00:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:04:40", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:09:05", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:13:30", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:17:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:22:20", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:26:45", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:31:10", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:35:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:40:00", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:44:25", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:48:50", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "08:53:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "08:57:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:00:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:04:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:08:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:12:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:16:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:20:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:23:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:27:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:31:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:35:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:39:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:43:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:46:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:50:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "09:54:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "09:58:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:02:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:06:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:09:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:13:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:17:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:21:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:25:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:29:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:32:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:36:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:40:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:44:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:48:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:52:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "10:55:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "10:59:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:03:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:07:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:11:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:15:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:18:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:22:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:26:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:30:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:34:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:38:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:41:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:45:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:49:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "11:53:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "11:57:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:01:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:04:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:08:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:12:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:16:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:20:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:24:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:27:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:31:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:35:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:39:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:43:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:47:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:50:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "12:54:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "12:58:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:02:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:06:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:10:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:13:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:17:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:21:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:25:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:29:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:33:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:36:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:40:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:44:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:48:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:52:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "13:56:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "13:59:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:03:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:07:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:11:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:15:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:19:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:22:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:26:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:30:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:34:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:38:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:42:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:45:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:49:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "14:53:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "14:57:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:01:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:05:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:08:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:12:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:16:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:20:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:24:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:28:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:31:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:35:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:39:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:43:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:47:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:51:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "15:54:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "15:58:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:02:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:06:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:10:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:14:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:17:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:21:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:25:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:29:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:33:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:37:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:40:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:44:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:48:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "16:52:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "16:56:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:00:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:03:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:07:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:11:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:15:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:19:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:23:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:26:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:30:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:34:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:38:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:42:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:46:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:49:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "17:53:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "17:57:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:01:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:05:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:09:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:12:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:16:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:20:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:24:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:28:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:32:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:35:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:39:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:43:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:47:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:51:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "18:55:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "18:58:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:02:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:06:35", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:10:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:14:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:18:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:21:55", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:25:45", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:29:35", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:33:25", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:37:15", jiaolu: "大交路" },
+    { destination: "河定桥", time: "19:41:05", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "19:44:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:48:45", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:52:35", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "19:57:21", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:02:07", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:06:53", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:11:39", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:16:25", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:21:11", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:25:57", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:30:43", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:35:29", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:40:15", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:45:01", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "20:49:47", jiaolu: "大交路" },
+    { destination: "河定桥", time: "20:54:33", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "20:59:19", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:04:05", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:08:51", jiaolu: "大交路" },
+    { destination: "河定桥", time: "21:13:37", jiaolu: "小交路" },
+    { destination: "中国药科大学", time: "21:18:23", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:23:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:27:55", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:32:41", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:37:27", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:42:13", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:46:59", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:52:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "21:59:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:05:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:12:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:19:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:25:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:32:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:39:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:45:49", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "22:52:29", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:00:09", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:10:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:20:00", jiaolu: "大交路" },
+    { destination: "中国药科大学", time: "23:30:00", jiaolu: "大交路" },
+  ],
 };
 export default arrivalTimes;

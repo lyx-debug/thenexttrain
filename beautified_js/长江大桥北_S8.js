@@ -1,4170 +1,1057 @@
 const arrivalTimes = {
-    monday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "05:59:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:03:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:07:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:11:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:22:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:27:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:33:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:38:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:44:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:49:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:54:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:59:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:03:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:08:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:17:08",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:21:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:25:54",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:30:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:39:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:43:26",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:47:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:52:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:56:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:00:58",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:05:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:09:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:14:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:19:07",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:28:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:33:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:38:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:43:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:53:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:18:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:33:24",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:40:56",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:48:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:55:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:03:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:17:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:24:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:00:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:22:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:37:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:44:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:52:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:06:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:14:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:21:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:28:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:36:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:50:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:58:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:05:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:12:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:27:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:42:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:49:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:56:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:04:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:11:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:18:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:26:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:33:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:40:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:55:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:02:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:10:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:24:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:32:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:39:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:46:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:01:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:08:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:38:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:45:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:58:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:02:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:07:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:17:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:22:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:27:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:36:34",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:41:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:46:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:51:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:56:06",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:00:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:05:52",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:10:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:15:38",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:20:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:25:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:35:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:40:03",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:44:56",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:49:49",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:55:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:03:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:10:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:18:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:28:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:33:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:42:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:49:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:03:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:10:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:18:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:25:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:32:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:40:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:47:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:54:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:02:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:09:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:16:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:02:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }],
-    tuesday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "05:59:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:03:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:07:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:11:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:22:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:27:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:33:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:38:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:44:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:49:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:54:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:59:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:03:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:08:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:17:08",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:21:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:25:54",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:30:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:39:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:43:26",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:47:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:52:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:56:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:00:58",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:05:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:09:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:14:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:19:07",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:28:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:33:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:38:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:43:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:53:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:18:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:33:24",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:40:56",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:48:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:55:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:03:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:17:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:24:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:00:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:22:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:37:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:44:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:52:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:06:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:14:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:21:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:28:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:36:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:50:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:58:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:05:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:12:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:27:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:42:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:49:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:56:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:04:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:11:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:18:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:26:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:33:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:40:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:55:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:02:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:10:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:24:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:32:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:39:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:46:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:01:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:08:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:38:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:45:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:58:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:02:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:07:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:17:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:22:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:27:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:36:34",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:41:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:46:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:51:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:56:06",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:00:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:05:52",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:10:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:15:38",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:20:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:25:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:35:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:40:03",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:44:56",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:49:49",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:55:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:03:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:10:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:18:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:28:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:33:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:42:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:49:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:03:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:10:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:18:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:25:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:32:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:40:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:47:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:54:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:02:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:09:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:16:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:02:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }],
-    wednesday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "05:59:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:03:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:07:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:11:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:22:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:27:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:33:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:38:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:44:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:49:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:54:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:59:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:03:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:08:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:17:08",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:21:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:25:54",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:30:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:39:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:43:26",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:47:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:52:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:56:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:00:58",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:05:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:09:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:14:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:19:07",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:28:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:33:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:38:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:43:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:53:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:18:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:33:24",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:40:56",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:48:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:55:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:03:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:17:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:24:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:00:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:22:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:37:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:44:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:52:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:06:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:14:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:21:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:28:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:36:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:50:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:58:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:05:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:12:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:27:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:42:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:49:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:56:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:04:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:11:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:18:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:26:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:33:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:40:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:55:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:02:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:10:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:24:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:32:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:39:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:46:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:01:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:08:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:38:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:45:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:58:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:02:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:07:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:17:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:22:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:27:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:36:34",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:41:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:46:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:51:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:56:06",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:00:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:05:52",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:10:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:15:38",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:20:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:25:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:35:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:40:03",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:44:56",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:49:49",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:55:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:03:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:10:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:18:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:28:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:33:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:42:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:49:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:03:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:10:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:18:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:25:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:32:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:40:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:47:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:54:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:02:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:09:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:16:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:02:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }],
-    thursday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "05:59:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:03:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:07:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:11:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:22:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:27:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:33:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:38:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:44:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:49:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:54:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:59:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:03:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:08:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:17:08",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:21:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:25:54",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:30:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:39:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:43:26",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:47:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:52:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:56:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:00:58",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:05:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:09:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:14:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:19:07",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:28:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:33:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:38:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:43:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:53:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:18:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:33:24",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:40:56",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:48:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:55:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:03:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:17:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:24:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:00:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:22:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:37:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:44:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:52:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:06:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:14:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:21:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:28:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:36:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:50:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:58:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:05:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:12:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:27:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:42:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:49:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:56:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:04:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:11:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:18:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:26:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:33:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:40:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:55:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:02:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:10:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:24:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:32:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:39:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:46:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:01:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:08:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:38:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:45:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:58:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:02:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:07:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:17:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:22:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:27:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:36:34",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:41:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:46:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:51:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:56:06",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:00:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:05:52",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:10:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:15:38",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:20:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:25:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:35:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:40:03",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:44:56",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:49:49",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:55:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:03:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:10:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:18:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:28:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:33:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:42:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:49:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:03:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:10:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:18:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:25:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:32:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:40:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:47:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:54:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:02:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:09:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:16:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:02:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }],
-    friday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "05:59:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:03:01",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:07:23",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:11:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:22:29",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:27:51",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:33:23",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:38:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:44:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:49:19",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "06:54:43",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "06:59:36",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:03:59",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:08:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:12:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:17:08",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:21:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:25:54",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:30:17",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:39:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:43:26",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:47:49",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "07:52:12",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "07:56:35",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:00:58",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:05:21",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:09:51",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:14:14",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:19:07",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:28:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:33:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:38:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:43:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "08:48:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:53:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "08:58:11",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:05",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:11:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:18:45",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:14",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:33:24",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:40:56",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "09:48:03",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:55:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:03:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:17:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:24:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "10:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:00:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:08:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:15:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:22:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:37:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:44:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:52:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "11:59:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:06:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:14:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:21:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:28:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:36:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:43:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:50:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "12:58:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:05:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:12:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:27:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:34:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:42:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:49:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "13:56:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:04:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:11:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:18:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:26:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:33:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:40:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "14:55:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:02:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:10:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:24:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:32:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:39:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:46:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "15:54:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:01:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:08:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:38:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:45:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "16:52:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:58:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:02:53",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:07:46",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:12:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:17:32",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:22:25",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:27:18",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:31:41",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:36:34",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:41:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "17:46:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "17:51:13",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:56:06",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:00:59",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:05:52",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:10:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:15:38",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:20:31",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:25:24",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:35:10",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:40:03",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "18:44:56",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "18:49:49",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:55:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:03:22",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:10:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:18:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:23:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:28:45",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:33:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:42:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "19:49:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:03:50",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:10:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:18:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:25:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:32:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:40:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "20:47:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:54:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:02:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:09:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:16:40",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:24:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:31:20",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:40",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "21:46:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:53:20",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:02:05",
-        jiaolu: "小交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:50",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "23:00:00",
-        jiaolu: "小交路"
-    }],
-    saturday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:02:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:08:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:16:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:23:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:30:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:38:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:45:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:52:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:00:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:07:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:14:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:22:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:29:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:36:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:44:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:51:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:58:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:06:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:13:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:20:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:28:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:35:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:42:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:50:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:57:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:12:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:19:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:34:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:41:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:48:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:56:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:03:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:18:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:26:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:36:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:46:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:04:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:13:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:23:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:33:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:43:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:53:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:02:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:12:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:22:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:32:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:51:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:01:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:11:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:30:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:40:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:50:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:59:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:09:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:19:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:29:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:38:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:58:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:08:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:27:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:37:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:47:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:56:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:06:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:24:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:39:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:47:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:55:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:02:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:10:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:24:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:32:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:39:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:46:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:54:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:01:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:08:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:16:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:23:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:38:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:45:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:52:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:07:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:14:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:22:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:29:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:38:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:47:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:07:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:27:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:37:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:47:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:57:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:06:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:16:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:27:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:49:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:00:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "23:00:00",
-        jiaolu: "小交路"
-    }],
-    sunday: [{
-        destination: "金牛湖",
-        time: "05:55:39",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:02:10",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:08:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:16:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:23:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:30:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:38:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:45:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "06:52:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:00:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:07:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:14:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:22:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:29:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:36:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:44:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:51:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "07:58:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:06:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:13:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:20:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:28:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:35:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:42:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:50:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "08:57:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:04:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:12:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:19:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:26:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:34:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:41:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:48:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "09:56:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:03:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:10:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:18:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:26:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:36:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:46:02",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "10:55:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:04:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:13:32",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:23:35",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:33:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:43:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "11:53:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:02:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:12:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:22:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:32:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:41:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "12:51:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:01:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:11:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:20:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:30:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:40:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:50:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "13:59:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:09:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:19:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:29:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:38:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:48:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "14:58:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:08:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:17:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:27:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:37:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:47:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "15:56:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:06:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:16:22",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:24:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:31:52",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:39:37",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:47:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "16:55:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:02:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:10:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:17:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:24:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:32:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:39:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:46:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "17:54:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:01:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:08:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:16:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:23:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:30:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:38:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:45:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "18:52:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:00:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:07:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:14:47",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:22:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:29:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:38:34",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:47:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "19:57:44",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:07:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:17:07",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:27:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:37:17",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:47:27",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "20:57:12",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:06:57",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:16:42",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:27:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:38:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "21:49:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:00:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:10:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "金牛湖",
-        time: "22:20:00",
-        jiaolu: "大交路"
-    }, {
-        destination: "方州广场",
-        time: "22:30:00",
-        jiaolu: "小交路"
-    }, {
-        destination: "方州广场",
-        time: "22:40:00",
-        jiaolu: "小交路"
-    }]
+  monday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "05:59:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:03:01", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:07:23", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:11:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:17:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:22:29", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:27:51", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:33:23", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:38:35", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:44:12", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:49:19", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:54:43", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:59:36", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:03:59", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:08:22", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:12:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:17:08", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:21:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:25:54", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:30:17", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:39:03", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:43:26", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:47:49", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:52:12", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:56:35", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:00:58", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:05:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:09:51", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:14:14", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:19:07", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:28:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:33:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:38:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:43:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:48:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:53:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:58:11", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:04:05", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:11:35", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:18:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:26:14", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:33:24", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:40:56", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:48:03", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:55:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:03:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:10:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:17:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:24:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:00:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:08:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:15:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:22:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:30:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:37:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:44:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:52:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:59:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:06:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:14:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:21:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:28:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:36:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:43:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:50:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:58:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:05:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:12:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:27:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:42:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:49:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:56:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:04:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:11:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:18:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:26:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:33:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:40:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:48:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:55:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:02:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:10:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:17:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:24:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:32:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:39:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:46:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:54:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:01:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:08:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:16:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:31:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:38:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:45:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:52:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:58:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:02:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:07:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:12:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:17:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:22:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:27:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:31:41", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:36:34", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:41:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:46:20", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:51:13", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:56:06", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:00:59", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:05:52", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:10:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:15:38", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:20:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:25:24", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:17", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:35:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:40:03", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:44:56", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:49:49", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:55:42", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:03:22", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:10:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:18:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:28:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:33:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:42:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:49:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:57:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:03:50", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:10:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:18:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:25:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:32:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:40:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:47:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:54:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:02:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:09:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:16:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:02:05", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "22:10:50", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+  ],
+  tuesday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "05:59:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:03:01", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:07:23", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:11:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:17:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:22:29", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:27:51", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:33:23", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:38:35", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:44:12", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:49:19", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:54:43", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:59:36", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:03:59", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:08:22", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:12:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:17:08", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:21:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:25:54", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:30:17", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:39:03", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:43:26", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:47:49", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:52:12", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:56:35", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:00:58", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:05:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:09:51", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:14:14", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:19:07", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:28:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:33:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:38:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:43:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:48:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:53:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:58:11", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:04:05", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:11:35", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:18:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:26:14", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:33:24", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:40:56", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:48:03", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:55:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:03:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:10:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:17:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:24:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:00:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:08:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:15:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:22:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:30:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:37:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:44:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:52:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:59:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:06:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:14:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:21:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:28:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:36:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:43:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:50:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:58:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:05:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:12:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:27:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:42:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:49:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:56:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:04:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:11:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:18:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:26:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:33:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:40:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:48:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:55:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:02:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:10:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:17:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:24:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:32:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:39:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:46:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:54:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:01:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:08:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:16:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:31:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:38:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:45:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:52:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:58:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:02:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:07:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:12:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:17:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:22:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:27:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:31:41", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:36:34", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:41:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:46:20", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:51:13", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:56:06", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:00:59", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:05:52", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:10:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:15:38", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:20:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:25:24", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:17", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:35:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:40:03", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:44:56", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:49:49", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:55:42", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:03:22", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:10:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:18:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:28:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:33:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:42:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:49:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:57:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:03:50", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:10:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:18:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:25:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:32:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:40:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:47:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:54:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:02:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:09:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:16:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:02:05", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "22:10:50", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+  ],
+  wednesday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "05:59:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:03:01", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:07:23", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:11:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:17:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:22:29", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:27:51", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:33:23", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:38:35", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:44:12", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:49:19", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:54:43", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:59:36", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:03:59", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:08:22", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:12:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:17:08", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:21:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:25:54", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:30:17", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:39:03", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:43:26", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:47:49", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:52:12", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:56:35", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:00:58", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:05:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:09:51", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:14:14", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:19:07", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:28:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:33:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:38:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:43:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:48:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:53:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:58:11", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:04:05", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:11:35", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:18:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:26:14", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:33:24", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:40:56", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:48:03", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:55:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:03:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:10:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:17:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:24:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:00:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:08:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:15:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:22:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:30:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:37:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:44:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:52:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:59:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:06:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:14:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:21:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:28:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:36:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:43:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:50:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:58:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:05:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:12:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:27:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:42:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:49:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:56:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:04:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:11:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:18:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:26:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:33:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:40:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:48:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:55:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:02:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:10:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:17:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:24:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:32:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:39:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:46:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:54:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:01:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:08:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:16:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:31:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:38:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:45:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:52:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:58:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:02:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:07:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:12:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:17:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:22:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:27:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:31:41", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:36:34", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:41:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:46:20", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:51:13", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:56:06", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:00:59", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:05:52", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:10:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:15:38", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:20:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:25:24", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:17", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:35:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:40:03", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:44:56", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:49:49", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:55:42", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:03:22", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:10:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:18:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:28:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:33:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:42:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:49:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:57:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:03:50", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:10:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:18:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:25:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:32:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:40:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:47:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:54:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:02:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:09:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:16:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:02:05", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "22:10:50", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+  ],
+  thursday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "05:59:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:03:01", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:07:23", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:11:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:17:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:22:29", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:27:51", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:33:23", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:38:35", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:44:12", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:49:19", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:54:43", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:59:36", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:03:59", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:08:22", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:12:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:17:08", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:21:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:25:54", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:30:17", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:39:03", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:43:26", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:47:49", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:52:12", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:56:35", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:00:58", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:05:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:09:51", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:14:14", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:19:07", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:28:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:33:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:38:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:43:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:48:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:53:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:58:11", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:04:05", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:11:35", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:18:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:26:14", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:33:24", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:40:56", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:48:03", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:55:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:03:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:10:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:17:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:24:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:00:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:08:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:15:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:22:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:30:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:37:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:44:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:52:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:59:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:06:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:14:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:21:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:28:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:36:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:43:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:50:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:58:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:05:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:12:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:27:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:42:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:49:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:56:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:04:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:11:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:18:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:26:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:33:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:40:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:48:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:55:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:02:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:10:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:17:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:24:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:32:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:39:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:46:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:54:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:01:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:08:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:16:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:31:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:38:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:45:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:52:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:58:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:02:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:07:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:12:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:17:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:22:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:27:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:31:41", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:36:34", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:41:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:46:20", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:51:13", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:56:06", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:00:59", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:05:52", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:10:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:15:38", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:20:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:25:24", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:17", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:35:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:40:03", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:44:56", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:49:49", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:55:42", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:03:22", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:10:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:18:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:28:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:33:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:42:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:49:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:57:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:03:50", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:10:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:18:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:25:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:32:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:40:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:47:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:54:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:02:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:09:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:16:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:02:05", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "22:10:50", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+  ],
+  friday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "05:59:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:03:01", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:07:23", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:11:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:17:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:22:29", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:27:51", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:33:23", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:38:35", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:44:12", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "06:49:19", jiaolu: "大交路" },
+    { destination: "方州广场", time: "06:54:43", jiaolu: "小交路" },
+    { destination: "方州广场", time: "06:59:36", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:03:59", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:08:22", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:12:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:17:08", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:21:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:25:54", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:30:17", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:39:03", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:43:26", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "07:47:49", jiaolu: "大交路" },
+    { destination: "方州广场", time: "07:52:12", jiaolu: "小交路" },
+    { destination: "方州广场", time: "07:56:35", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:00:58", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:05:21", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:09:51", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:14:14", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:19:07", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:28:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:33:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:38:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:43:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "08:48:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "08:53:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "08:58:11", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:04:05", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:11:35", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:18:45", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:26:14", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:33:24", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:40:56", jiaolu: "大交路" },
+    { destination: "方州广场", time: "09:48:03", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "09:55:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:03:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:10:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:17:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:24:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "10:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "10:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:00:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:08:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:15:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:22:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:30:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:37:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:44:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "11:52:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "11:59:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:06:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:14:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:21:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:28:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:36:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:43:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "12:50:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "12:58:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:05:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:12:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:27:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:34:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:42:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "13:49:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "13:56:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:04:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:11:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:18:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:26:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:33:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:40:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "14:48:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "14:55:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:02:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:10:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:17:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:24:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:32:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:39:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "15:46:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "15:54:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:01:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:08:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:16:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:31:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:38:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:45:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "16:52:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "16:58:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:02:53", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:07:46", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:12:39", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:17:32", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:22:25", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:27:18", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:31:41", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:36:34", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:41:27", jiaolu: "大交路" },
+    { destination: "方州广场", time: "17:46:20", jiaolu: "小交路" },
+    { destination: "方州广场", time: "17:51:13", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "17:56:06", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:00:59", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:05:52", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:10:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:15:38", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:20:31", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:25:24", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:17", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:35:10", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:40:03", jiaolu: "大交路" },
+    { destination: "方州广场", time: "18:44:56", jiaolu: "小交路" },
+    { destination: "方州广场", time: "18:49:49", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "18:55:42", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:03:22", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:10:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:18:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:23:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:28:45", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:33:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:42:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "19:49:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "19:57:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:03:50", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:10:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:18:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:25:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:32:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:40:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "20:47:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "20:54:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:02:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:09:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:16:40", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:24:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:31:20", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:38:40", jiaolu: "大交路" },
+    { destination: "方州广场", time: "21:46:00", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "21:53:20", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:02:05", jiaolu: "小交路" },
+    { destination: "金牛湖", time: "22:10:50", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "23:00:00", jiaolu: "小交路" },
+  ],
+  saturday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:02:10", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:08:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:16:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:23:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:30:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:38:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:45:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:52:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:00:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:07:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:14:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:22:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:29:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:36:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:44:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:51:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:58:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:06:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:13:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:20:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:28:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:35:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:42:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:50:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:57:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:04:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:12:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:19:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:26:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:34:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:41:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:48:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:56:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:03:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:10:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:18:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:26:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:36:17", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:46:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:55:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:04:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:13:32", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:23:35", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:33:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:43:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:53:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:02:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:12:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:22:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:32:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:41:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:51:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:01:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:11:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:20:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:30:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:40:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:50:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:59:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:09:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:19:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:29:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:38:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:48:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:58:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:08:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:17:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:27:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:37:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:47:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:56:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:06:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:16:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:24:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:31:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:39:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:47:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:55:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:02:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:10:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:17:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:24:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:32:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:39:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:46:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:54:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:01:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:08:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:16:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:23:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:38:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:45:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:52:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:00:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:07:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:14:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:22:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:29:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:38:34", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:47:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:57:44", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:07:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:17:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:27:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:37:17", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:47:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:57:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:06:57", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:16:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:27:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:38:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:49:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:00:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:10:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "23:00:00", jiaolu: "小交路" },
+  ],
+  sunday: [
+    { destination: "金牛湖", time: "05:55:39", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:02:10", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:08:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:16:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:23:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:30:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:38:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:45:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "06:52:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:00:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:07:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:14:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:22:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:29:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:36:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:44:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:51:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "07:58:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:06:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:13:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:20:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:28:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:35:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:42:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:50:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "08:57:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:04:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:12:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:19:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:26:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:34:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:41:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:48:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "09:56:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:03:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:10:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:18:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:26:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:36:17", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:46:02", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "10:55:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:04:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:13:32", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:23:35", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:33:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:43:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "11:53:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:02:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:12:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:22:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:32:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:41:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "12:51:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:01:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:11:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:20:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:30:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:40:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:50:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "13:59:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:09:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:19:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:29:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:38:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:48:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "14:58:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:08:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:17:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:27:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:37:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:47:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "15:56:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:06:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:16:22", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:24:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:31:52", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:39:37", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:47:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "16:55:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:02:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:10:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:17:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:24:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:32:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:39:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:46:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "17:54:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:01:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:08:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:16:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:23:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:30:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:38:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:45:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "18:52:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:00:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:07:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:14:47", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:22:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:29:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:38:34", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:47:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "19:57:44", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:07:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:17:07", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:27:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:37:17", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:47:27", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "20:57:12", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:06:57", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:16:42", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:27:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:38:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "21:49:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:00:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:10:00", jiaolu: "大交路" },
+    { destination: "金牛湖", time: "22:20:00", jiaolu: "大交路" },
+    { destination: "方州广场", time: "22:30:00", jiaolu: "小交路" },
+    { destination: "方州广场", time: "22:40:00", jiaolu: "小交路" },
+  ],
 };
 export default arrivalTimes;

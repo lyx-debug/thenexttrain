@@ -44,8 +44,6 @@
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* 给图片添加小的阴影效果 */
         }
 
-
-
         .search-box {
             display: flex;
             gap: 10px;
@@ -108,6 +106,11 @@
         .autocomplete-item:hover {
             background: #e9e9e9;
         }
+
+        input:focus {
+            border-color: #007BFF; /* 设置边框颜色 */
+            box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* 添加蓝色阴影 */
+        }
     </style>
 </head>
 <body>
@@ -130,6 +133,11 @@
 
     <script src="./stationdata.js"></script>
     <script>
+        // 页面加载完成时自动聚焦到输入框
+        window.onload = function() {
+            document.getElementById("stationInput").focus(); // 页面加载完成后，自动聚焦到搜索框
+        };
+
         function showSuggestions(input) {
             const autocompleteList = document.getElementById("autocomplete-list");
             autocompleteList.innerHTML = "";
@@ -158,6 +166,9 @@
             const resultDiv = document.getElementById("result");
             resultDiv.innerHTML = "";
 
+            // 确保点击搜索时聚焦到输入框
+            document.getElementById("stationInput").focus();
+
             if (!input) {
                 resultDiv.innerHTML = "<div>请输入站点名称</div>";
                 return;
@@ -177,7 +188,7 @@
             const output = document.createElement("div");
             output.innerHTML = `<div class="station-name">${input}</div>`;
 
-            const lineNames = foundLines.map(line => line.name).join(" ");//线路文字间隔
+            const lineNames = foundLines.map(line => line.name).join(" "); // 线路文字间隔
 
             // 判断站点是否为换乘站
             const isTransferStation = foundLines.some(line =>
@@ -197,8 +208,12 @@
             `;
             lineInfo.addEventListener("click", () => {
                 const stationHtmlMapping = {
-                    "鸡鸣寺": "./station/4/cs2.html",
-                    
+                    "龙江": "./station/4/龙江.html",
+                    "草场门": "./station/interchangestation/草场门.html",
+                    "云南路": "./station/4/云南路.html",
+                    "鼓楼": "./station/interchangestation/鼓楼.html",
+                    "鸡鸣寺": "./station/interchangestation/鸡鸣寺.html",
+                    "九华山": "./station/4/九华山.html",
                     // 继续添加其他站点和对应的 HTML 页面
                 };
 
