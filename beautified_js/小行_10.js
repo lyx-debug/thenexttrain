@@ -1,4 +1,4 @@
-const arrivalTimes = {
+arrivalTimes = {
   monday: [
     { destination: "雨山路", time: "06:03:50", jiaolu: "大交路" },
     { destination: "雨山路", time: "06:10:10", jiaolu: "大交路" },
@@ -2348,4 +2348,4 @@ const arrivalTimes = {
     { destination: "雨山路", time: "23:33:30", jiaolu: "大交路" },
   ],
 };
-export default arrivalTimes;
+
