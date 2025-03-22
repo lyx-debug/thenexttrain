@@ -23,7 +23,17 @@ const metroLines = [
             { name: "天隆寺", isTransferStation: false },
             { name: "软件大道", isTransferStation: false },
             { name: "花神庙", isTransferStation: false },
-            { name: "南京南站", isTransferStation: true }
+            { name: "南京南站", isTransferStation: true },
+            {name:"双龙大道",istransfer station:false},
+            {name:"河定桥",istransfer station:false},
+            {name:"胜太路",istransfer station:false},
+            {name:"百家湖",istransfer station:false},
+            {name:"小龙湾",istransfer station:false},
+            {name:"竹山路",istransfer station:true},
+            {name:"天印大道",istransfer station:false},
+            {name:"南医大·江苏经贸学院",istransfer station:false},
+            {name:"南京交院",istransfer station:false},
+            {name:"中国药科大学",istransfer station:false}
         ]
     },
     {
