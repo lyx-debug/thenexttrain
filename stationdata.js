@@ -197,6 +197,44 @@ const metroLines = [
             { name: "栖霞山", isTransferStation: false } 
         ]
     },
+
+
+    {
+        name: "7",
+        color: "#4A772A",
+        stations: [
+            /*{ name: "南京南站", isTransferStation: true },
+            { name: "夹岗", isTransferStation: false },
+            { name: "十月广场", isTransferStation: false },
+            { name: "兴智街", isTransferStation: false },
+            { name: "兴学路", isTransferStation: false },
+            { name: "燕江新城", isTransferStation: false },
+            { name: "万寿", isTransferStation: true },
+            { name: "营苑南路", isTransferStation: false },
+            { name: "红山新城", isTransferStation: false },
+            { name: "花园路", isTransferStation: false },
+            { name: "岗子村", isTransferStation: true },
+            { name: "大校场", isTransferStation: false },
+            { name: "七桥瓮", isTransferStation: false },
+            { name: "石门坎", isTransferStation: false },
+            { name: "光华门", isTransferStation: false },
+            { name: "通济门", isTransferStation: false },
+            { name: "夫子庙", isTransferStation: true },
+            { name: "三山街", isTransferStation: true },
+            { name: "朝天宫", isTransferStation: false },
+            { name: "上海路", isTransferStation: true },
+            { name: "五台山", isTransferStation: false },
+            { name: "云南路", isTransferStation: true },
+            { name: "青春广场", isTransferStation: false },
+            { name: "虹桥", isTransferStation: false },
+            { name: "福建路", isTransferStation: true },
+            { name: "盐仓桥", isTransferStation: false },
+            { name: "下关", isTransferStation: true },
+            { name: "静海寺", isTransferStation: false },
+            { name: "金陵石化", isTransferStation: false },
+            { name: "栖霞山", isTransferStation: false }*/ 
+        ]
+    },
     
 
 
