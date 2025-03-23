@@ -369,13 +369,18 @@
                             statusCell.textContent = '正常';
                             row.classList.remove('arriving-soon');
                         }
-                    } else {
+                    } 
+                    else {
                         if (train.timeRemaining.totalSeconds === 0) {
                             statusUpdated = true;
+                            statusCell.textContent = '列车到站';
+                            setTimeout(() => {
+                                row.style.display = 'none';
+                            }, 20000);
                             statusCell.textContent = '正在离开';
                             setTimeout(() => {
                                 row.style.display = 'none';
-                            }, 5000);
+                            }, 10000);
                         }
                     }
                 }

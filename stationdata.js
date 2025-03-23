@@ -43,8 +43,8 @@ const metroLines = [
             { name: "鱼嘴", isTransferStation: false },
             { name: "天保街", isTransferStation: false },
             { name: "青莲街", isTransferStation: false },
-            { name: "螺塘路", isTransferStation: false },
-            { name: "油坊桥", isTransferStation: false },
+            { name: "螺塘路", isTransferStation: true },
+            { name: "油坊桥", isTransferStation: true },
             { name: "雨润大街", isTransferStation: false },
             { name: "元通", isTransferStation: true },
             { name: "奥体东", isTransferStation: false },
@@ -233,7 +233,7 @@ const metroLines = [
             { name: "新城科技园", isTransferStation: false },
             { name: "中胜", isTransferStation: true },
             { name: "嘉陵江东街", isTransferStation: false },
-            { name: "永初路", isTransferStation: false },
+            { name: "永初路", isTransferStation: true },
             { name: "太清路", isTransferStation: false },
             { name: "螺塘路", isTransferStation: true },
             { name: "西善桥", isTransferStation: false }
@@ -295,7 +295,8 @@ const metroLines = [
             { name: "正方中路", isTransferStation: false },
             { name: "翔宇路北", isTransferStation: false },
             { name: "翔宇路南", isTransferStation: true },
-            { name: "禄口机场", isTransferStation: false }
+            { name: "禄口机场", isTransferStation: false },
+            { name: "空港新城江宁", isTransferStation: true }
         ]
     },
 
@@ -304,14 +305,25 @@ const metroLines = [
         name: "S3",
         color: "#b06c96",
         stations: [
-            { name: "南京南站", isTransferStation: true },
-            /*{ name: "翠屏山", isTransferStation: false },
-            { name: "河海大学·佛城西路", isTransferStation: false },
-            { name: "吉印大道", isTransferStation: true },
-            { name: "正方中路", isTransferStation: false },
-            { name: "翔宇路北", isTransferStation: false },
-            { name: "翔宇路南", isTransferStation: true },
-            { name: "禄口机场", isTransferStation: false }*/
+            { name: "南京南站", isTransferStation: true },  
+            { name: "景明佳园", isTransferStation: false }, 
+            { name: "铁心桥", isTransferStation: false },  
+            { name: "春江路", isTransferStation: false },  
+            { name: "贾西", isTransferStation: false },  
+            { name: "油坊桥", isTransferStation: true },  
+            { name: "永初路", isTransferStation: true },  
+            { name: "平良大街", isTransferStation: false },  
+            { name: "吴侯街", isTransferStation: false },  
+            { name: "高庙路", isTransferStation: false },  
+            { name: "天保", isTransferStation: false },  
+            { name: "刘村", isTransferStation: false },  
+            { name: "马骡圩", isTransferStation: false },  
+            { name: "兰花塘", isTransferStation: false },  
+            { name: "双垅", isTransferStation: false },
+            { name: "石碛河", isTransferStation: false }, 
+            { name: "桥林新城", isTransferStation: false }, 
+            { name: "林山", isTransferStation: false }, 
+            { name: "高家冲", isTransferStation: false }
         ]
     },
 
@@ -341,6 +353,24 @@ const metroLines = [
     },
 
 
+
+
+    {
+        name: "S7",
+        color: "#E99DAE",
+        stations: [
+
+            { name: "空港新城江宁", isTransferStation: true },
+            { name: "柘塘", isTransferStation: false },
+            { name: "空港新城溧水", isTransferStation: false },
+            { name: "群力", isTransferStation: false },
+            { name: "卧龙湖", isTransferStation: false },
+            { name: "溧水", isTransferStation: false },
+            { name: "中山湖", isTransferStation: false },
+            { name: "幸庄", isTransferStation: false },
+            { name: "无想山", isTransferStation: false }
+        ]
+    },
 
 
     {
