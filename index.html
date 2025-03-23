@@ -141,7 +141,7 @@
             margin-bottom: 20px;
             color: #007BFF;
         }
-                table {
+        table {
             width: 100%;
             margin: 0 auto;
             border-radius: 8px;/* 表格圆角 */
@@ -203,6 +203,9 @@
                 text-align: left;
             }
         }
+
+
+            
     </style>
 </head>
 <body>
@@ -374,16 +377,22 @@
                         if (train.timeRemaining.totalSeconds === 0) {
                             statusUpdated = true;
                             statusCell.textContent = '列车到站';
+
+                            // 先设置“列车到站”，然后 20秒后更改为“正在离开”
                             setTimeout(() => {
-                                row.style.display = 'none';
-                            }, 20000);
-                            statusCell.textContent = '正在离开';
-                            setTimeout(() => {
-                                row.style.display = 'none';
-                            }, 10000);
+                                statusCell.textContent = '正在离开';
+
+                                // 10秒后再隐藏行
+                                setTimeout(() => {
+                                    row.style.display = 'none';
+                                }, 10000); // 10秒后隐藏
+                            }, 20000); // 20秒后更改为“正在离开”
                         }
                     }
+
+
                 }
+                    
 
                 // 每秒更新状态列
                 const intervalId = setInterval(() => {
@@ -437,28 +446,28 @@
             document.getElementById("stationInput").focus(); // 页面加载完成后，自动聚焦到搜索框
         };
 
-        // function showSuggestions(input) {
-        //     const autocompleteList = document.getElementById("autocomplete-list");
-        //     autocompleteList.innerHTML = "";
-        //     if (!input) return;
+        /* function showSuggestions(input) {
+             const autocompleteList = document.getElementById("autocomplete-list");
+             autocompleteList.innerHTML = "";
+             if (!input) return;
 
-        //     const suggestions = metroLines.flatMap(line => 
-        //         line.stations.filter(station => 
-        //             station.name.toLowerCase().includes(input.toLowerCase())
-        //         ).map(station => ({ station, line }))
-        //     );
+             const suggestions = metroLines.flatMap(line => 
+                 line.stations.filter(station => 
+                     station.name.toLowerCase().includes(input.toLowerCase())
+                 ).map(station => ({ station, line }))
+             );
 
-        //     suggestions.forEach(suggestion => {
-        //         const item = document.createElement("div");
-        //         item.className = "autocomplete-item";
-        //         item.innerHTML = `<strong>${suggestion.station.name}</strong> - ${suggestion.line.name}`;
-        //         item.addEventListener("click", () => {
-        //             document.getElementById("stationInput").value = suggestion.station.name;
-        //             autocompleteList.innerHTML = "";
-        //         });
-        //         autocompleteList.appendChild(item);
-        //     });
-        // }
+             suggestions.forEach(suggestion => {
+                 const item = document.createElement("div");
+                 item.className = "autocomplete-item";
+                 item.innerHTML = `<strong>${suggestion.station.name}</strong> - ${suggestion.line.name}`;
+                 item.addEventListener("click", () => {
+                     document.getElementById("stationInput").value = suggestion.station.name;
+                     autocompleteList.innerHTML = "";
+                 });
+                 autocompleteList.appendChild(item);
+             });
+         }*/
 
         function searchStation() {
             const input = document.getElementById("stationInput").value.trim();
