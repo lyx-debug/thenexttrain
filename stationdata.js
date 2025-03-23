@@ -210,7 +210,7 @@ const metroLines = [
         name: "7",
         color: "#4A772A",
         stations: [
-            { name: "仙新路", isTransferStation: true },
+            { name: "仙新路", isTransferStation: false },
             { name: "尧化门", isTransferStation: false },
             { name: "尧化新村", isTransferStation: false },
             { name: "丁家庄南", isTransferStation: false },
