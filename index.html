@@ -199,27 +199,32 @@
         top: 100%;
         left: 0;
         right: 0;
-        max-height: 300px;
-        overflow-y: auto;
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
         animation: fadeIn 0.3s ease-out;
+        max-height: 300px;
+        overflow-y: auto;
     }
 
     .autocomplete-item {
+        display: flex;
+        align-items: center;
         padding: 12px 15px;
         cursor: pointer;
         background: white;
         border-bottom: 1px solid #eaeef2;
         transition: all 0.2s ease;
+        transform: translateX(0);
+    }
+
+    .autocomplete-item strong {
+        color: #808080;
+        margin-right: 8px;
     }
 
     .autocomplete-item:hover {
         background: #f0f4f8;
         transform: translateX(5px);
-    }
-
-    .autocomplete-item strong {
-        color: #6e8efb;
+        margin-right: 5px; /* 补偿translateX导致的宽度变化 */
     }
 
     table {
@@ -364,9 +369,9 @@
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁-the-next-train</h1>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁 The-Next-Train</h1>
     <div class="search-box">
-        <input type="text" id="stationInput" placeholder="输入地铁站名称..." oninput="showSuggestions(this.value)">
+        <input type="text" id="stationInput" placeholder="输入地铁站名称 如 新街口/xjk" oninput="showSuggestions(this.value)" onclick="showSuggestions(this.value)">
         <button onclick="searchStation()">搜索</button>
     </div>
     <div id="autocomplete-list" class="autocomplete-items"></div>
@@ -374,6 +379,7 @@
     <div id="lineInfo"></div>
 
     <script src="./stationdata.js"></script>
+    <script src="./pinyinpro.min.js"></script>
     <script>
         // 获取当前日期的星期几
         function getWeekDay() {
@@ -566,27 +572,77 @@
         // 页面加载完成时自动聚焦到输入框
         window.onload = function() {
             document.getElementById("stationInput").focus(); // 页面加载完成后，自动聚焦到搜索框
+            showSuggestions("");
         };
 
+        function matchesPinyin(input, pinyin) {
+            if (!pinyin) return false;
+            if (pinyin.toLowerCase().includes(input.toLowerCase())) {
+                return true;
+            }
+            const initials = pinyin.split('').filter(c => /[a-z]/.test(c)).join('');
+            return initials.toLowerCase().includes(input.toLowerCase());
+        }
+
         function showSuggestions(input) {
+            console.log("Show suggestions " + input);
             const autocompleteList = document.getElementById("autocomplete-list");
             autocompleteList.innerHTML = "";
-            if (!input) return;
+            
+            // Group stations by name to handle transfer stations
+            const stationMap = new Map();
+            
+            metroLines.forEach(line => {
+                line.stations.forEach(station => {
+                    const pinyin = pinyinPro.pinyin(station.name, { toneType: 'none' }) || "";
+                    const pinyinInitials = pinyin.split(" ").map(s => s[0]).join("");
+                    const match1 = station.name.toLowerCase().includes(input.toLowerCase());
+                    const match2 = pinyinInitials.toLowerCase().includes(input.toLowerCase());
+                    if (match1 || match2) {
+                        if (!stationMap.has(station.name)) {
+                            stationMap.set(station.name, {
+                                station: station,
+                                lines: []
+                            });
+                        }
+                        stationMap.get(station.name).lines.push(line);
+                    }
+                });
+            });
 
-            const suggestions = metroLines.flatMap(line => 
-                line.stations.filter(station => 
-                    station.name.toLowerCase().includes(input.toLowerCase())
-                ).map(station => ({ station, line }))
-            );
-
-            suggestions.forEach(suggestion => {
+            // Create suggestions from the map
+            stationMap.forEach((value, stationName) => {
                 const item = document.createElement("div");
                 item.className = "autocomplete-item";
-                item.innerHTML = `<strong>${suggestion.station.name}</strong> - ${suggestion.line.name}`;
+                
+                // Create line circles
+                const lineCircles = value.lines.map(line => {
+                    return `<span style="
+                        display: inline-block;
+                        width: 20px;
+                        height: 20px;
+                        background: ${line.color};
+                        border-radius: 50%;
+                        text-align: center;
+                        line-height: 20px;
+                        color: white;
+                        font-size: 12px;
+                        margin-left: 5px;
+                        box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+                    ">${line.name}</span>`;
+                }).join("");
+                
+                item.innerHTML = `
+                    <strong>${stationName}</strong>
+                    ${lineCircles}
+                `;
+                
                 item.addEventListener("click", () => {
-                    document.getElementById("stationInput").value = suggestion.station.name;
+                    document.getElementById("stationInput").value = stationName;
+                    searchStation();
                     autocompleteList.innerHTML = "";
                 });
+                
                 autocompleteList.appendChild(item);
             });
         }
@@ -654,7 +710,7 @@
                 for (_ of foundLines.map(line => [line.name, line.color])) {
                     i = _[0]; col = _[1];
                     table.innerHTML += `\
-                    <h1 style="">${i}号线 ${input} </h1>\
+                    <h1 style="-webkit-background-clip: text!important; background: ${col};">${i}号线 ${input} </h1>\
                     <table>\
                         <thead>\
                             <tr>\
