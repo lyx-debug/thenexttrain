@@ -13,7 +13,7 @@ const metroLines = [
             { name: "南京站", isTransferStation: true },
             { name: "新模范马路", isTransferStation: false },
             { name: "玄武门", isTransferStation: false },
-            { name: "鼓楼", isTransferStation: true },
+            { name: "鼓楼",  },
             { name: "珠江路", isTransferStation: false },
             { name: "新街口", isTransferStation: true },
             { name: "张府园", isTransferStation: false },

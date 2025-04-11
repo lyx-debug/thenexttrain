@@ -1,5 +1,10 @@
+@font-face {
+    font-family: 'Swis721';
+    src: url('fonts/Swis721.ttf') format('truetype');
+}
+
 body {
-    font-family: "SimHei", sans-serif;
+    font-family: "Swis721", "SimHei" , sans-serif;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;

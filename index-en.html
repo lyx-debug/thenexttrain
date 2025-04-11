@@ -2,30 +2,30 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>南京地铁-the-next-train</title>
+    <title>NJmetro The-Next-Train</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <div class="navbar">
         <!-- 左侧导航按钮 -->
-        <a href="about.html" target="_self">关于</a>
+        <a href="about.html" target="_self">About</a>
 
         <!-- 右侧图片占位符 -->
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁 The-Next-Train</h1>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">NJ metro The-Next-Train</h1>
     <div class="search-box">
         <input
             type="text"
             id="stationInput"
-            placeholder="输入地铁站名称 新街口/xjk"
+            placeholder="Please input the station name.  example:XINJIEKOU/xjk"
             oninput="showSuggestions(this.value)"
             onclick="showSuggestions(this.value)"
             onkeydown="if (event.key == 'Enter') { document.getElementById('stationInput').value = firstStation; searchStation(); }"
         >
-        <button onclick="searchStation()">搜索</button>
+        <button onclick="searchStation()">Search</button>
     </div>
     <div id="autocomplete-list" class="autocomplete-items"></div>
     <div id="result" class="result"></div>
@@ -33,7 +33,21 @@
 
     <script src="./stationdata.js"></script>
     <script src="./pinyinpro.min.js"></script>
+    <script src="./translationdata.js"></script>
     <script>
+const translation_en_zh = new Map();
+for (i of translation){
+translation_en_zh.set(i.en,i.zh);
+}
+const translation_zh_en = new Map();
+for (i of translation){
+translation_zh_en.set(i.zh,i.en);
+}
+function zh_to_en(str) {
+v = translation_zh_en.get(str);
+if (v == undefined) return str;
+else return v;
+}
         // 获取当前日期的星期几
         function getWeekDay() {
             const now = new Date();
@@ -95,7 +109,7 @@
                 minutes,
                 seconds,
                 totalSeconds: arrivalTotalSeconds - currentTotalSeconds,
-                timeString: `${padTime(hours)}小时 ${padTime(minutes)}分钟 ${padTime(seconds)}秒`
+                timeString: `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`
             };
         }
 
@@ -139,7 +153,7 @@
                 const row = document.createElement('tr');
 
                 const destinationCell = document.createElement('td');
-                destinationCell.textContent = train.destination;
+                destinationCell.textContent = zh_to_en(train.destination);
                 row.appendChild(destinationCell);
 
                 const arrivalTimeCell = document.createElement('td');
@@ -152,18 +166,18 @@
                 row.appendChild(timeRemainingCell);
 
                 const jiaoluCell = document.createElement('td');
-                jiaoluCell.textContent = train.jiaolu;
+                jiaoluCell.textContent = zh_to_en(train.jiaolu);
                 row.appendChild(jiaoluCell);
 
                 const statusCell = document.createElement('td');
-                statusCell.textContent = '正常';
+                statusCell.textContent = 'Normal';
                 row.appendChild(statusCell);
 
                 row.classList.remove('arriving-soon');
 
                 if (train.timeRemaining.totalSeconds <= 60 && train.timeRemaining.totalSeconds > 0) {
                     row.classList.add('arriving-soon');
-                    statusCell.textContent = '即将进站';
+                    statusCell.textContent = 'Coming soon';
                 }
 
                 let statusUpdated = false;
@@ -171,16 +185,16 @@
                 function updateStatus() {
                     if (train.timeRemaining.totalSeconds > 0) {
                         if (train.timeRemaining.totalSeconds <= 60) {
-                            statusCell.textContent = '即将进站';
+                            statusCell.textContent = 'Coming soon';
                             row.classList.add('arriving-soon');
                         } else {
-                            statusCell.textContent = '正常';
+                            statusCell.textContent = 'Normal';
                             row.classList.remove('arriving-soon');
                         }
                     } else {
                         if (train.timeRemaining.totalSeconds === 0) {
                             statusUpdated = true;
-                            statusCell.textContent = '正在离开';
+                            statusCell.textContent = 'Leaving';
                             setTimeout(() => {
                                 row.style.display = 'none';
                             }, 5000);
@@ -192,7 +206,7 @@
                 const intervalId = setInterval(() => {
                     if (!statusUpdated) {
                         train.timeRemaining.totalSeconds--;
-                        timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}小时 ${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}分钟 ${padTime(train.timeRemaining.totalSeconds % 60)}秒`;
+                        timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}:${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}:${padTime(train.timeRemaining.totalSeconds % 60)}`;
                         updateStatus();
                     } else {
                         clearInterval(intervalId);
@@ -249,18 +263,22 @@
             
             metroLines.forEach(line => {
                 line.stations.forEach(station => {
+station_zh_name = zh_to_en(station.name);
                     const pinyin = pinyinPro.pinyin(station.name, { toneType: 'none' }) || "";
+
                     const pinyinInitials = pinyin.split(" ").map(s => s[0]).join("");
-                    const match1 = station.name.toLowerCase().includes(input.toLowerCase());
+
+                    const match1 = station_zh_name.toLowerCase().includes(input.toLowerCase());
                     const match2 = pinyinInitials.toLowerCase().includes(input.toLowerCase());
+
                     if (match1 || match2) {
-                        if (!stationMap.has(station.name)) {
-                            stationMap.set(station.name, {
+                        if (!stationMap.has(station_zh_name)) {
+                            stationMap.set(station_zh_name, {
                                 station: station,
                                 lines: []
                             });
                         }
-                        stationMap.get(station.name).lines.push(line);
+                        stationMap.get(station_zh_name).lines.push(line);
                     }
                 });
             });
@@ -319,30 +337,30 @@
             document.getElementById("stationInput").focus();
 
             if (!input) {
-                resultDiv.innerHTML = "<div>请输入站点名称</div>";
+                resultDiv.innerHTML = "<div>Please input the station name.</div>";
                 return;
             }
 
             const foundLines = metroLines.filter(line => 
                 line.stations.some(station => 
-                    station.name.toLowerCase() === input.toLowerCase()
+                    (translation_zh_en.get(station.name) || "").toLowerCase() === input.toLowerCase()
                 )
             );
 
             if (foundLines.length === 0) {
-                resultDiv.innerHTML = "<div>未找到相关站哦，请重试～</div>";
+                resultDiv.innerHTML = "<div>Can not find the station. Please try again.</div>";
                 return;
             }
 
             const output = document.createElement("div");
             output.innerHTML = `<div class="station-name">${input}</div>`;
 
-            const lineNames = foundLines.map(line => line.name + "号线").join(" "); // 线路文字间隔
+            const lineNames = foundLines.map(line => "Line " + line.name ).join(" "); // 线路文字间隔
 
             // 判断站点是否为换乘站
             const isTransferStation = foundLines.some(line =>
                 line.stations.some(station => 
-                    station.name.toLowerCase() === input.toLowerCase() && station.isTransferStation
+                    zh_to_en(station.name).toLowerCase() === input.toLowerCase() && station.isTransferStation
                 )
             );
 
@@ -371,21 +389,21 @@
                 for (_ of foundLines.map(line => [line.name, line.color])) {
                     i = _[0]; col = _[1];
                     table.innerHTML += `\
-                    <h1 style="-webkit-background-clip: text!important; background: ${col};">${i}号线 ${input} </h1>\
+                    <h1 style="-webkit-background-clip: text!important; background: ${col};">Line ${i} ${input} </h1>\
                     <table>\
                         <thead>\
                             <tr>\
-                                <th>终点站</th>\
-                                <th>到站时间</th>\
-                                <th>状态</th>\
-                                <th>模式</th>\
-                                <th>状态</th>\
+                                <th>Destination</th>\
+                                <th>ArrivalTime</th>\
+                                <th>Status</th>\
+                                <th>Mode</th>\
+                                <th>Status</th>\
                             </tr>\
                         </thead>\
                         <tbody id='train-table-body-${i}'>\
                         </tbody>\
                     </table>`;
-                    const moduleName = "./beautified_js/" + input + "_" + i + ".js";
+                    const moduleName = "./beautified_js/" + translation_en_zh.get(input) + "_" + i + ".js";
                     function callback(args) {
                         updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
                     }
