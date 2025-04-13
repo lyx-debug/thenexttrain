@@ -655,19 +655,19 @@ const translation = [
     },
     {
         "zh": "雨山路",
-        "en": "YUSHANLU"
+        "en": "YUSHANLU/Yushan Road"
     },
     {
         "zh": "文德路",
-        "en": "WENDELU"
+        "en": "WENDELU/Wende Road"
     },
     {
         "zh": "龙华路",
-        "en": "LONGHUALU"
+        "en": "LONGHUALU/Longhua Road"
     },
     {
         "zh": "南京工业大学",
-        "en": "NANJINGGONGYEDAXUE"
+        "en": "NANJINGGONGYEDAXUE/NANJING TECH"
     },
     {
         "zh": "浦口万汇城",
@@ -687,11 +687,11 @@ const translation = [
     },
     {
         "zh": "梦都大街",
-        "en": "MENGDOUDAJIE"
+        "en": "MENGDOUDAJIE/Mengdu Avenue"
     },
     {
         "zh": "奥体中心",
-        "en": "AOTIZHONGXIN"
+        "en": "AOTIZHONGXIN/Olympic Center"
     },
     {
         "zh": "元通",
@@ -707,39 +707,39 @@ const translation = [
     },
     {
         "zh": "安德门",
-        "en": "ANDEMEN"
+        "en": "ANDEMEN/An'de Gate"
     },
     {
         "zh": "南京南站",
-        "en": "NANJINGNANZHAN"
+        "en": "NANJINGNANZHAN/Nanjing South Railway Station"
     },
     {
         "zh": "翠屏山",
-        "en": "CUIPINGSHAN"
+        "en": "CUIPINGSHAN/Cuiping Mountain"
     },
     {
         "zh": "河海大学·佛城西路",
-        "en": "HEHAIDAXUE·FOCHENGXILU"
+        "en": "HEHAIDAXUE·FOCHENGXILU/HHU/FOCHENGXILU"
     },
     {
         "zh": "吉印大道",
-        "en": "JIYINDADAO"
+        "en": "JIYINDADAO/Jiyin Avenue"
     },
     {
         "zh": "正方中路",
-        "en": "ZHENGFANGZHONGLU"
+        "en": "ZHENGFANGZHONGLU/Zhengfang Road"
     },
     {
         "zh": "翔宇路北",
-        "en": "XIANGYULUBEI"
+        "en": "XIANGYULUBEI/North Xiangyu Road"
     },
     {
         "zh": "翔宇路南",
-        "en": "XIANGYULUNAN"
+        "en": "XIANGYULUNAN/South Xiangyu Road"
     },
     {
         "zh": "禄口机场",
-        "en": "LUKOUJICHANG"
+        "en": "LUKOUJICHANG/Lukou International Airport"
     },
     {
         "zh": "空港新城江宁",
@@ -747,7 +747,7 @@ const translation = [
     },
     {
         "zh": "南京南站",
-        "en": "NANJINGNANZHAN"
+        "en": "NANJINGNANZHAN/Nanjing South Railway Station"
     },
     {
         "zh": "景明佳园",
@@ -755,11 +755,11 @@ const translation = [
     },
     {
         "zh": "铁心桥",
-        "en": "TIEXINQIAO"
+        "en": "TIEXINQIAO/Tiexin Bridge"
     },
     {
         "zh": "春江路",
-        "en": "CHUNJIANGLU"
+        "en": "CHUNJIANGLU/Chunjiang Road"
     },
     {
         "zh": "贾西",
@@ -767,23 +767,23 @@ const translation = [
     },
     {
         "zh": "油坊桥",
-        "en": "YOUFANGQIAO"
+        "en": "YOUFANGQIAO/Youfang Bridge"
     },
     {
         "zh": "永初路",
-        "en": "YONGCHULU"
+        "en": "YONGCHULU/Yongchu Road"
     },
     {
         "zh": "平良大街",
-        "en": "PINGLIANGDAJIE"
+        "en": "PINGLIANGDAJIE/Pingliang Avenue"
     },
     {
         "zh": "吴侯街",
-        "en": "WUHOUJIE"
+        "en": "WUHOUJIE/Wuhou Street"
     },
     {
         "zh": "高庙路",
-        "en": "GAOMIAOLU"
+        "en": "GAOMIAOLU/Gaomiao Road"
     },
     {
         "zh": "天保",
@@ -795,7 +795,7 @@ const translation = [
     },
     {
         "zh": "马骡圩",
-        "en": "MALUOXU"
+        "en": "MALUOWEI"
     },
     {
         "zh": "兰花塘",
@@ -807,7 +807,7 @@ const translation = [
     },
     {
         "zh": "石碛河",
-        "en": "SHIQIHE"
+        "en": "SHIQIHE/Shiqi River"
     },
     {
         "zh": "桥林新城",
@@ -821,17 +821,18 @@ const translation = [
         "zh": "高家冲",
         "en": "GAOJIACHONG"
     },
+    
     {
         "zh": "马群",
         "en": "MAQUN"
     },
     {
         "zh": "百水桥",
-        "en": "BAISHUIQIAO"
+        "en": "BAISHUIQIAO/Baishui Bridge"
     },
     {
         "zh": "麒麟门",
-        "en": "QILINMEN"
+        "en": "QILINMEN/Qilin Gate"
     },
     {
         "zh": "东郊小镇",
@@ -847,7 +848,7 @@ const translation = [
     },
     {
         "zh": "泉都大街",
-        "en": "QUANDOUDAJIE"
+        "en": "QUANDOUDAJIE/Quandou Avenue"
     },
     {
         "zh": "黄梅",
@@ -887,7 +888,7 @@ const translation = [
     },
     {
         "zh": "卧龙湖",
-        "en": "WOLONGHU"
+        "en": "WOLONGHU/Wolong Lake"
     },
     {
         "zh": "溧水",
@@ -895,7 +896,7 @@ const translation = [
     },
     {
         "zh": "中山湖",
-        "en": "ZHONGSHANHU"
+        "en": "ZHONGSHANHU/Zhongshan Lake"
     },
     {
         "zh": "幸庄",
@@ -903,27 +904,27 @@ const translation = [
     },
     {
         "zh": "无想山",
-        "en": "WUXIANGSHAN"
+        "en": "WUXIANGSHAN/Wuxiang Mountain"
     },
     {
         "zh": "金牛湖",
-        "en": "JINNIUHU"
+        "en": "JINNIUHU/Jinniu Lake"
     },
     {
         "zh": "八百桥",
-        "en": "BABAIQIAO"
+        "en": "BABAIQIAO/Babai Bridge"
     },
     {
         "zh": "沈桥",
-        "en": "SHENQIAO"
+        "en": "SHENQIAO/Shen Bridge"
     },
     {
         "zh": "方州广场",
-        "en": "FANGZHOUGUANGCHANG"
+        "en": "FANGZHOUGUANGCHANG/Fangzhou Square"
     },
     {
         "zh": "凤凰山公园",
-        "en": "FENGHUANGSHANGONGYUAN"
+        "en": "FENGHUANGSHANGONGYUAN/Fenghuangshan Park"
     },
     {
         "zh": "雄州",
@@ -935,7 +936,7 @@ const translation = [
     },
     {
         "zh": "六合开发区",
-        "en": "LIUHEKAIFAQU"
+        "en": "LIUHEKAIFAQU/Liuhe Development Zone"
     },
     {
         "zh": "化工园",
@@ -959,15 +960,15 @@ const translation = [
     },
     {
         "zh": "信息工程大学",
-        "en": "XINXIGONGCHENGDAXUE"
+        "en": "XINXIGONGCHENGDAXUE/NUIST"
     },
     {
         "zh": "高新开发区",
-        "en": "GAOXINKAIFAQU"
+        "en": "GAOXINKAIFAQU/Gaoxin Development Zone"
     },
     {
         "zh": "泰冯路",
-        "en": "TAIFENGLU"
+        "en": "TAIFENGLU/Taifeng Road"
     },
     {
         "zh": "泰山新村",
@@ -975,15 +976,15 @@ const translation = [
     },
     {
         "zh": "毛纺厂路",
-        "en": "MAOFANGCHANGLU"
+        "en": "MAOFANGCHANGLU/Maofangchang Road"
     },
     {
         "zh": "长江大桥北",
-        "en": "CHANGJIANGDAQIAOBEI"
+        "en": "CHANGJIANGDAQIAOBEI/North Changjiang Bridge"
     },
     {
         "zh": "翔宇路南",
-        "en": "XIANGYULUNAN"
+        "en": "XIANGYULUNAN/South Xiangyu Road"
     },
     {
         "zh": "铜山",
@@ -999,7 +1000,7 @@ const translation = [
     },
     {
         "zh": "团结圩",
-        "en": "TUANJIEXU"
+        "en": "TUANJIEWEI"
     },
     {
         "zh": "高淳",

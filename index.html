@@ -11,6 +11,7 @@
         <!-- 左侧导航按钮 -->
         <a href="about.html" target="_self">关于</a>
         <a href="index-en.html" target="_self">英文/English</a>
+        <a href="choosecity.html" target="_self">选择城市</a>
 
         <!-- 右侧图片占位符 -->
         <img src="placeholder.png" alt="">
@@ -32,7 +33,7 @@
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
-    <script src="./stationdata.js"></script>
+    <script src="./js/stationdata.js"></script>
     <script src="./pinyinpro.min.js"></script>
     <script>
         // 获取当前日期的星期几
@@ -178,13 +179,21 @@
                             statusCell.textContent = '正常';
                             row.classList.remove('arriving-soon');
                         }
-                    } else {
+                    } 
+                    else {
                         if (train.timeRemaining.totalSeconds === 0) {
                             statusUpdated = true;
-                            statusCell.textContent = '正在离开';
+                            statusCell.textContent = '列车到站';
+
+                            // 先设置“列车到站”，然后 20秒后更改为“正在离开”
                             setTimeout(() => {
-                                row.style.display = 'none';
-                            }, 5000);
+                                statusCell.textContent = '正在离开';
+
+                                // 10秒后再隐藏行
+                                setTimeout(() => {
+                                    row.style.display = 'none';
+                                }, 10000); // 10秒后隐藏
+                            }, 20000); // 20秒后更改为“正在离开”
                         }
                     }
                 }

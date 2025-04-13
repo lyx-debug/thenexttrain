@@ -2,53 +2,40 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>NJmetro The-Next-Train</title>
+    <title>北京地铁 The-Next-Train</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <!-- 导航栏 -->
     <div class="navbar">
         <!-- 左侧导航按钮 -->
-        <a href="about.html" target="_self">About</a>
-        <a href="index.html" target="_self">中文/Chinese</a>
+        <a href="about.html" target="_self">关于</a>
+        <a href="index-en.html" target="_self">英文/English</a>
+        <a href="choosecity.html" target="_self">选择城市</a>
 
         <!-- 右侧图片占位符 -->
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">NJ metro The-Next-Train</h1>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">北京地铁 The-Next-Train</h1>
     <div class="search-box">
         <input
             type="text"
             id="stationInput"
-            placeholder="Please input the station name.  example:XINJIEKOU/xjk"
+            placeholder="输入地铁站名称 新街口/xjk"
             oninput="showSuggestions(this.value)"
             onclick="showSuggestions(this.value)"
             onkeydown="if (event.key == 'Enter') { document.getElementById('stationInput').value = firstStation; searchStation(); }"
         >
-        <button onclick="searchStation()">Search</button>
+        <button onclick="searchStation()">搜索</button>
     </div>
     <div id="autocomplete-list" class="autocomplete-items"></div>
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
-    <script src="./stationdata.js"></script>
+    <script src="./js/stationdata-beijing.js"></script>
     <script src="./pinyinpro.min.js"></script>
-    <script src="./translationdata.js"></script>
     <script>
-        const translation_en_zh = new Map();
-        for (i of translation){
-        translation_en_zh.set(i.en,i.zh);
-        }
-        const translation_zh_en = new Map();
-        for (i of translation){
-        translation_zh_en.set(i.zh,i.en);
-        }
-        function zh_to_en(str) {
-        v = translation_zh_en.get(str);
-        if (v == undefined) return str;
-        else return v;
-        }
         // 获取当前日期的星期几
         function getWeekDay() {
             const now = new Date();
@@ -110,7 +97,7 @@
                 minutes,
                 seconds,
                 totalSeconds: arrivalTotalSeconds - currentTotalSeconds,
-                timeString: `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`
+                timeString: `${padTime(hours)}小时 ${padTime(minutes)}分钟 ${padTime(seconds)}秒`
             };
         }
 
@@ -154,7 +141,7 @@
                 const row = document.createElement('tr');
 
                 const destinationCell = document.createElement('td');
-                destinationCell.textContent = zh_to_en(train.destination);
+                destinationCell.textContent = train.destination;
                 row.appendChild(destinationCell);
 
                 const arrivalTimeCell = document.createElement('td');
@@ -167,18 +154,18 @@
                 row.appendChild(timeRemainingCell);
 
                 const jiaoluCell = document.createElement('td');
-                jiaoluCell.textContent = zh_to_en(train.jiaolu);
+                jiaoluCell.textContent = train.jiaolu;
                 row.appendChild(jiaoluCell);
 
                 const statusCell = document.createElement('td');
-                statusCell.textContent = 'Normal';
+                statusCell.textContent = '正常';
                 row.appendChild(statusCell);
 
                 row.classList.remove('arriving-soon');
 
                 if (train.timeRemaining.totalSeconds <= 60 && train.timeRemaining.totalSeconds > 0) {
                     row.classList.add('arriving-soon');
-                    statusCell.textContent = 'Coming soon';
+                    statusCell.textContent = '即将进站';
                 }
 
                 let statusUpdated = false;
@@ -186,19 +173,27 @@
                 function updateStatus() {
                     if (train.timeRemaining.totalSeconds > 0) {
                         if (train.timeRemaining.totalSeconds <= 60) {
-                            statusCell.textContent = 'Coming soon';
+                            statusCell.textContent = '即将进站';
                             row.classList.add('arriving-soon');
                         } else {
-                            statusCell.textContent = 'Normal';
+                            statusCell.textContent = '正常';
                             row.classList.remove('arriving-soon');
                         }
-                    } else {
+                    } 
+                    else {
                         if (train.timeRemaining.totalSeconds === 0) {
                             statusUpdated = true;
-                            statusCell.textContent = 'Leaving';
+                            statusCell.textContent = '列车到站';
+
+                            // 先设置“列车到站”，然后 20秒后更改为“正在离开”
                             setTimeout(() => {
-                                row.style.display = 'none';
-                            }, 5000);
+                                statusCell.textContent = '正在离开';
+
+                                // 10秒后再隐藏行
+                                setTimeout(() => {
+                                    row.style.display = 'none';
+                                }, 10000); // 10秒后隐藏
+                            }, 20000); // 20秒后更改为“正在离开”
                         }
                     }
                 }
@@ -207,7 +202,7 @@
                 const intervalId = setInterval(() => {
                     if (!statusUpdated) {
                         train.timeRemaining.totalSeconds--;
-                        timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}:${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}:${padTime(train.timeRemaining.totalSeconds % 60)}`;
+                        timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}小时 ${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}分钟 ${padTime(train.timeRemaining.totalSeconds % 60)}秒`;
                         updateStatus();
                     } else {
                         clearInterval(intervalId);
@@ -264,22 +259,18 @@
             
             metroLines.forEach(line => {
                 line.stations.forEach(station => {
-station_zh_name = zh_to_en(station.name);
                     const pinyin = pinyinPro.pinyin(station.name, { toneType: 'none' }) || "";
-
                     const pinyinInitials = pinyin.split(" ").map(s => s[0]).join("");
-
-                    const match1 = station_zh_name.toLowerCase().includes(input.toLowerCase());
+                    const match1 = station.name.toLowerCase().includes(input.toLowerCase());
                     const match2 = pinyinInitials.toLowerCase().includes(input.toLowerCase());
-
                     if (match1 || match2) {
-                        if (!stationMap.has(station_zh_name)) {
-                            stationMap.set(station_zh_name, {
+                        if (!stationMap.has(station.name)) {
+                            stationMap.set(station.name, {
                                 station: station,
                                 lines: []
                             });
                         }
-                        stationMap.get(station_zh_name).lines.push(line);
+                        stationMap.get(station.name).lines.push(line);
                     }
                 });
             });
@@ -338,30 +329,30 @@ station_zh_name = zh_to_en(station.name);
             document.getElementById("stationInput").focus();
 
             if (!input) {
-                resultDiv.innerHTML = "<div>Please input the station name.</div>";
+                resultDiv.innerHTML = "<div>请输入站点名称</div>";
                 return;
             }
 
             const foundLines = metroLines.filter(line => 
                 line.stations.some(station => 
-                    (translation_zh_en.get(station.name) || "").toLowerCase() === input.toLowerCase()
+                    station.name.toLowerCase() === input.toLowerCase()
                 )
             );
 
             if (foundLines.length === 0) {
-                resultDiv.innerHTML = "<div>Can not find the station. Please try again.</div>";
+                resultDiv.innerHTML = "<div>未找到相关站哦，请重试～</div>";
                 return;
             }
 
             const output = document.createElement("div");
             output.innerHTML = `<div class="station-name">${input}</div>`;
 
-            const lineNames = foundLines.map(line => "Line " + line.name ).join(" "); // 线路文字间隔
+            const lineNames = foundLines.map(line => line.name + "号线").join(" "); // 线路文字间隔
 
             // 判断站点是否为换乘站
             const isTransferStation = foundLines.some(line =>
                 line.stations.some(station => 
-                    zh_to_en(station.name).toLowerCase() === input.toLowerCase() && station.isTransferStation
+                    station.name.toLowerCase() === input.toLowerCase() && station.isTransferStation
                 )
             );
 
@@ -390,21 +381,21 @@ station_zh_name = zh_to_en(station.name);
                 for (_ of foundLines.map(line => [line.name, line.color])) {
                     i = _[0]; col = _[1];
                     table.innerHTML += `\
-                    <h1 style="-webkit-background-clip: text!important; background: ${col};">Line ${i} ${input} </h1>\
+                    <h1 style="-webkit-background-clip: text!important; background: ${col};">${i}号线 ${input} </h1>\
                     <table>\
                         <thead>\
                             <tr>\
-                                <th>Destination</th>\
-                                <th>ArrivalTime</th>\
-                                <th>Status</th>\
-                                <th>Mode</th>\
-                                <th>Status</th>\
+                                <th>终点站</th>\
+                                <th>到站时间</th>\
+                                <th>状态</th>\
+                                <th>模式</th>\
+                                <th>状态</th>\
                             </tr>\
                         </thead>\
                         <tbody id='train-table-body-${i}'>\
                         </tbody>\
                     </table>`;
-                    const moduleName = "./beautified_js/" + translation_en_zh.get(input) + "_" + i + ".js";
+                    const moduleName = "./js-timetable/" + input + "_" + i + ".js";
                     function callback(args) {
                         updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
                     }
