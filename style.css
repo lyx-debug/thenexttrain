@@ -376,3 +376,134 @@ tbody tr:hover .time-remaining {
     margin: 10px 0;
     padding: 5px 0;
 }
+
+/* 移动设备样式 */
+.mobile-device {
+    overflow-x: hidden;
+    position: relative;  /* 改为 relative */
+    max-width: 100%;
+    margin: 0;
+    padding: 10px;
+}
+
+.mobile-device .search-box {
+    width: 100%;
+    max-width: 340px;
+    margin: 10px auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.mobile-device .search-box input {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.mobile-device .search-box button {
+    width: 100%;
+    height: 40px;
+    font-size: 16px;
+}
+
+/* 移动设备表格样式 */
+.mobile-device table {
+    width: 100%;
+    margin: 10px auto;
+    font-size: 14px;
+    border-radius: 8px;
+    display: table;  /* 确保表格正常显示 */
+}
+
+.mobile-device thead {
+    display: table-header-group;  /* 显示表头 */
+    background: linear-gradient(135deg, #6e8efb 0%, #a777e3 100%);
+    color: white;
+}
+
+.mobile-device th {
+    padding: 10px 5px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: bold;
+    display: table-cell;  /* 确保表头单元格正常显示 */
+}
+
+.mobile-device tbody {
+    display: table-row-group;
+}
+
+.mobile-device tr {
+    display: table-row;
+}
+
+.mobile-device td {
+    display: table-cell;
+    padding: 10px 5px;
+    font-size: 14px;
+    text-align: center;
+}
+
+/* 移除之前的响应式表格布局 */
+@media screen and (max-width: 480px) {
+    .mobile-device table,
+    .mobile-device thead,
+    .mobile-device tbody,
+    .mobile-device th,
+    .mobile-device td,
+    .mobile-device tr {
+        display: revert;  /* 恢复默认表格布局 */
+    }
+    
+    .mobile-device thead tr {
+        display: table-row;  /* 显示表头行 */
+    }
+    
+    .mobile-device tbody td::before {
+        display: none;  /* 移除之前添加的标签 */
+    }
+}
+.mobile-device .station-name {
+    font-size: 20px;
+    margin: 15px 0;
+    text-align: center;
+}
+
+.mobile-device h1 {
+    font-size: 22px;
+    margin: 15px 0;
+    padding: 0 10px;
+    text-align: center;
+}
+
+.mobile-device .autocomplete-items {
+    width: 100%;
+    max-width: 340px;
+    margin: 0 auto;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.mobile-device .line-info {
+    width: 100%;
+    max-width: 340px;
+    margin: 10px auto;
+    padding: 15px 10px;
+}
+
+.mobile-device .navbar {
+    width: 100%;
+    padding: 10px;
+    height: auto;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-device .navbar a {
+    font-size: 14px;
+    padding: 8px 12px;
+}

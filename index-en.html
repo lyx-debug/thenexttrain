@@ -36,19 +36,19 @@
     <script src="./pinyinpro.min.js"></script>
     <script src="./translationdata.js"></script>
     <script>
-const translation_en_zh = new Map();
-for (i of translation){
-translation_en_zh.set(i.en,i.zh);
-}
-const translation_zh_en = new Map();
-for (i of translation){
-translation_zh_en.set(i.zh,i.en);
-}
-function zh_to_en(str) {
-v = translation_zh_en.get(str);
-if (v == undefined) return str;
-else return v;
-}
+        const translation_en_zh = new Map();
+        for (i of translation){
+        translation_en_zh.set(i.en,i.zh);
+        }
+        const translation_zh_en = new Map();
+        for (i of translation){
+        translation_zh_en.set(i.zh,i.en);
+        }
+        function zh_to_en(str) {
+        v = translation_zh_en.get(str);
+        if (v == undefined) return str;
+        else return v;
+        }
         // 获取当前日期的星期几
         function getWeekDay() {
             const now = new Date();

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>南京地铁-the-next-train</title>
+    <title>北京地铁 The-Next-Train</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁 The-Next-Train</h1>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">北京地铁 The-Next-Train</h1>
     <div class="search-box">
         <input
             type="text"
@@ -33,7 +33,7 @@
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
-    <script src="./js/stationdata.js"></script>
+    <script src="./js/stationdata-beijing.js"></script>
     <script src="./pinyinpro.min.js"></script>
     <script>
         // 获取当前日期的星期几
@@ -395,7 +395,7 @@
                         <tbody id='train-table-body-${i}'>\
                         </tbody>\
                     </table>`;
-                    const moduleName = "./beautified_js/" + input + "_" + i + ".js";
+                    const moduleName = "./js-timetable/" + input + "_" + i + ".js";
                     function callback(args) {
                         updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
                     }
