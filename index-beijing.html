@@ -46,19 +46,27 @@
         function getArrivalTimesForToday(arrivalTimes) {
             const weekDay = getWeekDay();
             console.log(`Today is day: ${weekDay}`);
+            console.log("Available arrival times data:", arrivalTimes);
 
-            const arrivalTimesForToday = {
-                0: arrivalTimes.sunday,
-                1: arrivalTimes.monday,
-                2: arrivalTimes.tuesday,
-                3: arrivalTimes.wednesday,
-                4: arrivalTimes.thursday,
-                5: arrivalTimes.friday,
-                6: arrivalTimes.saturday,
-            }[weekDay] || [];
+            let arrivalTimesForToday;
+            
+            // 周一到周四使用 weekdays 时刻表
+            if (weekDay >= 1 && weekDay <= 4) {
+                console.log("Using weekdays timetable");
+                arrivalTimesForToday = arrivalTimes.weekdays;
+            } else {
+                // 周五到周日使用 weekend 时刻表
+                console.log("Using weekend timetable");
+                arrivalTimesForToday = arrivalTimes.weekend || arrivalTimes.weekdays; // 如果没有weekend时刻表，使用weekdays
+            }
 
-            console.log("Arrival times for today:", arrivalTimesForToday);
-            return Array.isArray(arrivalTimesForToday)? arrivalTimesForToday : [];
+            if (!arrivalTimesForToday) {
+                console.log("Warning: No timetable found for today");
+                return [];
+            }
+
+            console.log("Selected timetable for today:", arrivalTimesForToday);
+            return Array.isArray(arrivalTimesForToday) ? arrivalTimesForToday : [];
         }
 
         function padTime(number) {
