@@ -50,16 +50,29 @@
 
             let arrivalTimesForToday;
             
-            // 周一到周四使用 weekdays 时刻表
-            if (weekDay >= 1 && weekDay <= 4) {
-                console.log("Using weekdays timetable");
-                arrivalTimesForToday = arrivalTimes.weekdays;
+            // 检查是否是大兴机场线的时刻表
+            const isDaxingAirport = window.location.href.includes("大兴机场");
+            
+            if (isDaxingAirport) {
+                // 大兴机场线：周一到周四使用 weekdays，周五到周日使用 weekend
+                if (weekDay >= 1 && weekDay <= 4) {
+                    console.log("Using weekdays timetable (Airport Line)");
+                    arrivalTimesForToday = arrivalTimes.weekdays;
+                } else {
+                    console.log("Using weekend timetable (Airport Line)");
+                    arrivalTimesForToday = arrivalTimes.weekend || arrivalTimes.weekdays;
+                }
             } else {
-                // 周五到周日使用 weekend 时刻表
-                console.log("Using weekend timetable");
-                arrivalTimesForToday = arrivalTimes.weekend || arrivalTimes.weekdays; // 如果没有weekend时刻表，使用weekdays
+                // 其他线路：周一到周五使用 weekdays，周六周日使用 weekend
+                if (weekDay >= 1 && weekDay <= 5) {
+                    console.log("Using weekdays timetable");
+                    arrivalTimesForToday = arrivalTimes.weekdays;
+                } else {
+                    console.log("Using weekend timetable");
+                    arrivalTimesForToday = arrivalTimes.weekend || arrivalTimes.weekdays;
+                }
             }
-
+            
             if (!arrivalTimesForToday) {
                 console.log("Warning: No timetable found for today");
                 return [];
@@ -355,7 +368,10 @@
             const output = document.createElement("div");
             output.innerHTML = `<div class="station-name">${input}</div>`;
 
-            const lineNames = foundLines.map(line => line.name + "号线").join(" "); // 线路文字间隔
+            const lineNames = foundLines.map(line => {
+                // 判断是否为数字
+                return isNaN(line.name) ? `${line.name}线` : `${line.name}号线`;
+            }).join(" ");
 
             // 判断站点是否为换乘站
             const isTransferStation = foundLines.some(line =>
@@ -389,7 +405,7 @@
                 for (_ of foundLines.map(line => [line.name, line.color])) {
                     i = _[0]; col = _[1];
                     table.innerHTML += `\
-                    <h1 style="-webkit-background-clip: text!important; background: ${col};">${i}号线 ${input} </h1>\
+                    <h1 style="-webkit-background-clip: text!important; background: ${col};">${isNaN(i) ? `${i}线` : `${i}号线`} ${input} </h1>\
                     <table>\
                         <thead>\
                             <tr>\
