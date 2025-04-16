@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>南京地铁-the-next-train</title>
+    <title>南外接驳 The-Next-Bus</title>
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -22,7 +22,7 @@
         <input
             type="text"
             id="stationInput"
-            placeholder="输入地铁站名称 新街口/xjk"
+            placeholder="输入车站名称 南部新城/nbxc"
             oninput="showSuggestions(this.value)"
             onclick="showSuggestions(this.value)"
             onkeydown="if (event.key == 'Enter') { document.getElementById('stationInput').value = firstStation; searchStation(); }"
@@ -33,7 +33,7 @@
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
-    <script src="./js/stationdata.js"></script>
+    <script src="./js/stationdata-NFLS.js"></script>
     <script src="./pinyinpro.min.js"></script>
     <script>
         // 获取当前日期的星期几
@@ -123,7 +123,7 @@
                 const arrivalTotalSeconds = arrivalTime.hours * 3600 + arrivalTime.minutes * 60 + arrivalTime.seconds;
                 const currentTotalSeconds = currentTime.hours * 3600 + currentTime.minutes * 60 + currentTime.seconds;
 
-                return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 1800;
+                return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 7200;//过滤7200秒内的列车
             });
 
             console.log(`Filtered arrival times:`, filteredArrivalTimes);
@@ -154,7 +154,7 @@
                 row.appendChild(timeRemainingCell);
 
                 const jiaoluCell = document.createElement('td');
-                jiaoluCell.textContent = train.jiaolu;
+                jiaoluCell.textContent = train.busnumber || train.jiaolu;  // 优先显示车号，如果没有则显示车型
                 row.appendChild(jiaoluCell);
 
                 const statusCell = document.createElement('td');
@@ -390,15 +390,15 @@
                             <tr>\
                                 <th>终点站</th>\
                                 <th>到站时间</th>\
-                                <th>状态</th>\
-                                <th>模式</th>\
+                                <th>剩余时间</th>\
+                                <th>模式/车号</th>\
                                 <th>状态</th>\
                             </tr>\
                         </thead>\
                         <tbody id='train-table-body-${i}'>\
                         </tbody>\
                     </table>`;
-                    const moduleName = "./beautified_js/" + input + "_" + i + ".js";
+                    const moduleName = "./timetable-NFLS/" + input + "_" + i + ".js";
                     function callback(args) {
                         updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
                     }

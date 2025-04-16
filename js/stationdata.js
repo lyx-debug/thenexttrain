@@ -95,7 +95,7 @@ const metroLines = [
             { name: "武定门", isTransferStation: false },
             { name: "雨花门", isTransferStation: false },
             { name: "卡子门", isTransferStation: false },
-            { name: "大明路", isTransferStation: false },
+            { name: "大明路", isTransferStation: true },
             { name: "明发广场", isTransferStation: false },
             { name: "南京南站", isTransferStation: true },
             { name: "宏运大道", isTransferStation: false },
@@ -414,5 +414,14 @@ const metroLines = [
             { name: "团结圩", isTransferStation: false },
             { name: "高淳", isTransferStation: false }
         ]
-    }
+    },
+    {
+        name: "接驳",
+        color: "#034ba0",
+        stations: [
+            
+            { name: "大明路", isTransferStation: true }
+            
+        ]
+    },
 ];
