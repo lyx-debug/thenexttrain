@@ -12,7 +12,14 @@ arrivalTimes = {
     
     ],
     tuesday: [
-    
+        { destination: "北校区", time: "08:00:00",busnumber: "1" },
+      { destination: "北校区", time: "12:45:00",busnumber: "2" },
+      { destination: "北校区", time: "16:10:00",busnumber: "1" },
+      { destination: "北校区", time: "16:40:00",busnumber: "2" },
+      { destination: "北校区", time: "17:10:00",busnumber: "3" },
+      { destination: "北校区", time: "17:55:00",busnumber: "1" },
+      { destination: "北校区", time: "20:15:00",busnumber: "2" },
+      { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
     wednesday: [
       { destination: "北校区", time: "08:00:00",busnumber: "1" },
@@ -25,16 +32,44 @@ arrivalTimes = {
       { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
     thursday: [
-    
+        { destination: "北校区", time: "08:00:00",busnumber: "1" },
+      { destination: "北校区", time: "12:45:00",busnumber: "2" },
+      { destination: "北校区", time: "16:10:00",busnumber: "1" },
+      { destination: "北校区", time: "16:40:00",busnumber: "2" },
+      { destination: "北校区", time: "17:10:00",busnumber: "3" },
+      { destination: "北校区", time: "17:55:00",busnumber: "1" },
+      { destination: "北校区", time: "20:15:00",busnumber: "2" },
+      { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
     friday: [
-    
+        { destination: "北校区", time: "08:00:00",busnumber: "1" },
+      { destination: "北校区", time: "12:45:00",busnumber: "2" },
+      { destination: "北校区", time: "16:10:00",busnumber: "1" },
+      { destination: "北校区", time: "16:40:00",busnumber: "2" },
+      { destination: "北校区", time: "17:10:00",busnumber: "3" },
+      { destination: "北校区", time: "17:55:00",busnumber: "1" },
+      { destination: "北校区", time: "20:15:00",busnumber: "2" },
+      { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
     saturday: [
-    
+        { destination: "北校区", time: "08:00:00",busnumber: "1" },
+      { destination: "北校区", time: "12:45:00",busnumber: "2" },
+      { destination: "北校区", time: "16:10:00",busnumber: "1" },
+      { destination: "北校区", time: "16:40:00",busnumber: "2" },
+      { destination: "北校区", time: "17:10:00",busnumber: "3" },
+      { destination: "北校区", time: "17:55:00",busnumber: "1" },
+      { destination: "北校区", time: "20:15:00",busnumber: "2" },
+      { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
     sunday: [
-    
+        { destination: "北校区", time: "08:00:00",busnumber: "1" },
+      { destination: "北校区", time: "12:45:00",busnumber: "2" },
+      { destination: "北校区", time: "16:10:00",busnumber: "1" },
+      { destination: "北校区", time: "16:40:00",busnumber: "2" },
+      { destination: "北校区", time: "17:10:00",busnumber: "3" },
+      { destination: "北校区", time: "17:55:00",busnumber: "1" },
+      { destination: "北校区", time: "20:15:00",busnumber: "2" },
+      { destination: "北校区", time: "21:40:00",busnumber: "3" },
     ],
 };
 

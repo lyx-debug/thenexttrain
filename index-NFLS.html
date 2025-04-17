@@ -17,7 +17,7 @@
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁 The-Next-Train</h1>
+    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南外接驳 The-Next-Bus</h1>
     <div class="search-box">
         <input
             type="text"
@@ -123,7 +123,7 @@
                 const arrivalTotalSeconds = arrivalTime.hours * 3600 + arrivalTime.minutes * 60 + arrivalTime.seconds;
                 const currentTotalSeconds = currentTime.hours * 3600 + currentTime.minutes * 60 + currentTime.seconds;
 
-                return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 7200;//过滤7200秒内的列车
+                return arrivalTotalSeconds > currentTotalSeconds && timeRemaining.totalSeconds <= 21600;//过滤21600秒内的列车
             });
 
             console.log(`Filtered arrival times:`, filteredArrivalTimes);
