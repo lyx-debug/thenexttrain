@@ -61,9 +61,6 @@ function showSuggestions(input) {
     firstStation = "";
 
     // Create suggestions from the map
-    // 添加语言判断
-    const isEnglish = window.location.href.includes('index-en.html');
-    
     stationMap.forEach((value, stationName) => {
         if (firstStation == "") {
             firstStation = stationName;
@@ -89,11 +86,8 @@ function showSuggestions(input) {
             ">${line.name}</span>`;
         }).join("");
         
-        // 根据语言显示站点名称
-        const displayName = isEnglish ? (zh_to_en(stationName) || stationName) : stationName;
-        
         item.innerHTML = `
-            <strong>${displayName}</strong>
+            <strong>${stationName}</strong>
             ${lineCircles}
         `;
         
@@ -117,11 +111,8 @@ function searchStation() {
     // 确保点击搜索时聚焦到输入框
     document.getElementById("stationInput").focus();
 
-    // 修改语言判断逻辑，通过URL来判断
-    const isEnglish = window.location.href.includes('index-en.html');
-
     if (!input) {
-        resultDiv.innerHTML = isEnglish ? "<div>Please enter a station name</div>" : "<div>请输入站点名称</div>";
+        resultDiv.innerHTML = "<div>请输入站点名称</div>";
         return;
     }
 
@@ -132,18 +123,16 @@ function searchStation() {
     );
 
     if (foundLines.length === 0) {
-        resultDiv.innerHTML = isEnglish ? "<div>Station not found, please try again</div>" : "<div>未找到相关站哦，请重试～</div>";
+        resultDiv.innerHTML = "<div>未找到相关站哦，请重试～</div>";
         return;
     }
 
     const output = document.createElement("div");
-    const displayName = isEnglish ? (zh_to_en(input) || input) : input;
-    output.innerHTML = `<div class="station-name">${displayName}</div>`;
+    output.innerHTML = `<div class="station-name">${input}</div>`;
 
     const lineNames = foundLines.map(line => {
-        // 修改这里的逻辑，确保英文显示完整的线路号
-        const prefix = isEnglish ? `Line ${line.name}` : (isNaN(line.name) ? `${line.name}线` : `${line.name}号线`);
-        return isNaN(line.name) ? prefix : prefix;  // 修改这里，确保显示完整的线路名称
+        // 判断是否为数字
+        return isNaN(line.name) ? `${line.name}线` : `${line.name}号线`;
     }).join(" ");
 
     // 判断站点是否为换乘站
@@ -177,18 +166,16 @@ function searchStation() {
         clearInterval();
         for (_ of foundLines.map(line => [line.name, line.color])) {
             i = _[0]; col = _[1];
-            // 修改这里的逻辑，确保英文显示完整的线路号
-            const linePrefix = isEnglish ? `Line ${i}` : (isNaN(i) ? `${i}线` : `${i}号线`);
             table.innerHTML += `\
-            <h1 style="-webkit-background-clip: text!important; background: ${col};">${linePrefix} ${displayName}</h1>\
+            <h1 style="-webkit-background-clip: text!important; background: ${col};">${isNaN(i) ? `${i}线` : `${i}号线`} ${input} </h1>\
             <table>\
                 <thead>\
                     <tr>\
-                        <th>${isEnglish ? "Destination" : "终点站"}</th>\
-                        <th>${isEnglish ? "Arrival Time" : "到站时间"}</th>\
-                        <th>${isEnglish ? "Time Remaining" : "状态"}</th>\
-                        <th>${isEnglish ? "Mode" : "模式"}</th>\
-                        <th>${isEnglish ? "Status" : "状态"}</th>\
+                        <th>终点站</th>\
+                        <th>到站时间</th>\
+                        <th>状态</th>\
+                        <th>模式</th>\
+                        <th>状态</th>\
                     </tr>\
                 </thead>\
                 <tbody id='train-table-body-${i}'>\

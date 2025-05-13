@@ -144,8 +144,8 @@ const metroLines = [
             { name: "竹山路", isTransferStation: true },
             { name: "新亭路", isTransferStation: false },
             { name: "东山", isTransferStation: false },
-            { name: "文靖路", isTransferStation: false },
-            { name: "东山香樟园", isTransferStation: false },
+            { name: "文靖路", isTransferStation: false }
+            /*{ name: "东山香樟园", isTransferStation: false },
             { name: "神机营", isTransferStation: false },
             { name: "大校场", isTransferStation: false },
             { name: "七桥瓮", isTransferStation: false },
@@ -165,7 +165,7 @@ const metroLines = [
             { name: "下关", isTransferStation: true },
             { name: "静海寺", isTransferStation: false },
             { name: "南京西站", isTransferStation: false },
-            { name: "方家营", isTransferStation: false } 
+            { name: "方家营", isTransferStation: false } */
         ]
     },
     {
