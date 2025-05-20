@@ -2,8 +2,70 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>关于南京地铁-the-next-train</title>
     <link rel="stylesheet" href="./style.css">
+    <style>
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .team-section {
+            margin-bottom: 30px;
+        }
+        
+        .team-section h2 {
+            color: #1a73e8;
+            border-bottom: 2px solid #1a73e8;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        
+        .team-members {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .team-member {
+            background-color: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            flex: 1 1 200px;
+            transition: transform 0.2s;
+        }
+        
+        .team-member:hover {
+            transform: translateY(-5px);
+        }
+        
+        .version-info {
+            margin-top: 30px;
+            text-align: center;
+            font-weight: bold;
+            color: #333;
+        }
+        
+        .contact-info {
+            margin-top: 20px;
+            text-align: center;
+            padding: 15px;
+            background-color: #e8f0fe;
+            border-radius: 8px;
+        }
+        
+        .page-title {
+            text-align: center;
+            color: #1a73e8;
+            margin-bottom: 30px;
+        }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -12,19 +74,51 @@
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1>关于南京地铁-the-next-train</h1>
+    <h1 class="page-title">关于南京地铁-the-next-train</h1>
 
     <div class="content about-content">
-        <p>开发者：</p>
-        <p>NFLS-lyx</p>
-        <p>NFLS-xcx</p>
-        <p>梦梦-天问</p>
+        <div class="team-section">
+            <h2>开发团队</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>NFLS-LYX/黄鱼-Larimichthys polyactis</h3>
+                </div>
+                <div class="team-member">
+                    <h3>NFLS-XCX</h3>
+                </div>
+                <div class="team-member">
+                    <h3>梦梦-天问</h3>
+                </div>
+            </div>
+        </div>
         
-        <p>测试人员：</p>
-        <p>NFLS-xxy</p>
-        <p>𝖴𝗇𝗂𝖲𝖾𝖯𝖳-Furry</p>
-        <p>版本：Beta 6.7.6</p>
-        <p>欢迎关注我们的官方qq群：，获取更多资讯！</p>
+        <div class="team-section">
+            <h2>测试团队</h2>
+            <div class="team-members">
+                <div class="team-member">
+                    <h3>NFLS-LYX/黄鱼-Larimichthys polyactis</h3>
+                </div>
+                <div class="team-member">
+                    <h3>NFLS-XCX</h3>
+                </div>
+                <div class="team-member">
+                    <h3>NFLS-XXY</h3>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="version-info">
+            <p>版本：Beta 6.8.6</p>
+        </div>
+        
+        <div class="contact-info">
+            <p>欢迎关注我们的官方QQ群：<strong>[QQ群号]</strong>，获取更多资讯！</p>
+        </div>
     </div>
+    
+    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; font-size: 0.9em;">
+        <p>© 2025 南京地铁-the-next-train 团队. 保留所有权利.</p>
+    </footer>
 </body>
 </html>

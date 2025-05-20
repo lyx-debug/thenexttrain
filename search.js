@@ -42,18 +42,22 @@ function showSuggestions(input) {
     
     metroLines.forEach(line => {
         line.stations.forEach(station => {
+            station_zh_name = getlocale(station.name);
             const pinyin = pinyinPro.pinyin(station.name, { toneType: 'none' }) || "";
+
             const pinyinInitials = pinyin.split(" ").map(s => s[0]).join("");
-            const match1 = station.name.toLowerCase().includes(input.toLowerCase());
+
+            const match1 = station_zh_name.toLowerCase().includes(input.toLowerCase());
             const match2 = pinyinInitials.toLowerCase().includes(input.toLowerCase());
+
             if (match1 || match2) {
-                if (!stationMap.has(station.name)) {
-                    stationMap.set(station.name, {
+                if (!stationMap.has(station_zh_name)) {
+                    stationMap.set(station_zh_name, {
                         station: station,
                         lines: []
                     });
                 }
-                stationMap.get(station.name).lines.push(line);
+                stationMap.get(station_zh_name).lines.push(line);
             }
         });
     });
@@ -112,33 +116,30 @@ function searchStation() {
     document.getElementById("stationInput").focus();
 
     if (!input) {
-        resultDiv.innerHTML = "<div>请输入站点名称</div>";
+        resultDiv.innerHTML = "<div>Please input the station name.</div>";
         return;
     }
 
     const foundLines = metroLines.filter(line => 
         line.stations.some(station => 
-            station.name.toLowerCase() === input.toLowerCase()
+            (getlocale(station.name) || "").toLowerCase() === input.toLowerCase()
         )
     );
 
     if (foundLines.length === 0) {
-        resultDiv.innerHTML = "<div>未找到相关站哦，请重试～</div>";
+        resultDiv.innerHTML = "<div>Can not find the station. Please try again.</div>";
         return;
     }
 
     const output = document.createElement("div");
     output.innerHTML = `<div class="station-name">${input}</div>`;
 
-    const lineNames = foundLines.map(line => {
-        // 判断是否为数字
-        return isNaN(line.name) ? `${line.name}线` : `${line.name}号线`;
-    }).join(" ");
+    const lineNames = foundLines.map(line => getlocale_line(line.name)).join(" "); // 线路文字间隔
 
     // 判断站点是否为换乘站
     const isTransferStation = foundLines.some(line =>
         line.stations.some(station => 
-            station.name.toLowerCase() === input.toLowerCase() && station.isTransferStation
+            getlocale(station.name).toLowerCase() === input.toLowerCase() && station.isTransferStation
         )
     );
 
@@ -167,21 +168,21 @@ function searchStation() {
         for (_ of foundLines.map(line => [line.name, line.color])) {
             i = _[0]; col = _[1];
             table.innerHTML += `\
-            <h1 style="-webkit-background-clip: text!important; background: ${col};">${isNaN(i) ? `${i}线` : `${i}号线`} ${input} </h1>\
+            <h1 style="-webkit-background-clip: text!important; background: ${col};">${getlocale_line(i)} ${input} </h1>\
             <table>\
                 <thead>\
                     <tr>\
-                        <th>终点站</th>\
-                        <th>到站时间</th>\
-                        <th>状态</th>\
-                        <th>模式</th>\
-                        <th>状态</th>\
+                        <th>${getlocale("终点站")}</th>\
+                        <th>${getlocale("到站时间")}</th>\
+                        <th>${getlocale("状态")}</th>\
+                        <th>${getlocale("模式")}</th>\
+                        <th>${getlocale("状态")}</th>\
                     </tr>\
                 </thead>\
                 <tbody id='train-table-body-${i}'>\
                 </tbody>\
             </table>`;
-            const moduleName = "./beautified_js/" + input + "_" + i + ".js";
+            const moduleName = "./beautified_js/" + getzh(input) + "_" + i + ".js";
             function callback(args) {
                 updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
             }
