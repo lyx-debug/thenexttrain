@@ -10,7 +10,7 @@
     <div class="navbar">
         <!-- 左侧导航按钮 -->
         <a href="about.html" target="_self">关于</a>
-        <a href="index-en.html" target="_self">英文/English</a>
+        <a id="locale-selection" onclick="" target="_self">英文/English</a>
         <a href="choosecity.html" target="_self"> </a>
 
         <!-- 右侧图片占位符 -->
@@ -20,21 +20,15 @@
     <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">南京地铁 The-Next-Train</h1>
     
     <div class="news-ticker">
-        <span id="ticker-text">5号线文靖路站-方家营站暂未开通&nbsp;&nbsp;&nbsp;&nbsp;6号线南京南站-栖霞山站暂未开通</span>
+        <span data-i18n="ui.newsall"></span>
         <div class="dropdown-arrow" onclick="toggleNewsExpansion()">▼</div>
         <div class="expanded-news">
             <div class="news-content">
-                <div class="news-page active">
-                    <h3>停运通知</h3>
-                    <p>5号线文靖路站-方家营站暂未开通</p>
+                <div class="news-page active" data-i18n="ui.news1">
                 </div>
-                <div class="news-page">
-                    <h3>停运通知</h3>
-                    <p>6号线南京南站-栖霞山站暂未开通</p>
+                <div class="news-page" data-i18n="ui.news2">
                 </div>
-                <div class="news-page">
-                    <h3>News 3</h3>
-                    <p>Content 3</p>
+                <div class="news-page" data-i18n="ui.news3">
                 </div>
             </div>
             <div class="news-controls">
@@ -49,7 +43,7 @@
         <input
             type="text"
             id="stationInput"
-            placeholder="输入地铁站名称 新街口/xjk"
+            placeholder
             oninput="showSuggestions(this.value)"
             onclick="showSuggestions(this.value)"
             onkeydown="if (event.key == 'Enter') { document.getElementById('stationInput').value = firstStation; searchStation(); }"
@@ -60,12 +54,11 @@
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
+    <script src="./locale.js"></script>
     <script src="./js/stationdata.js"></script>
     <script src="./pinyinpro.min.js"></script>
     <script src="./timetable.js"></script>
     <script src="./search.js"></script>
-
- 
 
     <script>
         let currentNewsPage = 0;
@@ -118,6 +111,50 @@
             const indicator = document.querySelector('.page-indicator');
             indicator.textContent = `${currentNewsPage + 1}/${totalNewsPages}`;
         }
+        
+
+        const content = document.querySelector('#content'); //获取需要放大缩小的盒子
+        let firstDistance = 0; // 存放手指开始放上的时，两根手指之间的距离
+        // 缩放事件的处理
+        const getDistance =  (start, stop) => { //计算两根手指之间的距离
+            return Math.sqrt(Math.pow(Math.abs(start.x - stop.x), 2) + Math.pow(Math.abs(start.y - stop.y), 2));
+        };
+        content.addEventListener('touchstart', function (event) { // 获取第一次触摸的点
+            const touches = event.touches;
+            if(touches.length > 1){ //判断是否是两指
+                const events1 = touches[0];
+                const events2 = touches[1];
+                const one = {
+                    x:events1.pageX, //第一根手指的横坐标
+                    y:events1.pageY, //第一根手指的纵坐标
+                }; //第一根手指的横坐标
+                const two = {
+                    x:events2.pageX, //第二根手指的横坐标
+                    y:events2.pageY, //第二根手指的纵坐标
+                }; 
+                firstDistance = getDistance(one,two);
+            }
+            event.preventDefault();
+        });
+        document.addEventListener('touchmove', function (event) {
+            event.preventDefault();
+            const touches = event.touches;
+            if(touches.length>1){
+                const events1 = touches[0];
+                const events2 = touches[1];
+                const one = {
+                    x:events1.pageX, //第一根手指的横坐标
+                    y:events1.pageY, //第一根手指的纵坐标
+                }; //第一根手指的横坐标
+                const two = {
+                    x:events2.pageX, //第二根手指的横坐标
+                    y:events2.pageY, //第二根手指的纵坐标
+                }; 
+                const distance = getDistance(one,two);
+                const zoom = distance / firstDistance
+                content.style.transform = 'scale('+ zoom +')';
+            }
+        });
     </script>
 
     <div class="blur-overlay"></div>

@@ -59,7 +59,7 @@ function calculateTimeRemaining(arrivalTime, currentTime) {
         minutes,
         seconds,
         totalSeconds: arrivalTotalSeconds - currentTotalSeconds,
-        timeString: `${padTime(hours)}小时 ${padTime(minutes)}分钟 ${padTime(seconds)}秒`
+        timeString: `${padTime(hours)}:${padTime(minutes)}:${padTime(seconds)}`
     };
 }
 
@@ -103,7 +103,7 @@ function updateTable(tableId, arrivalTimesForToday) {
         const row = document.createElement('tr');
 
         const destinationCell = document.createElement('td');
-        destinationCell.textContent = train.destination;
+        destinationCell.textContent = getlocale(train.destination);
         row.appendChild(destinationCell);
 
         const arrivalTimeCell = document.createElement('td');
@@ -116,18 +116,18 @@ function updateTable(tableId, arrivalTimesForToday) {
         row.appendChild(timeRemainingCell);
 
         const jiaoluCell = document.createElement('td');
-        jiaoluCell.textContent = train.jiaolu;
+        jiaoluCell.textContent = getlocale(train.jiaolu);
         row.appendChild(jiaoluCell);
 
         const statusCell = document.createElement('td');
-        statusCell.textContent = '正常';
+        statusCell.textContent = getlocale("normal");
         row.appendChild(statusCell);
 
         row.classList.remove('arriving-soon');
 
         if (train.timeRemaining.totalSeconds <= 60 && train.timeRemaining.totalSeconds > 0) {
             row.classList.add('arriving-soon');
-            statusCell.textContent = '即将进站';
+            statusCell.textContent = getlocale("coming_soon");
         }
 
         let statusUpdated = false;
@@ -135,27 +135,19 @@ function updateTable(tableId, arrivalTimesForToday) {
         function updateStatus() {
             if (train.timeRemaining.totalSeconds > 0) {
                 if (train.timeRemaining.totalSeconds <= 60) {
-                    statusCell.textContent = '即将进站';
+                    statusCell.textContent = getlocale("coming_soon");
                     row.classList.add('arriving-soon');
                 } else {
-                    statusCell.textContent = '正常';
+                    statusCell.textContent = getlocale("normal");
                     row.classList.remove('arriving-soon');
                 }
-            } 
-            else {
+            } else {
                 if (train.timeRemaining.totalSeconds === 0) {
                     statusUpdated = true;
-                    statusCell.textContent = '列车到站';
-
-                    // 先设置“列车到站”，然后 20秒后更改为“正在离开”
+                    statusCell.textContent = getlocale("leaving");
                     setTimeout(() => {
-                        statusCell.textContent = '正在离开';
-
-                        // 10秒后再隐藏行
-                        setTimeout(() => {
-                            row.style.display = 'none';
-                        }, 10000); // 10秒后隐藏
-                    }, 20000); // 20秒后更改为“正在离开”
+                        row.style.display = 'none';
+                    }, 5000);
                 }
             }
         }
@@ -164,7 +156,7 @@ function updateTable(tableId, arrivalTimesForToday) {
         const intervalId = setInterval(() => {
             if (!statusUpdated) {
                 train.timeRemaining.totalSeconds--;
-                timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}小时 ${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}分钟 ${padTime(train.timeRemaining.totalSeconds % 60)}秒`;
+                timeRemainingCell.textContent = `${padTime(Math.floor(train.timeRemaining.totalSeconds / 3600))}:${padTime(Math.floor((train.timeRemaining.totalSeconds % 3600) / 60))}:${padTime(train.timeRemaining.totalSeconds % 60)}`;
                 updateStatus();
             } else {
                 clearInterval(intervalId);
