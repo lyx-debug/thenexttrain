@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0, user-scalable=yes">
     <title>南京地铁-the-next-train</title>
     <link rel="stylesheet" href="./style.css">
+    <script src="./locale.js"></script>
 </head>
 <body>
     <!-- 导航栏 -->
@@ -55,7 +56,6 @@
     <div id="result" class="result"></div>
     <div id="lineInfo"></div>
 
-    <script src="./locale.js"></script>
     <script src="./js/stationdata.js"></script>
     <script src="./pinyinpro.min.js"></script>
     <script src="./timetable.js"></script>
@@ -112,9 +112,6 @@
             const indicator = document.querySelector('.page-indicator');
             indicator.textContent = `${currentNewsPage + 1}/${totalNewsPages}`;
         }
-        
-
-        
     </script>
 
     <div class="blur-overlay"></div>

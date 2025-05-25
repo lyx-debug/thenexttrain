@@ -17,7 +17,15 @@ class I18n {
     // Initialize the i18n system
     async init() {
         await this.loadTranslations();
-        this.setup();
+        // Defer setup until DOM is loaded
+        if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', () => {
+                this.setup();
+            });
+        } else {
+            // DOMContentLoaded has already fired
+            this.setup();
+        }
     }
 
     // Load translation files
