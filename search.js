@@ -177,3 +177,37 @@ function searchStation() {
     output.appendChild(lineInfo);
     resultDiv.appendChild(output);
 }
+
+// 添加在文件顶部
+let initialDistance = 0;
+
+document.addEventListener('touchstart', function(e) {
+    if (e.touches.length === 2) {
+        initialDistance = Math.hypot(
+            e.touches[0].pageX - e.touches[1].pageX,
+            e.touches[0].pageY - e.touches[1].pageY
+        );
+    }
+});
+
+document.addEventListener('touchmove', function(e) {
+    if (e.touches.length === 2) {
+        e.preventDefault();
+        const currentDistance = Math.hypot(
+            e.touches[0].pageX - e.touches[1].pageX,
+            e.touches[0].pageY - e.touches[1].pageY
+        );
+        
+        if (initialDistance > 0) {
+            const scale = currentDistance / initialDistance;
+            document.body.style.transform = `scale(${scale})`;
+            document.body.style.transformOrigin = 'center center';
+        }
+    }
+});
+
+// 触摸结束时重置缩放
+document.addEventListener('touchend', function() {
+    initialDistance = 0;
+    document.body.style.transform = 'scale(1)';
+});
