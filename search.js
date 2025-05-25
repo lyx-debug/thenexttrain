@@ -75,7 +75,8 @@ function showSuggestions(input) {
             ">${line.name}</span>
         `).join("");
         
-        item.innerHTML = `<strong>${stationName}</strong>${lineCircles}`;
+        // 修改这里，移除'station.'前缀
+        item.innerHTML = `<strong>${stationName.replace('station.', '')}</strong>${lineCircles}`;
         
         item.addEventListener("click", () => {
             document.getElementById("stationInput").value = stationName;
