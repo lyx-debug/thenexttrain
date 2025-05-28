@@ -16,18 +16,17 @@ class I18n {
 
     // Initialize the i18n system
     async init() {
+        // 先设置默认翻译，再异步加载完整翻译
+        this.setupBasicTranslations();
         await this.loadTranslations();
-        // Defer setup until DOM is loaded
-        if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', () => {
-                this.setup();
-            });
-        } else {
-            // DOMContentLoaded has already fired
-            this.setup();
-        }
+        this.setup();
     }
 
+    setupBasicTranslations() {
+        // 设置关键元素的默认翻译
+        const stationInput = document.getElementById("stationInput");
+        if (stationInput) stationInput.placeholder = "请输入站点名称";
+    }
     // Load translation files
     async loadTranslations() {
         for (const locale of this.SUPPORTED_LOCALES) {
