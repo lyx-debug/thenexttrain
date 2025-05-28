@@ -120,13 +120,14 @@ function searchStation() {
 
     const lineNames = foundLines.map(line => getlocale_line(line.name)).join(" ");
 
-    // 检查是否为换乘站
-    const isTransferStation = foundLines.some(line =>
-        line.stations.some(station => 
-            getlocale(station.name).toLowerCase() === input.toLowerCase() && 
-            station.isTransferStation
-        )
-    );
+    // 检查是否为换乘站（通过站名是否在多条线路中出现来判断）
+    const isTransferStation = foundLines.length > 1 || 
+        metroLines.some(line => 
+            line !== foundLines[0] && 
+            line.stations.some(station => 
+                getlocale(station.name).toLowerCase() === input.toLowerCase()
+            )
+        );
 
     // 创建线路信息显示
     const lineInfo = document.createElement("div");
