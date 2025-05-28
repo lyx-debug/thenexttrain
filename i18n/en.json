@@ -125,7 +125,6 @@
     "静海寺": "JINGHAISI/Jinghai Temple",
     "南京西站": "NANJINGXIZHAN/Nanjing West Railway Station",
     "方家营": "FANGJIAYING",
-
     "栖霞山": "QIXIASHAN/Qixia Mountain",
     "金陵石化": "JINLINGSHIHUA",
     "十月广场": "SHIYUEGUANGCHANG",
@@ -142,8 +141,6 @@
     "市中医院": "SHIZHONGYIYUAN/Shizhong Hospital",
     "机场跑道旧址": "JICHANGPAODAOJIUZHI/Old Site Of The Airport Runway",
     "夹岗": "JIAGANG",
-
-
     "仙新路": "XIANXINLU/Xianxin Road",
     "尧化门": "YAOHUAMEN/Yaohua Gate",
     "尧化新村": "YAOHUAXINCUN",
@@ -165,6 +162,19 @@
     "永初路": "YONGCHULU/Yongchu Road",
     "太清路": "TAIQINGLU/Taiqing Road",
     "西善桥": "XISHANQIAO/Xishan Bridge",
+
+    "仙林站": "XIANLINZHAN/Xianlin Railway Station",
+    "双拜岗": "SHUANGBAIGANG",
+    "天成路": "TIANCHENGLU/Tiancheng Road",
+    "定林": "DINGLIN",
+    "康安里": "KANGANLI",
+    "文澜路": "WENLANLU/Wenlan Road",
+    "沧波路南": "CANGBOLUNAN/South Cangbo Road",
+    "沧波门": "CANGBOMEN/Cangbo Gate",
+    "生态公园": "SHENGTAIGONGYUAN/Shengtai Park",
+    "胜利村": "SHENGLICUN/Shengli Village",
+    "芝嘉路": "ZHIJIALU/Zhijia Road",
+
     "雨山路": "YUSHANLU/Yushan Road",
     "文德路": "WENDELU/Wende Road",
     "龙华路": "LONGHUALU/Longhua Road",
@@ -241,6 +251,7 @@
     "明觉": "MINGJUE",
     "团结圩": "TUANJIEWEI",
     "高淳": "GAOCHUN"
+    
   },
   "ui": {
     "input": "Please enter the station name (Example: XINJIEKOU/xjk)",
@@ -254,7 +265,7 @@
     "贯通快车": "Through Express",
     "newsall": "Line 5: Wenjinglu - Fangjiayin section not in service&nbsp;&nbsp;&nbsp;&nbsp;Line 6: Nanjing South Railway Station - Qixiashan section not in service",
     "news1": "<h3>Service Suspension Notice</h3><p>Line 5: Wenjinglu - Fangjiayin section not in service</p>",
-    "news2": "<h3>Service Suspension Notice</h3><p>Line 6: Nanjing South Railway Station - Qixiashan section not in service</p>", 
+    "news2": "<h3>Service Suspension Notice</h3><p>Line 6: Nanjing South Railway Station - Qixiashan section not in service</p>",
     "news3": "No news yet",
     "normal": "Normal",
     "coming_soon": "Coming Soon",

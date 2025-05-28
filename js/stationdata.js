@@ -112,7 +112,6 @@ const metroLines = [
         stations: [
             { name: "龙江" },
             { name: "草场门" },
-            //{ name: "云南路" },
             { name: "云南路" },
             { name: "鼓楼" },
             { name: "鸡鸣寺" },
@@ -183,7 +182,6 @@ const metroLines = [
             { name: "红山新城" },
             { name: "花园路" },
             { name: "岗子村" },
-            
             { name: "富贵山" },
             { name: "明故宫" },
             { name: "光华门" },
@@ -232,7 +230,33 @@ const metroLines = [
         ]
     },
     
-
+    {
+        name: "8",
+        color: "#BB353E",
+        stations: [
+            { name: "十月广场" },
+            { name: "仙新路" },
+            { name: "仙林站" },
+            { name: "文澜路" },
+            { name: "仙林中心" },
+            { name: "灵山" },
+            { name: "麒麟门" },
+            { name: "芝嘉路" },
+            { name: "定林" },
+            { name: "天成路" },
+            { name: "生态公园" },
+            { name: "沧波路南" },
+            { name: "沧波门" },
+            { name: "双拜岗" },
+            { name: "胜利村" },
+            { name: "石门坎" },
+            { name: "中和桥" },
+            { name: "康安里" },
+            { name: "雨花门" },
+            { name: "中华门" }
+             
+        ]
+    },
 
 
     {
