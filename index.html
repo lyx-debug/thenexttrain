@@ -19,8 +19,21 @@
         <a href="about.html" target="_self">关于</a>
         <a id="locale-selection" onclick="" target="_self">英文/English</a>
         <a href="choosecity.html" target="_self"> </a>
-        <a href="#" onclick="document.getElementById('bgUpload').click();">自定义背景</a>
+        <div class="dropdown">
+            <span class="dropbtn">自定义背景</span>
+            <div class="dropdown-content">
+                <a href="#" onclick="document.getElementById('bgUpload').click();">选择图片</a>
+                <a href="#" onclick="resetBg();">重置背景</a>
+            </div>
+        </div>
         <input type="file" id="bgUpload" accept="image/*" style="display: none" onchange="changeBg(event)">
+
+        <div class="dropdown">
+            <span class="dropbtn">更多</span>
+            <div class="dropdown-content">
+                <a href="linequery.html" target="_self">线路查询</a>
+            </div>
+        </div>
 
         <!-- 右侧图片占位符 -->
         <img src="placeholder.png" alt="">
@@ -132,6 +145,12 @@
                 };
                 reader.readAsDataURL(file);
             }
+        }
+
+        function resetBg() {
+            document.body.style.backgroundImage = '';
+            document.body.classList.remove('custom-bg');
+            localStorage.removeItem('customBg');
         }
 
         // 页面加载时恢复背景
