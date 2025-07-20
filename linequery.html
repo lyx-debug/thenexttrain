@@ -1,471 +1,304 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-
-    <script src="./locale.js"></script>
-    <link rel="stylesheet" href="./style.css">
+  <meta charset="UTF-8">
+  <title>线路查询 - 南京地铁</title>
+  <link rel="stylesheet" href="./style.css">
+  <script src="./locale.js"></script>
+  <script src="./js/linequery_stationdata.js"></script>
 </head>
 <body>
-    <!-- 导航栏 -->
-    <div class="navbar">
-        <!-- 左侧导航按钮 -->
-        <a href="index.html" target="_self">主页</a>
-        <a href="about.html" target="_self">关于</a>
-        
-        <a href="choosecity.html" target="_self"> </a>
-        <div class="dropdown">
-            <span class="dropbtn">自定义背景</span>
-            <div class="dropdown-content">
-                <a href="#" onclick="document.getElementById('bgUpload').click();">选择图片</a>
-                <a href="#" onclick="resetBg();">重置背景</a>
-            </div>
-        </div>
-        <input type="file" id="bgUpload" accept="image/*" style="display: none" onchange="changeBg(event)">
-
-        <div class="dropdown">
-            <span class="dropbtn">更多</span>
-            <div class="dropdown-content">
-                <a href="linequery.html" target="_self">线路查询</a>
-            </div>
-        </div>
-
-        <!-- 右侧图片占位符 -->
-        <img src="placeholder.png" alt="">
+  <!-- 导航栏 -->
+  <div class="navbar">
+    <a href="index.html">主页</a>
+    <a href="about.html">关于</a>
+    <a href="choosecity.html"></a>
+    <div class="dropdown">
+      <span class="dropbtn">自定义背景</span>
+      <div class="dropdown-content">
+        <a href="#" onclick="document.getElementById('bgUpload').click();">选择图片</a>
+        <a href="#" onclick="resetBg();">重置背景</a>
+      </div>
     </div>
-
-    <h1 style="text-align: center; color: orange; margin-bottom: 30px; font-family: SimHei">线路查询 - 南京地铁</h1>
-    <div class="query-section">
-        <div class="input-group">
-            <label for="startLine">起点线路:</label>
-            <select id="startLine"></select>
-            <label for="startStation">起点车站:</label>
-            <select id="startStation"></select>
-        </div>
-        <div class="input-group">
-            <label for="endLine">终点线路:</label>
-            <select id="endLine"></select>
-            <label for="endStation"></label>
-            <select id="endStation"></select>
-        </div>
-        <button onclick="queryRoute()">查询路线</button>
+    <input type="file" id="bgUpload" accept="image/*" style="display: none" onchange="changeBg(event)">
+    <div class="dropdown">
+      <span class="dropbtn">更多</span>
+      <div class="dropdown-content">
+        <a href="linequery.html">线路查询</a>
+      </div>
     </div>
+    <img src="placeholder.png" alt="">
+  </div>
 
-    <script src="./js/linequery_stationdata.js"></script>
-    <script>
-        // 引入外部线路和站点数据
-        // stationData 变量现在从 js/linequery_stationdata.js 中获取，并命名为 metroLines
-        const stationData = metroLines;
+  <h1 style="text-align: center; color: orange; font-family: SimHei; margin-bottom: 20px;">线路查询 - 南京地铁</h1>
 
-        // 构建地铁网络图
-        const graph = {};
-        const stationToLines = {}; // 记录每个站点属于哪些线路
+  <!-- 查询区 -->
+  <div class="query-section">
+    <div class="input-group">
+      <label for="startLine">起点线路:</label>
+      <select id="startLine"></select>
+      <label for="startStation">起点车站:</label>
+      <select id="startStation"></select>
+    </div>
+    <div class="input-group">
+      <label for="endLine">终点线路:</label>
+      <select id="endLine"></select>
+      <label for="endStation">终点车站:</label>
+      <select id="endStation"></select>
+    </div>
+    <button onclick="queryRoute()">查询路线</button>
+  </div>
 
-        stationData.forEach(line => {
-            const lineName = line.name;
-            line.stations.forEach((station, index) => {
-                const stationName = station.name;
-                const nodeId = `${stationName}_${lineName}`; // 唯一节点ID
+  <div id="resultDiv" style="text-align: center; font-size: 2em; color: #333; margin-top: 20px;"></div>
+  <div id="visualRoute" style="margin-top: 30px; text-align: left; padding-left: 30px;"></div>
 
-                if (!graph[nodeId]) {
-                    graph[nodeId] = [];
-                }
+  <script>
+    const stationData = metroLines;
+    const graph = {};
+    const stationToLines = {};
 
-                // 添加同线路的相邻站点
-                if (index > 0) {
-                    const prevStationName = line.stations[index - 1].name;
-                    const prevNodeId = `${prevStationName}_${lineName}`;
-                    graph[nodeId].push({ name: prevStationName, line: lineName, type: 'station' });
-                    if (!graph[prevNodeId]) {
-                        graph[prevNodeId] = [];
-                    }
-                    graph[prevNodeId].push({ name: stationName, line: lineName, type: 'station' });
-                }
+    stationData.forEach(line => {
+      const lineName = line.name;
+      line.stations.forEach((station, index) => {
+        const stationName = station.name;
+        const nodeId = `${stationName}_${lineName}`;
+        if (!graph[nodeId]) graph[nodeId] = [];
 
-                // 记录站点所属线路，用于处理换乘
-                if (!stationToLines[stationName]) {
-                    stationToLines[stationName] = new Set();
-                }
-                stationToLines[stationName].add(lineName);
-            });
-        });
-
-        // 添加换乘边
-        for (const stationName in stationToLines) {
-            const lines = Array.from(stationToLines[stationName]);
-            if (lines.length > 1) {
-                // 如果一个站点属于多条线路，则在这些线路的同名站点之间添加换乘边
-                for (let i = 0; i < lines.length; i++) {
-                    for (let j = i + 1; j < lines.length; j++) {
-                        const line1 = lines[i];
-                        const line2 = lines[j];
-                        const nodeId1 = `${stationName}_${line1}`;
-                        const nodeId2 = `${stationName}_${line2}`;
-
-                        // 添加双向换乘边
-                        graph[nodeId1].push({ name: stationName, line: line2, type: 'transfer' });
-                        graph[nodeId2].push({ name: stationName, line: line1, type: 'transfer' });
-                    }
-                }
-            }
-        }
-        function populateLines(selectId) {
-            const selectElement = document.getElementById(selectId);
-            selectElement.innerHTML = ''; // Clear existing options
-            stationData.forEach(lineObj => {
-                const option = document.createElement('option');
-                option.value = lineObj.name;
-                option.textContent = lineObj.name + '号线'; // Add '号线' for display
-                selectElement.appendChild(option);
-            });
-            // 默认填充第一个线路的车站
-            if (stationData.length > 0) {
-                populateStations(selectId.replace('Line', ''), stationData[0].name);
-            }
+        if (index > 0) {
+          const prevStation = line.stations[index - 1].name;
+          const prevId = `${prevStation}_${lineName}`;
+          graph[nodeId].push({ name: prevStation, line: lineName, type: 'station' });
+          graph[prevId].push({ name: stationName, line: lineName, type: 'station' });
         }
 
-        function populateStations(type, lineName) {
-            const stationSelectId = type + 'Station';
-            const stationSelectElement = document.getElementById(stationSelectId);
-            stationSelectElement.innerHTML = ''; // 清空现有选项
+        if (!stationToLines[stationName]) stationToLines[stationName] = new Set();
+        stationToLines[stationName].add(lineName);
+      });
+    });
 
-            const lineObj = stationData.find(obj => obj.name === lineName);
-            if (lineObj && lineObj.stations) {
-                lineObj.stations.forEach(station => {
-                    const option = document.createElement('option');
-                    option.value = station.name;
-                    option.textContent = station.name;
-                    stationSelectElement.appendChild(option);
-                });
-            }
+    for (const stationName in stationToLines) {
+      const lines = Array.from(stationToLines[stationName]);
+      if (lines.length > 1) {
+        for (let i = 0; i < lines.length; i++) {
+          for (let j = i + 1; j < lines.length; j++) {
+            const id1 = `${stationName}_${lines[i]}`;
+            const id2 = `${stationName}_${lines[j]}`;
+            graph[id1].push({ name: stationName, line: lines[j], type: 'transfer' });
+            graph[id2].push({ name: stationName, line: lines[i], type: 'transfer' });
+          }
         }
+      }
+    }
 
-        function queryRoute() {
-            const startLine = document.getElementById('startLine').value;
-            const startStation = document.getElementById('startStation').value;
-            const endLine = document.getElementById('endLine').value;
-            const endStation = document.getElementById('endStation').value;
+    function populateLines(selectId) {
+      const select = document.getElementById(selectId);
+      select.innerHTML = '';
+      stationData.forEach(line => {
+        const option = document.createElement('option');
+        option.value = line.name;
+        option.textContent = line.name + '号线';
+        select.appendChild(option);
+      });
+      populateStations(selectId.replace('Line', ''), stationData[0].name);
+    }
 
-            const resultDiv = document.getElementById('resultDiv');
-            if (!startStation || !endStation) {
-                resultDiv.innerHTML = '请选择起点和终点车站。';
-                return;
-            }
+    function populateStations(type, lineName) {
+      const stationSelect = document.getElementById(type + 'Station');
+      stationSelect.innerHTML = '';
+      const line = stationData.find(l => l.name === lineName);
+      line?.stations.forEach(station => {
+        const opt = document.createElement('option');
+        opt.value = station.name;
+        opt.textContent = station.name;
+        stationSelect.appendChild(opt);
+      });
+    }
 
-            // 实现 Dijkstra 算法查找最短路径
-            function dijkstra(startNodeId, endNodeId) {
-                const distances = {};
-                const previous = {};
-                const pq = new PriorityQueue(); // 优先队列
+    document.getElementById('startLine').addEventListener('change', function () {
+      populateStations('start', this.value);
+    });
+    document.getElementById('endLine').addEventListener('change', function () {
+      populateStations('end', this.value);
+    });
 
-                // 初始化
-                for (const nodeId in graph) {
-                    distances[nodeId] = Infinity;
-                    previous[nodeId] = null;
-                }
-                distances[startNodeId] = 0;
-                pq.enqueue(startNodeId, 0);
+    window.onload = function () {
+      const bg = localStorage.getItem('customBg');
+      if (bg) document.body.style.backgroundImage = `url('${bg}')`;
+      populateLines('startLine');
+      populateLines('endLine');
+    };
 
-                while (!pq.isEmpty()) {
-                    const { element: currentId, priority: currentDistance } = pq.dequeue();
-
-                    if (currentId === endNodeId) break; // 找到终点
-
-                    if (currentDistance > distances[currentId]) continue;
-
-                    const [currentStationName, currentLineName] = currentId.split('_');
-
-                    for (const neighbor of graph[currentId]) {
-                        let newDistance = currentDistance;
-                        let neighborNodeId;
-
-                        if (neighbor.type === 'station') {
-                            // 同线路的相邻站点，距离 +1
-                            newDistance += 1;
-                            neighborNodeId = `${neighbor.name}_${neighbor.line}`;
-                        } else if (neighbor.type === 'transfer') {
-                            // 换乘站点，距离 +3 (换乘惩罚)
-                            newDistance += 3; // 假设换乘需要更多时间
-                            neighborNodeId = `${neighbor.name}_${neighbor.line}`;
-                        }
-
-                        if (newDistance < distances[neighborNodeId]) {
-                            distances[neighborNodeId] = newDistance;
-                            previous[neighborNodeId] = currentId;
-                            pq.enqueue(neighborNodeId, newDistance);
-                        }
-                    }
-                }
-
-                // 重构路径
-                const path = [];
-                let currentNodeId = endNodeId;
-                while (currentNodeId) {
-                    path.unshift(currentNodeId);
-                    currentNodeId = previous[currentNodeId];
-                }
-
-                if (path.length === 0 || distances[endNodeId] === Infinity) {
-                    resultDiv.innerHTML = '无法找到从 ' + startStation + ' 到 ' + endStation + ' 的路径。';
-                    return;
-                }
-
-                let pathString = '';
-                let currentLine = '';
-                for (let i = 0; i < path.length; i++) {
-                    const [stationName, lineName] = path[i].split('_');
-                    if (i === 0) {
-                        pathString += stationName;
-                        currentLine = lineName;
-                    } else {
-                        if (lineName !== currentLine) {
-                            pathString += `->换乘${lineName}号线->${stationName}`;
-                            currentLine = lineName;
-                        } else {
-                            pathString += `->${stationName}`;
-                        }
-                    }
-                }
-                resultDiv.innerHTML = `最短路径: ${pathString} (总距离: ${distances[endNodeId]})`;
-            }
-
-            // 调用 Dijkstra 算法
-            const startNodeId = `${startStation}_${startLine}`;
-            const endNodeId = `${endStation}_${endLine}`;
-            dijkstra(startNodeId, endNodeId);
-        }
-
-        // 优先队列实现 (用于 Dijkstra)
-        class PriorityQueue {
-            constructor() {
-                this.collection = [];
-            }
-
-            enqueue(element, priority) {
-                const entry = { element, priority };
-                let added = false;
-                for (let i = 0; i < this.collection.length; i++) {
-                    if (entry.priority < this.collection[i].priority) {
-                        this.collection.splice(i, 0, entry);
-                        added = true;
-                        break;
-                    }
-                }
-                if (!added) {
-                    this.collection.push(entry);
-                }
-            }
-
-            dequeue() {
-                return this.collection.shift();
-            }
-
-            isEmpty() {
-                return this.collection.length === 0;
-            }
-        }
-
-        // 监听线路选择变化，更新车站选择
-        document.getElementById('startLine').addEventListener('change', function() {
-            populateStations('start', this.value);
-        });
-        document.getElementById('endLine').addEventListener('change', function() {
-            populateStations('end', this.value);
-        });
-
-        // 页面加载时初始化线路选择框
-        populateLines('startLine');
-        populateLines('endLine');
-
-        // 背景图片切换功能
-        function changeBg(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.body.style.backgroundImage = `url('${e.target.result}')`;
-                    localStorage.setItem('backgroundImage', e.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function resetBg() {
-            document.body.style.backgroundImage = 'none';
-            localStorage.removeItem('backgroundImage');
-        }
-
-        // 加载保存的背景图片
-        const savedBg = localStorage.getItem('backgroundImage');
-        if (savedBg) {
-            document.body.style.backgroundImage = `url('${savedBg}')`;
-        }
-    </script>
-    <div id="resultDiv" style="margin-top: 20px; text-align: center; font-size: 1.2em; color: #333;"></div>
-<script>
-                const path = [];
-                let current = endNodeId;
-                while (current && previous[current] !== undefined) {
-                    path.unshift(current);
-                    current = previous[current];
-                }
-                if (path[0] !== startNodeId) { // 如果路径不包含起点，说明无法到达
-                    return null;
-                }
-                return path;
-
-            // 优先队列实现 (用于 Dijkstra)
-            class PriorityQueue {
-                constructor() {
-                    this.collection = [];
-                }
-
-                enqueue(element, priority) {
-                    let contain = false;
-                    for (let i = 0; i < this.collection.length; i++) {
-                        if (this.collection[i].priority > priority) {
-                            this.collection.splice(i, 0, { element, priority });
-                            contain = true;
-                            break;
-                        }
-                    }
-                    if (!contain) {
-                        this.collection.push({ element, priority });
-                    }
-                }
-
-                dequeue() {
-                    return this.collection.shift();
-                }
-
-                isEmpty() {
-                    return this.collection.length === 0;
-                }
-            }
-
-            const startNodeId = `${startStation}_${startLine}`;
-            const endNodeId = `${endStation}_${endLine}`;
-
-            const shortestPath = dijkstra(startNodeId, endNodeId);
-
-            const resultDiv = document.getElementById('result');
-            resultDiv.innerHTML = ''; // 清空之前的结果
-
-            if (shortestPath) {
-                let pathDisplay = '';
-                let currentLine = '';
-                let transferCount = 0;
-
-                for (let i = 0; i < shortestPath.length; i++) {
-                    const [stationName, lineName] = shortestPath[i].split('_');
-
-                    if (i === 0) {
-                        pathDisplay += `${stationName}`; // 起点
-                        currentLine = lineName;
-                    } else {
-                        if (lineName !== currentLine) {
-                            // 换乘
-                            pathDisplay += ` -> 换乘${lineName}号线 -> ${stationName}`;
-                            currentLine = lineName;
-                            transferCount++;
-                        } else {
-                            // 同线路
-                            pathDisplay += ` -> ${stationName}`;
-                        }
-                    }
-                }
-                resultDiv.innerHTML = `<p>最短路径: ${pathDisplay}</p><p>总换乘次数: ${transferCount}</p>`;
-            } else {
-                resultDiv.innerHTML = '<p>未找到路径，请检查选择的站点是否正确或是否存在连接。</p>';
-            }
-
-        // 页面加载时初始化线路选择
-        // populateLines('startLine');
-        // populateLines('endLine');
-
-        // 为起点线路和终点线路的选择框添加事件监听器
-        document.getElementById('startLine').addEventListener('change', function() {
-            populateStations('start', this.value);
-        });
-        document.getElementById('endLine').addEventListener('change', function() {
-            populateStations('end', this.value);
-        });
-
-        // 为起点站和终点站的输入框添加事件监听器，用于自动填充
-        document.getElementById('startStationInput').addEventListener('input', function() {
-            showStationSuggestions(this.value, 'start');
-        });
-        document.getElementById('endStationInput').addEventListener('input', function() {
-            showStationSuggestions(this.value, 'end');
-        });
-
-        function showStationSuggestions(inputValue, type) {
-            const autocompleteList = document.getElementById(type + 'AutocompleteList');
-            autocompleteList.innerHTML = '';
-            if (!inputValue) {
-                return;
-            }
-
-            const currentLineSelect = document.getElementById(type + 'Line');
-            const currentLineName = currentLineSelect.value;
-            const lineObj = stationData.find(obj => obj.name === currentLineName);
-
-            if (lineObj && lineObj.stations) {
-                const filteredStations = lineObj.stations.filter(station =>
-                    station.name.includes(inputValue)
-                );
-
-                filteredStations.forEach(station => {
-                    const div = document.createElement('div');
-                    div.textContent = station.name;
-                    div.addEventListener('click', function() {
-                        document.getElementById(type + 'StationInput').value = station.name;
-                        autocompleteList.innerHTML = '';
-                    });
-                    autocompleteList.appendChild(div);
-                });
-            }
-        }
-
-        // 点击页面其他地方时隐藏自动完成列表
-        document.addEventListener('click', function(e) {
-            if (!e.target.closest('.search-box')) {
-                document.getElementById('startAutocompleteList').innerHTML = '';
-                document.getElementById('endAutocompleteList').innerHTML = '';
-            }
-        });
-    </script>
-    <script>
-        function changeBg(event) {
-            const file = event.target.files[0];
-            if (file) {
-                const reader = new FileReader();
-                reader.onload = function(e) {
-                    document.body.style.backgroundImage = `url(${e.target.result})`;
-                    document.body.classList.add('custom-bg');
-                    localStorage.setItem('customBg', e.target.result);
-                };
-                reader.readAsDataURL(file);
-            }
-        }
-
-        function resetBg() {
-            document.body.style.backgroundImage = '';
-            document.body.classList.remove('custom-bg');
-            localStorage.removeItem('customBg');
-        }
-
-        window.onload = function() {
-            const savedBg = localStorage.getItem('customBg');
-            if (savedBg) {
-                document.body.style.backgroundImage = `url(${savedBg})`;
-                document.body.classList.add('custom-bg');
-            }
-            // Call populateLines here after the DOM is fully loaded and background is set
-            populateLines('startLine');
-            populateLines('endLine');
+    function changeBg(event) {
+      const file = event.target.files[0];
+      if (file) {
+        const reader = new FileReader();
+        reader.onload = e => {
+          document.body.style.backgroundImage = `url(${e.target.result})`;
+          localStorage.setItem('customBg', e.target.result);
         };
-    </script>
-    <div class="blur-overlay"></div>
+        reader.readAsDataURL(file);
+      }
+    }
+
+    function resetBg() {
+      document.body.style.backgroundImage = '';
+      localStorage.removeItem('customBg');
+    }
+
+    class PriorityQueue {
+      constructor() {
+        this.collection = [];
+      }
+      enqueue(element, priority) {
+        const entry = { element, priority };
+        let added = false;
+        for (let i = 0; i < this.collection.length; i++) {
+          if (priority < this.collection[i].priority) {
+            this.collection.splice(i, 0, entry);
+            added = true;
+            break;
+          }
+        }
+        if (!added) this.collection.push(entry);
+      }
+      dequeue() {
+        return this.collection.shift();
+      }
+      isEmpty() {
+        return this.collection.length === 0;
+      }
+    }
+
+    function getLineColorFromData(lineName) {
+      const line = stationData.find(l => l.name === lineName);
+      return line ? line.color : '#999';
+    }
+
+    function getDirection(lineName, stations) {
+      const line = stationData.find(l => l.name === lineName);
+      if (!line) return '未知';
+      const names = line.stations.map(s => s.name);
+      const startIdx = names.indexOf(stations[0]);
+      const endIdx = names.indexOf(stations[stations.length - 1]);
+      return startIdx < endIdx ? names[names.length - 1] : names[0];
+    }
+
+    function dijkstra(start, end) {
+      const distances = {};
+      const previous = {};
+      const pq = new PriorityQueue();
+
+      for (const node in graph) {
+        distances[node] = Infinity;
+        previous[node] = null;
+      }
+      distances[start] = 0;
+      pq.enqueue(start, 0);
+
+      while (!pq.isEmpty()) {
+        const { element: current } = pq.dequeue();
+        if (current === end) break;
+
+        for (const neighbor of graph[current]) {
+          const neighborId = `${neighbor.name}_${neighbor.line}`;
+          const cost = neighbor.type === 'station' ? 1 : 3;
+          const newDist = distances[current] + cost;
+
+          if (newDist < distances[neighborId]) {
+            distances[neighborId] = newDist;
+            previous[neighborId] = current;
+            pq.enqueue(neighborId, newDist);
+          }
+        }
+      }
+
+      const path = [];
+      let curr = end;
+      while (curr) {
+        path.unshift(curr);
+        curr = previous[curr];
+      }
+
+      if (path[0] !== start) return null;
+      return path;
+    }
+
+    function queryRoute() {
+      const startLine = document.getElementById('startLine').value;
+      const endLine = document.getElementById('endLine').value;
+      const startStation = document.getElementById('startStation').value;
+      const endStation = document.getElementById('endStation').value;
+
+      const startId = `${startStation}_${startLine}`;
+      const endId = `${endStation}_${endLine}`;
+
+      const path = dijkstra(startId, endId);
+      const resultDiv = document.getElementById('resultDiv');
+      if (!path || path.length === 0) {
+        resultDiv.innerHTML = `无法找到从 ${startStation} 到 ${endStation} 的路径。`;
+        document.getElementById('visualRoute').innerHTML = '';
+        return;
+      }
+
+      resultDiv.innerHTML = `最短路径: ${path.map(p => p.split('_')[0]).join(' → ')}`;
+      renderVisualRoute(path);
+    }
+
+    function renderVisualRoute(pathArray) {
+      const container = document.getElementById('visualRoute');
+      container.innerHTML = '';
+
+      let currentLine = '';
+      let currentStations = [];
+      let segments = [];
+
+      for (const node of pathArray) {
+        const [station, line] = node.split('_');
+        if (line !== currentLine) {
+          if (currentStations.length) segments.push({ line: currentLine, stations: currentStations });
+          currentLine = line;
+          currentStations = [station];
+        } else {
+          currentStations.push(station);
+        }
+      }
+      if (currentStations.length) segments.push({ line: currentLine, stations: currentStations });
+
+      segments.forEach((seg, idx) => {
+        const color = getLineColorFromData(seg.line);
+        const direction = getDirection(seg.line, seg.stations);
+
+        const title = document.createElement('div');
+        title.innerHTML = `<b>${seg.line}号线</b> 往 ${direction}方向`;
+        title.style.color = color;
+        title.style.margin = '10px 0';
+        container.appendChild(title);
+
+        const list = document.createElement('div');
+        list.style.borderLeft = `15px solid ${color}`;
+        list.style.paddingLeft = '10px';
+        list.style.marginBottom = '20px';
+
+        seg.stations.forEach(st => {
+          const div = document.createElement('div');
+          div.innerText = st;
+          div.style.margin = '5px 0';
+          div.style.fontSize = '1.5em'; // 添加这一行
+          list.appendChild(div);
+        });
+
+        container.appendChild(list);
+
+        if (idx < segments.length - 1) {
+          const transfer = document.createElement('div');
+          const nextLine = segments[idx + 1].line;
+          transfer.innerHTML = `🔁 换乘${nextLine}号线`;
+          transfer.style.color = getLineColorFromData(nextLine);
+          transfer.style.margin = '10px 0 20px';
+          container.appendChild(transfer);
+        }
+      });
+    }
+  </script>
 </body>
 </html>
