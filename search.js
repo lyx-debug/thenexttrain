@@ -118,7 +118,14 @@ function searchStation() {
     const output = document.createElement("div");
     output.innerHTML = `<div class="station-name">${input}</div>`;
 
-    const lineNames = foundLines.map(line => getlocale_line(line.name)).join(" ");
+    // 修改顶部线路名称显示的部分
+    const lineNames = foundLines.map(line => {
+        // 对于南京南站的6号线和S1号线，使用原始的线路名称格式
+        if (input === "南京南站" && (line.name === "6" || line.name === "S1")) {
+            return i18n.getLine(line.name);
+        }
+        return getlocale_line(line.name);
+    }).join(" ");
 
     // 检查是否为换乘站（通过站名是否在多条线路中出现来判断）
     const isTransferStation = foundLines.length > 1 || 
@@ -132,9 +139,19 @@ function searchStation() {
     // 创建线路信息显示
     const lineInfo = document.createElement("div");
     lineInfo.className = "line-info";
-    lineInfo.style.background = isTransferStation 
-        ? `linear-gradient(to right, ${foundLines.map(line => line.color).join(", ")})`
-        : foundLines[0].color;
+    
+    // 特殊处理南京南站的背景颜色
+    if (input === "南京南站") {
+        const targetLines = foundLines.filter(line => 
+            ["1", "3", "6", "S3"].includes(line.name)
+        );
+        lineInfo.style.background = `linear-gradient(to right, ${targetLines.map(line => line.color).join(", ")})`;
+    } else {
+        lineInfo.style.background = isTransferStation 
+            ? `linear-gradient(to right, ${foundLines.map(line => line.color).join(", ")})`
+            : foundLines[0].color;
+    }
+    
     lineInfo.innerHTML = `<h3>${lineNames}</h3>`;
 
     // 更新到站信息
@@ -143,30 +160,121 @@ function searchStation() {
         table.innerHTML = "";
         clearInterval();
         
-        foundLines.forEach(({name: i, color: col}) => {
-            table.innerHTML += `
-                <h1 style="-webkit-background-clip: text!important; background: ${col};">
-                    ${getlocale_line(i)} ${input}
-                </h1>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>${getlocale("终点站")}</th>
-                            <th>${getlocale("到站时间")}</th>
-                            <th>${getlocale("状态")}</th>
-                            <th>${getlocale("模式")}</th>
-                            <th>${getlocale("状态")}</th>
-                        </tr>
-                    </thead>
-                    <tbody id='train-table-body-${i}'></tbody>
-                </table>
-            `;
-            
-            const moduleName = "./beautified_js/" + getzh(input) + "_" + i + ".js";
-            loadScript(moduleName, args => {
-                updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
-            }, i);
-        });
+        // 特殊处理南京南站的6号线和S1号线
+        if (input === "南京南站") {
+            const line6 = foundLines.find(line => line.name === "6");
+            const lineS1 = foundLines.find(line => line.name === "S1");
+            if (line6 && lineS1) {
+                // 显示合并的6/S1号线
+                table.innerHTML += `
+                    <h1 style="-webkit-background-clip: text!important; background: ${line6.color};">
+                        6/S1号线 ${input}
+                    </h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>${getlocale("终点站")}</th>
+                                <th>${getlocale("到站时间")}</th>
+                                <th>${getlocale("状态")}</th>
+                                <th>${getlocale("模式")}</th>
+                                <th>${getlocale("状态")}</th>
+                            </tr>
+                        </thead>
+                        <tbody id='train-table-body-6'></tbody>
+                        <tbody id='train-table-body-S1'></tbody>
+                    </table>
+                `;
+                
+                const moduleName6 = "./beautified_js/" + getzh(input) + "_6.js";
+                const moduleNameS1 = "./beautified_js/" + getzh(input) + "_S1.js";
+                loadScript(moduleName6, args => {
+                    updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
+                }, "6");
+                loadScript(moduleNameS1, args => {
+                    updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
+                }, "S1");
+                
+                // 处理其他线路，排除6号线和S1号线
+                foundLines.forEach(({name: i, color: col}) => {
+                    if (i !== "6" && i !== "S1") {
+                        table.innerHTML += `
+                            <h1 style="-webkit-background-clip: text!important; background: ${col};">
+                                ${getlocale_line(i)} ${input}
+                            </h1>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>${getlocale("终点站")}</th>
+                                        <th>${getlocale("到站时间")}</th>
+                                        <th>${getlocale("状态")}</th>
+                                        <th>${getlocale("模式")}</th>
+                                        <th>${getlocale("状态")}</th>
+                                    </tr>
+                                </thead>
+                                <tbody id='train-table-body-${i}'></tbody>
+                            </table>
+                        `;
+                        
+                        const moduleName = "./beautified_js/" + getzh(input) + "_" + i + ".js";
+                        loadScript(moduleName, args => {
+                            updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
+                        }, i);
+                    }
+                });
+            } else {
+                // 如果不是同时有6号线和S1号线，就使用原来的逻辑
+                foundLines.forEach(({name: i, color: col}) => {
+                    table.innerHTML += `
+                        <h1 style="-webkit-background-clip: text!important; background: ${col};">
+                            ${getlocale_line(i)} ${input}
+                        </h1>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>${getlocale("终点站")}</th>
+                                    <th>${getlocale("到站时间")}</th>
+                                    <th>${getlocale("状态")}</th>
+                                    <th>${getlocale("模式")}</th>
+                                    <th>${getlocale("状态")}</th>
+                                </tr>
+                            </thead>
+                            <tbody id='train-table-body-${i}'></tbody>
+                        </table>
+                    `;
+                    
+                    const moduleName = "./beautified_js/" + getzh(input) + "_" + i + ".js";
+                    loadScript(moduleName, args => {
+                        updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
+                    }, i);
+                });
+            }
+        } else {
+            // 不是南京南站，使用原来的逻辑
+            foundLines.forEach(({name: i, color: col}) => {
+                table.innerHTML += `
+                    <h1 style="-webkit-background-clip: text!important; background: ${col};">
+                        ${getlocale_line(i)} ${input}
+                    </h1>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>${getlocale("终点站")}</th>
+                                <th>${getlocale("到站时间")}</th>
+                                <th>${getlocale("状态")}</th>
+                                <th>${getlocale("模式")}</th>
+                                <th>${getlocale("状态")}</th>
+                            </tr>
+                        </thead>
+                        <tbody id='train-table-body-${i}'></tbody>
+                    </table>
+                `;
+                
+                const moduleName = "./beautified_js/" + getzh(input) + "_" + i + ".js";
+                loadScript(moduleName, args => {
+                    updateTable("train-table-body-" + args, getArrivalTimesForToday(arrivalTimes));
+                }, i);
+            });
+        }
     }
     
     updateStatus();

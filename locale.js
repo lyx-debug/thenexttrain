@@ -150,6 +150,13 @@ function getzh(englishName) {
 }
 
 function getlocale_line(lineNumber) {
+    // 特殊处理南京南站的6号线和S1号线
+    if (lineNumber === "6" || lineNumber === "S1") {
+        const currentStation = document.getElementById("stationInput")?.value;
+        if (currentStation === "南京南站") {
+            return "6/S1号线";
+        }
+    }
     return i18n.getLine(lineNumber);
 }
 
