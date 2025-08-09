@@ -240,7 +240,8 @@
         return;
       }
 
-      resultDiv.innerHTML = `最短路径: ${path.map(p => p.split('_')[0]).join(' → ')}`;
+      // resultDiv.innerHTML = `最短路径: ${path.map(p => p.split('_')[0]).join(' → ')}`;
+      document.getElementById('visualRoute').innerHTML = ''; // 清空最短路径的显示
       renderVisualRoute(path);
     }
 
