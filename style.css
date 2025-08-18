@@ -1,10 +1,26 @@
+/* 中文字体 */
 @font-face {
-    font-family: 'Swis721';
+    font-family: 'ChineseFont';
+    src: url('fonts/方正黑体_GBK.ttf') format('truetype');
+    unicode-range: U+4E00-9FFF;
+}
+
+/* 数字专用字体 */
+@font-face {
+    font-family: 'NumberFont';
+    src: url('fonts/方正黑体_GBK.ttf') format('truetype');
+    unicode-range: U+0030-0039;
+}
+
+/* 英文数字字体 */
+@font-face {
+    font-family: 'EnglishFont';
     src: url('fonts/Swis721.ttf') format('truetype');
+    unicode-range: U+0030-0039, U+0041-005A, U+0061-007A;
 }
 
 body {
-    font-family: "Swis721", "SimHei" , sans-serif;
+    font-family: 'NumberFont', 'ChineseFont', 'EnglishFont', sans-serif;
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
