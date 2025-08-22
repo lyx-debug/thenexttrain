@@ -225,24 +225,142 @@
 
     function queryRoute() {
       const startLine = document.getElementById('startLine').value;
-      const endLine = document.getElementById('endLine').value;
       const startStation = document.getElementById('startStation').value;
+      const endLine = document.getElementById('endLine').value;
       const endStation = document.getElementById('endStation').value;
 
-      const startId = `${startStation}_${startLine}`;
-      const endId = `${endStation}_${endLine}`;
+      const startNode = `${startStation}_${startLine}`;
+      const endNode = `${endStation}_${endLine}`;
 
-      const path = dijkstra(startId, endId);
+      const path = dijkstra(startNode, endNode);
+
       const resultDiv = document.getElementById('resultDiv');
-      if (!path || path.length === 0) {
-        resultDiv.innerHTML = `无法找到从 ${startStation} 到 ${endStation} 的路径。`;
-        document.getElementById('visualRoute').innerHTML = '';
+      const visualRouteDiv = document.getElementById('visualRoute');
+      visualRouteDiv.innerHTML = '';
+
+      if (!path) {
+        resultDiv.textContent = '无法找到路线。';
         return;
       }
 
-      // resultDiv.innerHTML = `最短路径: ${path.map(p => p.split('_')[0]).join(' → ')}`;
-      document.getElementById('visualRoute').innerHTML = ''; // 清空最短路径的显示
-      renderVisualRoute(path);
+      resultDiv.textContent = '找到最短路线！';
+
+      let currentLine = '';
+      let segmentStations = [];
+      let totalStations = 0;
+      let routeSegments = [];
+
+      path.forEach((node, index) => {
+        const [stationName, lineName] = node.split('_');
+
+        if (node.type === 'transfer') {
+          if (segmentStations.length > 0) {
+            routeSegments.push({
+              type: 'line',
+              lineName: currentLine,
+              stations: [...segmentStations]
+            });
+            totalStations += segmentStations.length;
+            segmentStations = [];
+          }
+          routeSegments.push({
+            type: 'transfer',
+            fromLine: currentLine,
+            toLine: lineName,
+            station: stationName
+          });
+          currentLine = lineName;
+          segmentStations.push(stationName);
+        } else {
+          if (currentLine === '' || currentLine === lineName) {
+            currentLine = lineName;
+            segmentStations.push(stationName);
+          } else {
+            routeSegments.push({
+              type: 'line',
+              lineName: currentLine,
+              stations: [...segmentStations]
+            });
+            totalStations += segmentStations.length;
+
+            routeSegments.push({
+              type: 'transfer',
+              fromLine: currentLine,
+              toLine: lineName,
+              station: stationName
+            });
+
+            currentLine = lineName;
+            segmentStations = [stationName];
+          }
+        }
+
+        if (index === path.length - 1 && segmentStations.length > 0) {
+          routeSegments.push({
+            type: 'line',
+            lineName: currentLine,
+            stations: [...segmentStations]
+          });
+          totalStations += segmentStations.length;
+        }
+      });
+
+      // Filter out redundant transfers
+      const filteredSegments = [];
+      for (let i = 0; i < routeSegments.length; i++) {
+        const segment = routeSegments[i];
+        if (segment.type === 'transfer') {
+          // Check if the transfer is truly necessary
+          const nextLineSegment = routeSegments[i + 1];
+          if (nextLineSegment && nextLineSegment.type === 'line' && nextLineSegment.lineName === segment.toLine) {
+            // This transfer is valid
+            filteredSegments.push(segment);
+          } else if (!nextLineSegment && segment.toLine === endLine && segment.station === endStation) {
+            // This is a transfer to the final destination line and station
+            filteredSegments.push(segment);
+          } else {
+            // Redundant transfer, skip it
+            continue;
+          }
+        } else {
+          filteredSegments.push(segment);
+        }
+      }
+
+      // Render the filtered segments
+      filteredSegments.forEach((segment, index) => {
+        if (segment.type === 'line') {
+          const direction = getDirection(segment.lineName, segment.stations);
+          const lineColor = getLineColorFromData(segment.lineName);
+          const lineDiv = document.createElement('div');
+          lineDiv.className = 'line-segment';
+          lineDiv.style.borderColor = lineColor;
+          lineDiv.innerHTML = `
+            <div class="line-info-left">
+              <div class="line-name" style="background-color: ${getLineColorFromData(segment.lineName)};">${segment.lineName}号线</div>
+              <div class="direction">开往 ${direction}方向</div>
+            </div>
+            <div class="stations">
+              ${segment.stations.map((s, idx) => `
+                <div class="station-wrapper">
+                  <div class="station-dot ${idx === 0 || idx === segment.stations.length - 1 ? 'large-dot' : ''}"></div>
+                  <div class="station-name-underline">${s}</div>
+                </div>
+              `).join('')}
+            </div>
+          `;
+          visualRouteDiv.appendChild(lineDiv);
+        } else if (segment.type === 'transfer') {
+          const transferDiv = document.createElement('div');
+          transferDiv.className = 'transfer-info';
+          transferDiv.innerHTML = `
+            <p>换乘${segment.toLine}号线</p>
+          `;
+          visualRouteDiv.appendChild(transferDiv);
+        }
+      });
+
+      resultDiv.textContent = `找到最短路线！总计 ${totalStations} 站。`;
     }
 
     function renderVisualRoute(pathArray) {

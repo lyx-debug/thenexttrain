@@ -25,7 +25,9 @@ class I18n {
     setupBasicTranslations() {
         // 设置关键元素的默认翻译
         const stationInput = document.getElementById("stationInput");
-        if (stationInput) stationInput.placeholder = "请输入站点名称";
+        if (stationInput) {
+            stationInput.placeholder = "请输入站点名称";
+        }
     }
     // Load translation files
     async loadTranslations() {
@@ -54,7 +56,9 @@ class I18n {
         }
 
         const stationInput = document.getElementById("stationInput");
-        stationInput.placeholder = this.t("ui.input");
+        if (stationInput) {
+            stationInput.placeholder = this.t("ui.input");
+        }
 
         document.querySelectorAll('[data-i18n]').forEach(element => {
             const key = element.getAttribute('data-i18n');

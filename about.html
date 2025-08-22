@@ -4,135 +4,61 @@
     <meta charset="UTF-8">
     <title>关于南京地铁-the-next-train</title>
     <link rel="stylesheet" href="./style.css">
-    <style>
-        .about-content {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f8f8f8;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        }
-        
-        .team-section {
-            margin-bottom: 30px;
-        }
-        
-        .team-section h2 {
-            color: #1a73e8;
-            border-bottom: 2px solid #1a73e8;
-            padding-bottom: 8px;
-            margin-bottom: 15px;
-        }
-        
-        .team-members {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 15px;
-        }
-        
-        .team-member {
-            background-color: white;
-            padding: 15px;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-            flex: 1 1 200px;
-            transition: transform 0.2s;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .team-member img {
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            object-fit: cover;
-        }
 
-        .team-member h3 {
-            margin: 0;
-        }
-        
-        .team-member:hover {
-            transform: translateY(-5px);
-        }
-        
-        .version-info {
-            margin-top: 30px;
-            text-align: center;
-            font-weight: bold;
-            color: #333;
-        }
-        
-        .contact-info {
-            margin-top: 20px;
-            text-align: center;
-            padding: 15px;
-            background-color: #e8f0fe;
-            border-radius: 8px;
-        }
-        
-        .page-title {
-            text-align: center;
-            color: #1a73e8;
-            margin-bottom: 30px;
-        }
-    </style>
 </head>
 <body>
     <div class="navbar">
         <a href="index.html">主页</a>
-        <a href="#">关于</a>
+        <a href="about.html">关于</a>
         <img src="placeholder.png" alt="">
     </div>
 
-    <h1 class="page-title">关于南京地铁-the-next-train</h1>
+    <h1 class="page-title" data-i18n="ui.aboutTitle">关于南京地铁-the-next-train</h1>
 
-    <div class="content about-content">
+    <div class="about-content">
         <div class="team-section">
-            <h2>开发团队</h2>
+            <h2 data-i18n="ui.devTeam">开发团队</h2>
             <div class="team-members">
                 <div class="team-member">
                     <img src="nflslyx.jpg" alt="NFLS-lyx">
-                    <h3>烬遥furry</h3>
+                    <h3 data-i18n="ui.dev1">烬遥furry</h3>
                 </div>
                 <div class="team-member">
                     <img src="nflsxcx.jpg" alt="NFLS-xcx">
-                    <h3>NFLS-xcx</h3>
+                    <h3 data-i18n="ui.dev2">NFLS-xcx</h3>
                 </div>
                 <div class="team-member">
                     <img src="mmtw.jpg" alt="梦梦-天问">
-                    <h3>梦梦-天问</h3>
+                    <h3 data-i18n="ui.dev3">梦梦-天问</h3>
                 </div>
             </div>
         </div>
         
         <div class="team-section">
-            <h2>测试团队</h2>
+            <h2 data-i18n="ui.testTeam">测试团队</h2>
             <div class="team-members">
                 <div class="team-member">
                     <img src="nflsxxy.jpg" alt="NFLS-xxy">
-                    <h3>NFLS-xxy</h3>
+                    <h3 data-i18n="ui.test1">NFLS-xxy</h3>
                 </div>
                 <div class="team-member">
                     <img src="wdm.jpg" alt="𝖴𝗇𝗂𝖲𝖾𝖯𝖳-Furry">
-                    <h3>Unisept</h3>
+                    <h3 data-i18n="ui.test2">Unisept</h3>
                 </div>
             </div>
         </div>
         
         <div class="version-info">
-            <p>版本：Beta 6.7.6</p>
+            <p data-i18n="ui.version">版本：Beta 6.7.6</p>
         </div>
         
         <div class="contact-info">
-            <p>欢迎关注我们的官方QQ群：<strong>[1053294956]</strong>，获取更多资讯！</p>
+            <p data-i18n="ui.contact">欢迎关注我们的官方QQ群：<strong>[1053294956]</strong>，获取更多资讯！</p>
         </div>
     </div>
     
-    <footer style="text-align: center; margin-top: 40px; padding: 20px; color: #666; font-size: 0.9em;">
-        <p>© 2025 南京地铁-the-next-train 团队. 保留所有权利.</p>
+    <footer>
+        <p data-i18n="ui.footer">© 2025 南京地铁-the-next-train 团队. 保留所有权利.</p>
     </footer>
 </body>
 </html>

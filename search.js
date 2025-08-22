@@ -152,7 +152,7 @@ function searchStation() {
             : foundLines[0].color;
     }
     
-    lineInfo.innerHTML = `<h3>${lineNames}</h3>`;
+    lineInfo.innerHTML = `<h3 style="color: white;">${lineNames}</h3>`;
 
     // 更新到站信息
     function updateStatus() {
@@ -167,7 +167,7 @@ function searchStation() {
             if (line6 && lineS1) {
                 // 显示合并的6/S1号线
                 table.innerHTML += `
-                    <h1 style="-webkit-background-clip: text!important; background: ${line6.color};">
+                    <h1 style="color: ${line6.color}; -webkit-background-clip: text!important; background: ${line6.color};">
                         6/S1号线 ${input}
                     </h1>
                     <table>
@@ -198,7 +198,7 @@ function searchStation() {
                 foundLines.forEach(({name: i, color: col}) => {
                     if (i !== "6" && i !== "S1") {
                         table.innerHTML += `
-                            <h1 style="-webkit-background-clip: text!important; background: ${col};">
+                            <h1 style="color: ${col}; -webkit-background-clip: text!important; background: ${col};">
                                 ${getlocale_line(i)} ${input}
                             </h1>
                             <table>
@@ -225,7 +225,7 @@ function searchStation() {
                 // 如果不是同时有6号线和S1号线，就使用原来的逻辑
                 foundLines.forEach(({name: i, color: col}) => {
                     table.innerHTML += `
-                        <h1 style="-webkit-background-clip: text!important; background: ${col};">
+                        <h1 style="color: ${col}; -webkit-background-clip: text!important; background: ${col};">
                             ${getlocale_line(i)} ${input}
                         </h1>
                         <table>
@@ -252,9 +252,9 @@ function searchStation() {
             // 不是南京南站，使用原来的逻辑
             foundLines.forEach(({name: i, color: col}) => {
                 table.innerHTML += `
-                    <h1 style="-webkit-background-clip: text!important; background: ${col};">
-                        ${getlocale_line(i)} ${input}
-                    </h1>
+                        <h1 style="color: ${col}; -webkit-background-clip: text!important; background: ${col};">
+                            ${getlocale_line(i)} ${input}
+                        </h1>
                     <table>
                         <thead>
                             <tr>
